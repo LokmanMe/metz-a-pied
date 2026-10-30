@@ -78,6 +78,14 @@ Conseils pour la visite :
 - Avant de partir (au Wi-Fi de l'hôtel par exemple), générez votre parcours et faites défiler/zoomer la carte sur les zones du parcours : les tuiles consultées restent disponibles hors ligne (jusqu'à environ 1 500 tuiles).
 - Autorisez la localisation quand Chrome la demande, pour voir le point bleu. En cas de refus, l'app reste utilisable ; pour réactiver : cadenas à gauche de l'adresse → Autorisations → Position (ou, pour l'app installée, Paramètres Android → Applications → Metz à pied → Autorisations).
 
+## Installer sur iPhone
+
+1. Ouvrir l'URL GitHub Pages dans **Safari**.
+2. Bouton **Partager** (carré avec une flèche vers le haut), puis **Sur l'écran d'accueil**, puis **Ajouter**.
+3. Lancer l'app depuis son icône : elle s'ouvre en plein écran, sans la barre de Safari.
+
+Depuis iOS 16.4, l'ajout fonctionne aussi depuis Chrome sur iPhone (même bouton Partager). Autoriser la localisation au premier lancement ; sinon : Réglages → Confidentialité et sécurité → Service de localisation.
+
 ## Optionnel : générer un .apk avec PWABuilder
 
 1. Ouvrir <https://www.pwabuilder.com> et coller l'URL GitHub Pages de l'app.

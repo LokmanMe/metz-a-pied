@@ -208,7 +208,7 @@ function insertPause(items, type, start, startClock, p) {
     const a = k === 0 ? start : pts[k - 1], b = pts[k];
     for (const v of venues) {
       const detour = walkKm(a, v) + (b ? walkKm(v, b) : 0) - (b ? walkKm(a, b) : 0);
-      const cost = Math.abs(clocks[k] - PAUSES[type].target) / 15 + detour * 6;
+      const cost = Math.abs(clocks[k] - PAUSES[type].target) / 8 + detour * 4;
       if (!best || cost < best.cost) best = { k, v, cost };
     }
   }
