@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metz à pied</title>
+  <meta name="description" content="Parcours personnalisé des lieux à voir à Metz, utilisable hors ligne.">
+  <meta name="theme-color" content="#C9A043" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#17130C" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="vitrail" aria-hidden="true"></div>
+    <div class="topbar-row">
+      <h1 class="brand"><span class="brand-mark" aria-hidden="true"></span>Metz <em>à pied</em></h1>
+      <button id="btn-edit" class="icon-btn" hidden aria-label="Modifier mes préférences">⚙︎</button>
+    </div>
+  </header>
+
+  <!-- Écran 1 : questionnaire -->
+  <main id="screen-quiz" class="screen">
+    <p class="intro">Quelques questions, et je vous trace un parcours dans la ville de la pierre de Jaumont.</p>
+    <form id="quiz" novalidate>
+      <fieldset class="q">
+        <legend><span class="q-num">1</span>Ce qui vous intéresse</legend>
+        <div class="chips" data-name="interests" data-multi>
+          <button type="button" class="chip" data-value="histoire">🏰 Histoire &amp; patrimoine</button>
+          <button type="button" class="chip" data-value="architecture">🏛 Architecture</button>
+          <button type="button" class="chip" data-value="art">🎨 Art &amp; musées</button>
+          <button type="button" class="chip" data-value="religieux">⛪ Églises</button>
+          <button type="button" class="chip" data-value="nature">🌿 Nature &amp; Moselle</button>
+          <button type="button" class="chip" data-value="gastronomie">🥧 Gastronomie lorraine</button>
+          <button type="button" class="chip" data-value="shopping">🛍 Shopping</button>
+          <button type="button" class="chip" data-value="photo">📷 Photo &amp; points de vue</button>
+          <button type="button" class="chip" data-value="nuit">🌙 Vie nocturne</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">2</span>Temps disponible</legend>
+        <div class="chips seg" data-name="duration">
+          <button type="button" class="chip" data-value="2h">2 h</button>
+          <button type="button" class="chip" data-value="half">½ journée</button>
+          <button type="button" class="chip" data-value="day">Journée</button>
+          <button type="button" class="chip" data-value="2days">2 jours</button>
+        </div>
+        <label class="inline-field">Départ à
+          <input type="time" id="start-time" step="900">
+        </label>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">3</span>Rythme</legend>
+        <div class="chips seg" data-name="pace">
+          <button type="button" class="chip" data-value="calm">Tranquille</button>
+          <button type="button" class="chip" data-value="normal">Normal</button>
+          <button type="button" class="chip" data-value="brisk">Soutenu</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">4</span>Déplacement</legend>
+        <div class="chips seg" data-name="transport">
+          <button type="button" class="chip" data-value="walk">🚶 À pied</button>
+          <button type="button" class="chip" data-value="bus">🚶+🚌 Pied + bus Le Met'</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">5</span>Point de départ</legend>
+        <div class="chips seg" data-name="start">
+          <button type="button" class="chip" data-value="gare">🚉 Gare</button>
+          <button type="button" class="chip" data-value="parking">🅿 Parking</button>
+          <button type="button" class="chip" data-value="gps">📍 Ma position</button>
+        </div>
+        <select id="parking" class="select" hidden aria-label="Parking de départ"></select>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">6</span>Budget</legend>
+        <div class="chips seg" data-name="budget">
+          <button type="button" class="chip" data-value="free">Gratuit uniquement</button>
+          <button type="button" class="chip" data-value="paid">Entrées payantes OK</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend><span class="q-num">7</span>Pauses à prévoir</legend>
+        <div class="chips" data-name="pauses" data-multi>
+          <button type="button" class="chip" data-value="cafe">☕ Café</button>
+          <button type="button" class="chip" data-value="dejeuner">🍽 Déjeuner lorrain</button>
+          <button type="button" class="chip" data-value="gouter">🟡 Goûter mirabelle</button>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary btn-xl">Tracer mon parcours</button>
+      <p class="fineprint">Horaires et tarifs indicatifs : à confirmer sur place.</p>
+    </form>
+  </main>
+
+  <!-- Écran 2 : parcours -->
+  <main id="screen-route" class="screen" hidden>
+    <div id="map" role="region" aria-label="Carte du parcours"></div>
+    <section class="summary" aria-live="polite">
+      <div class="stat"><strong id="sum-stops">–</strong><span>étapes</span></div>
+      <div class="stat"><strong id="sum-dist">–</strong><span>à pied</span></div>
+      <div class="stat"><strong id="sum-time">–</strong><span>au total</span></div>
+      <div class="stat"><strong id="sum-done">0 %</strong><span>visité</span></div>
+    </section>
+    <div class="progress" aria-hidden="true"><div id="progress-bar"></div></div>
+
+    <div id="notice" class="notice" hidden></div>
+
+    <ol id="stops" class="stops"></ol>
+
+    <div class="route-tools">
+      <button id="btn-suggest" class="btn btn-ghost">＋ Ajouter un lieu proche</button>
+      <button id="btn-regen" class="btn btn-ghost">↻ Régénérer</button>
+    </div>
+    <p class="fineprint">Horaires, tarifs et ouvertures sont indicatifs : à confirmer sur place. Données cartographiques © OpenStreetMap.</p>
+
+    <nav class="actionbar" aria-label="Navigation de visite">
+      <button id="btn-locate" class="btn btn-round" aria-label="Centrer sur ma position">◎</button>
+      <button id="btn-gmaps" class="btn btn-secondary">Itinéraire ↗</button>
+      <button id="btn-next" class="btn btn-primary">Étape suivante →</button>
+    </nav>
+  </main>
+
+  <!-- Fiche lieu -->
+  <dialog id="sheet" class="sheet">
+    <form method="dialog" class="sheet-inner">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <div id="sheet-body"></div>
+      <button class="btn btn-ghost btn-close" value="close">Fermer</button>
+    </form>
+  </dialog>
+
+  <!-- Suggestions -->
+  <dialog id="suggest" class="sheet">
+    <form method="dialog" class="sheet-inner">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <h2>Lieux proches du parcours</h2>
+      <ul id="suggest-list" class="suggest-list"></ul>
+      <button class="btn btn-ghost btn-close" value="close">Fermer</button>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
