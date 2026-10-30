@@ -450,8 +450,11 @@ function renderRoute(fit = false) {
       html.push(`<li class="stop${isDone ? ' visited' : ''}${isCur ? ' current' : ''}" data-index="${r.index}">
         <span class="badge${r.pause ? ' pause' : ''}${isDone ? ' done' : ''}">${isDone ? '✓' : r.index + 1}</span>
         <button class="stop-main" data-open="${r.index}">
-          <span class="stop-name">${r.pause ? esc(PAUSES[r.pause].label) + ' · ' : ''}${esc(r.pl.nom)}</span>
-          <span class="stop-meta">${fmtClock(r.arrive)} · ${fmtDur(r.leave - r.arrive)}${r.pl.payant && !r.pause ? ' · <span class="tag-pay">payant</span>' : ''}</span>
+          ${r.pl.image ? `<img class="stop-thumb" src="${esc(r.pl.image)}" alt="" loading="lazy" decoding="async">` : ''}
+          <span class="stop-text">
+            <span class="stop-name">${r.pause ? esc(PAUSES[r.pause].label) + ' · ' : ''}${esc(r.pl.nom)}</span>
+            <span class="stop-meta">${fmtClock(r.arrive)} · ${fmtDur(r.leave - r.arrive)}${r.pl.payant && !r.pause ? ' · <span class="tag-pay">payant</span>' : ''}</span>
+          </span>
         </button>
         <button class="stop-remove" data-remove="${r.index}" aria-label="Retirer ${esc(r.pl.nom)}">✕</button>
       </li>`);
@@ -585,6 +588,10 @@ function openSheet(index) {
   if (!r) return;
   const pl = r.pl, isDone = visited.has(pl.id);
   $('#sheet-body').innerHTML = `
+    ${pl.image ? `<figure class="sheet-photo">
+      <img src="${esc(pl.image)}" alt="${esc(pl.nom)}" decoding="async">
+      <figcaption>${pl.imageIllustration ? 'Illustration · ' : ''}Photo : <a href="${esc(pl.imageUrl)}" target="_blank" rel="noopener">${esc(pl.imageCredit)}</a></figcaption>
+    </figure>` : ''}
     <h2>${esc(pl.nom)}</h2>
     <div class="pills">
       <span class="pill">Étape ${index + 1} · ${fmtClock(r.arrive)}</span>

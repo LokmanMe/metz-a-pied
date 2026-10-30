@@ -2,7 +2,7 @@
  * - app shell + données : précache, puis « stale-while-revalidate »
  * - tuiles OpenStreetMap : cache d'abord (les zones consultées restent dispo hors ligne)
  */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL_CACHE = `metz-shell-${VERSION}`;
 const TILE_CACHE = 'metz-tiles';           // non versionné : on garde les tuiles entre mises à jour
 const MAX_TILES = 1500;
@@ -27,6 +27,12 @@ self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(SHELL_CACHE);
     await cache.addAll(SHELL);
+    // Photos des lieux : précachées pour être disponibles hors ligne pendant la visite.
+    try {
+      const data = await (await cache.match('data/lieux.json')).json();
+      const photos = [...new Set(data.lieux.map((l) => l.image).filter(Boolean))];
+      await cache.addAll(photos);
+    } catch { /* elles seront mises en cache au premier affichage */ }
     // Leaflet depuis le CDN (requêtes CORS pour rester compatibles avec l'attribut integrity).
     await Promise.all(CDN.map(async (url) => {
       try {

@@ -15,6 +15,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `manifest.webmanifest` | Métadonnées d'installation |
 | `service-worker.js` | Cache de l'app, des données, de Leaflet et des tuiles déjà vues |
 | `icons/` | Icônes 192, 512 et maskable 512 |
+| `images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 
 Les préférences, le parcours en cours et les lieux visités sont stockés dans le `localStorage` du téléphone.
 
@@ -112,5 +113,9 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
 ```
 
 Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables.
+
+### Photos
+
+Chaque lieu a une photo libre de droits issue de Wikimedia Commons (dossier `images/`, 800 px max), avec l'auteur et la licence affichés sous la photo dans la fiche (champs `image`, `imageCredit`, `imageUrl` de `lieux.json`). Les photos des pauses sont des illustrations (plat, quartier), pas l'établissement lui-même. Elles sont mises en cache à l'installation pour rester visibles hors ligne.
 
 Données cartographiques © contributeurs OpenStreetMap.
