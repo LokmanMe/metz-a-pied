@@ -282,6 +282,11 @@ function generateRoute(p, start, { jitter = false } = {}) {
     dayLists.push(solveTsp(start, day1, { thorough: true }), solveTsp(start, rest, { thorough: true }));
   }
 
+  return buildRoute(p, start, dayLists, { sparse });
+}
+
+/** Parcours à partir des lieux de chaque jour (déjà ordonnés) : ajoute les pauses demandées. */
+function buildRoute(p, start, dayLists, extra = {}) {
   const startClock = parseClock(p.startTime) ?? DAY_START_DEFAULT;
   const itemsByDay = dayLists.map((list, d) => {
     let items = list.map((pl) => ({ id: pl.id }));
@@ -298,8 +303,57 @@ function generateRoute(p, start, { jitter = false } = {}) {
     startClock,
     days: itemsByDay,
     current: 0,
-    sparse,
+    sparse: false,
+    ...extra,
   };
+}
+
+// ---------- Parcours tout prêts ----------
+const DURATION_LABELS = { '2h': '2 h', half: '½ journée', day: 'Journée', '2days': '2 jours' };
+
+/** Préférences d'un parcours tout prêt : thème, durée, pauses et heure du parcours ; rythme, transport et départ du visiteur. */
+function presetPrefs(pr) {
+  return {
+    ...prefs,
+    interests: pr.interets, duration: pr.duree, pauses: pr.pauses, budget: 'paid',
+    startTime: pr.heure || $('#start-time').value || defaultStartTime(),
+  };
+}
+
+function presetRoute(pr, start) {
+  const p = presetPrefs(pr);
+  const order = solveTsp(start, pr.lieux.map((id) => BY_ID[id]).filter(Boolean), { thorough: true });
+  return buildRoute(p, start, [order], { preset: pr.id });
+}
+
+function renderPresets() {
+  const list = DATA.parcours || [];
+  $('#presets').hidden = !list.length;
+  const gare = { ...DATA.departs.gare };
+  $('#preset-list').innerHTML = list.map((pr) => {
+    const r = presetRoute(pr, gare);
+    const min = schedule(r).minutes;
+    return `<li><button type="button" class="preset-card" data-preset="${esc(pr.id)}">
+      <span class="preset-emoji" aria-hidden="true">${esc(pr.emoji)}</span>
+      <strong>${esc(pr.titre)}</strong>
+      <small>≈ ${fmtDur(Math.round(min / 15) * 15)} · ${pr.lieux.length} étapes${pr.heure ? ` · dès ${pr.heure.replace(':', 'h')}` : ''}</small>
+      <span class="preset-desc">${esc(pr.resume)}</span>
+    </button></li>`;
+  }).join('');
+}
+
+async function startPreset(id, btn) {
+  const pr = DATA.parcours.find((x) => x.id === id);
+  if (!pr) return;
+  btn.disabled = true;
+  try {
+    const start = await resolveStart(prefs);
+    route = presetRoute(pr, start);
+    saveRoute();
+    showRoute();
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 /** Insère une pause au moment le plus proche de l'heure cible, dans l'adresse qui fait le moins de détour. */
@@ -554,9 +608,14 @@ function renderRoute(fit = false) {
   const done = sch.flat.filter((r) => visited.has(r.id)).length;
   const pct = total ? Math.round(done / total * 100) : 0;
   $('#sum-done').textContent = `${pct} %`;
+  const pr = route.preset && DATA.parcours?.find((x) => x.id === route.preset);
+  $('#route-title').hidden = !pr;
+  if (pr) $('#route-title').textContent = `${pr.emoji} ${pr.titre}`;
+  $('#btn-regen').hidden = !!route.preset;
   $('#progress-bar').style.width = `${pct}%`;
 
-  const over = sch.days.map((d) => d.minutes - perDay).filter((x) => x > 10);
+  // Un parcours tout prêt a sa propre durée, annoncée sur sa carte : pas d'alerte de dépassement.
+  const over = route.preset ? [] : sch.days.map((d) => d.minutes - perDay).filter((x) => x > 10);
   const n = $('#notice');
   if (over.length) {
     n.hidden = false;
@@ -776,6 +835,10 @@ function bindEvents() {
     if (b.dataset.city !== CITY?.id) return chooseCity(b.dataset.city);
     route ? showRoute() : showQuiz();
   });
+  $('#preset-list').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-preset]');
+    if (b) startPreset(b.dataset.preset, b);
+  });
   $('#btn-suggest').addEventListener('click', openSuggestions);
   $('#btn-regen').addEventListener('click', regenerate);
   $('#btn-next').addEventListener('click', nextStep);
@@ -922,6 +985,7 @@ async function main() {
   if (route && !route.days?.flat().every((it) => BY_ID[it.id])) route = null;
 
   initQuiz();
+  renderPresets();
   route ? showRoute() : showQuiz();
 }
 

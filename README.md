@@ -77,7 +77,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v6`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v7`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -150,6 +150,24 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
 ```
 
 Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables. Un parcours ne propose que les lieux qui correspondent aux centres d'intérêt choisis ; les adresses de pause en font partie (gastronomie, vie nocturne), avec au plus 30 min sur place.
+
+### Parcours tout prêts
+
+La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (6 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
+
+```json
+{
+  "id": "nuit", "emoji": "🌙", "titre": "Metz by night",
+  "resume": "Phrase affichée sur la carte",
+  "duree": "2h",
+  "heure": "20:30",
+  "interets": ["nuit", "photo"],
+  "pauses": [],
+  "lieux": ["place-armes", "opera-comedie", "temple-neuf"]
+}
+```
+
+`duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
 
 Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020.
 

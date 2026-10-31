@@ -906,5 +906,142 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_47.jpg",
       "imageIllustration": true
     }
+  ],
+  "parcours": [
+    {
+      "id": "essentiel",
+      "emoji": "⭐",
+      "titre": "L'essentiel de Metz",
+      "duree": "half",
+      "resume": "Les incontournables pour une première visite : cathédrale, Porte des Allemands, Temple Neuf et places du centre.",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "cathedrale",
+        "porte-allemands",
+        "temple-neuf",
+        "moyen-pont",
+        "opera-comedie",
+        "place-saint-louis",
+        "place-armes",
+        "gare-imperial"
+      ]
+    },
+    {
+      "id": "gothique",
+      "emoji": "⛪",
+      "titre": "Metz gothique",
+      "duree": "2h",
+      "resume": "La « lanterne du Bon Dieu », les églises médiévales et la porte fortifiée sur la Seille.",
+      "interets": [
+        "religieux",
+        "histoire",
+        "architecture"
+      ],
+      "pauses": [],
+      "lieux": [
+        "cathedrale",
+        "saint-eucaire",
+        "porte-allemands",
+        "place-saint-louis",
+        "saint-martin"
+      ]
+    },
+    {
+      "id": "nuit",
+      "emoji": "🌙",
+      "titre": "Metz by night",
+      "duree": "2h",
+      "heure": "20:30",
+      "resume": "Monuments illuminés, reflets sur la Moselle, puis un verre dans les rues animées.",
+      "interets": [
+        "nuit",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "place-armes",
+        "opera-comedie",
+        "temple-neuf",
+        "moyen-pont",
+        "rue-taison",
+        "place-saint-jacques"
+      ]
+    },
+    {
+      "id": "art",
+      "emoji": "🎨",
+      "titre": "Art et vitraux",
+      "duree": "day",
+      "resume": "Pompidou-Metz, les vitraux de Chagall et de Cocteau, et le musée de La Cour d'Or.",
+      "interets": [
+        "art",
+        "religieux"
+      ],
+      "pauses": [
+        "cafe",
+        "dejeuner"
+      ],
+      "lieux": [
+        "pompidou",
+        "cathedrale",
+        "saint-maximin",
+        "cour-dor",
+        "templiers",
+        "saint-pierre-nonnains",
+        "arsenal"
+      ]
+    },
+    {
+      "id": "moselle",
+      "emoji": "🌿",
+      "titre": "Au fil de la Moselle",
+      "duree": "half",
+      "resume": "Jardins, quais et plan d'eau : la balade verte de Metz, idéale aux beaux jours.",
+      "interets": [
+        "nature",
+        "photo"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "esplanade",
+        "jardin-tanneurs",
+        "plan-eau",
+        "quais-moselle",
+        "moyen-pont",
+        "temple-neuf",
+        "jardins-pelt"
+      ]
+    },
+    {
+      "id": "enfants",
+      "emoji": "🧒",
+      "titre": "Spécial enfants",
+      "duree": "half",
+      "resume": "Un château fort sur l'eau, des tours, des jardins et un goûter : des étapes courtes pour petites jambes.",
+      "interets": [
+        "nature",
+        "histoire"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "porte-allemands",
+        "tour-camoufle",
+        "esplanade",
+        "temple-neuf",
+        "plan-eau",
+        "marche-couvert"
+      ]
+    }
   ]
 }

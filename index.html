@@ -36,6 +36,11 @@
   <!-- Écran 1 : questionnaire -->
   <main id="screen-quiz" class="screen" hidden>
     <p class="intro" id="intro"></p>
+    <section id="presets" class="presets" hidden>
+      <h2 class="section-title">Parcours tout prêts</h2>
+      <ul id="preset-list" class="preset-list"></ul>
+    </section>
+    <h2 class="section-title">Ou composez le vôtre</h2>
     <form id="quiz" novalidate>
       <fieldset class="q">
         <legend><span class="q-num">1</span>Ce qui vous intéresse</legend>
@@ -117,6 +122,7 @@
   <!-- Écran 2 : parcours -->
   <main id="screen-route" class="screen" hidden>
     <div id="map" role="region" aria-label="Carte du parcours"></div>
+    <h2 id="route-title" class="route-title" hidden></h2>
     <section class="summary" aria-live="polite">
       <div class="stat"><strong id="sum-stops">–</strong><span>étapes</span></div>
       <div class="stat"><strong id="sum-dist">–</strong><span>à pied</span></div>

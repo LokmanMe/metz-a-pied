@@ -929,5 +929,139 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:LUX_Luxembourg_Grund_002_2016.jpg",
       "imageIllustration": true
     }
+  ],
+  "parcours": [
+    {
+      "id": "essentiel",
+      "emoji": "⭐",
+      "titre": "L'essentiel de Luxembourg",
+      "duree": "half",
+      "resume": "Palais grand-ducal, cathédrale, Gëlle Fra et la Corniche, « le plus beau balcon d'Europe ».",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "constitution",
+        "cathedrale",
+        "place-armes",
+        "knuedler",
+        "palais",
+        "corniche",
+        "casemates-bock",
+        "neumunster"
+      ]
+    },
+    {
+      "id": "unesco",
+      "emoji": "🏰",
+      "titre": "Luxembourg UNESCO",
+      "duree": "2h",
+      "resume": "Les vieux quartiers et fortifications classés au patrimoine mondial, du Bock au Grund.",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "palais",
+        "corniche",
+        "casemates-bock",
+        "wenzel",
+        "neumunster",
+        "trois-tours"
+      ]
+    },
+    {
+      "id": "nuit",
+      "emoji": "🌙",
+      "titre": "Luxembourg by night",
+      "duree": "2h",
+      "heure": "20:30",
+      "resume": "La Corniche et le Grund illuminés, puis un verre au bord de l'Alzette ou à Clausen.",
+      "interets": [
+        "nuit",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "place-armes",
+        "palais",
+        "corniche",
+        "neumunster",
+        "pause-scotts",
+        "clausen"
+      ]
+    },
+    {
+      "id": "kirchberg",
+      "emoji": "🎨",
+      "titre": "Art moderne et Kirchberg",
+      "duree": "half",
+      "resume": "Le pont rouge, l'ascenseur panoramique, le Mudam et la Philharmonie.",
+      "interets": [
+        "art",
+        "architecture"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "pfaffenthal-ascenseur",
+        "pont-rouge",
+        "mudam",
+        "fort-thungen",
+        "philharmonie"
+      ]
+    },
+    {
+      "id": "vallees",
+      "emoji": "🌿",
+      "titre": "Vallées vertes",
+      "duree": "half",
+      "resume": "Descendre dans la Pétrusse, longer l'Alzette au Grund et remonter par les ascenseurs.",
+      "interets": [
+        "nature",
+        "photo"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "pont-adolphe",
+        "petrusse",
+        "saint-quirin",
+        "neumunster",
+        "wenzel",
+        "ascenseur-grund",
+        "parc-municipal"
+      ]
+    },
+    {
+      "id": "enfants",
+      "emoji": "🧒",
+      "titre": "Spécial enfants",
+      "duree": "half",
+      "resume": "Souterrains des casemates, ascenseurs panoramiques, musée d'histoire naturelle et goûter.",
+      "interets": [
+        "nature",
+        "histoire"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "casemates-bock",
+        "natur-musee",
+        "ascenseur-grund",
+        "corniche",
+        "pfaffenthal-ascenseur"
+      ]
+    }
   ]
 }
