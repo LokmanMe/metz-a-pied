@@ -671,6 +671,89 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Trinitaires_-_Metz_(FR57)_-_2022-02-27_-_3.jpg"
     },
     {
+      "id": "muse",
+      "nom": "Muse (quartier de l'Amphithéâtre)",
+      "lat": 49.10607,
+      "lng": 6.1823,
+      "categories": [
+        "shopping",
+        "architecture"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Centre commercial ouvert en 2017 dans le nouveau quartier de l'Amphithéâtre, juste derrière le Centre Pompidou-Metz : enseignes de mode, restaurants et terrasses.",
+      "aRegarder": "Le contraste entre l'architecture contemporaine du quartier et la toiture blanche du Centre Pompidou, tout proche.",
+      "anecdote": "Le quartier tient son nom de l'amphithéâtre gallo-romain de Divodurum (l'antique Metz), mis au jour au début du XXe siècle lors de la construction de la gare de marchandises.",
+      "photo": "Cadrez la toiture du Centre Pompidou depuis le parvis qui relie les deux bâtiments.",
+      "note": "Horaires à confirmer.",
+      "image": "images/muse.jpg",
+      "imageCredit": "Alexandre Prevot from Nancy, France · CC BY-SA 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:MUSE_(54123884283).jpg"
+    },
+    {
+      "id": "centre-saint-jacques",
+      "nom": "Centre Saint-Jacques",
+      "lat": 49.11762,
+      "lng": 6.17726,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 1,
+      "description": "Galerie marchande couverte en plein cœur du centre-ville, sur la place du Marché-de-la-Chèvre, à côté de la place Saint-Jacques.",
+      "aRegarder": "Les terrasses de la place Saint-Jacques en sortant, et le nom de la place voisine, souvenir des marchés d'autrefois.",
+      "anecdote": "Pratique les jours de pluie : les rues commerçantes du centre sont toutes à quelques minutes à pied.",
+      "photo": "Plutôt la place Saint-Jacques et ses terrasses que la galerie elle-même.",
+      "note": "Horaires à confirmer (fermé le dimanche en général).",
+      "image": "images/centre-saint-jacques.jpg",
+      "imageCredit": "Zéphyrios · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Passage_Saint-Jacques.jpg"
+    },
+    {
+      "id": "rues-palais-clercs",
+      "nom": "Rue des Clercs et rue du Palais",
+      "lat": 49.1182,
+      "lng": 6.1743,
+      "categories": [
+        "shopping",
+        "architecture"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Rues piétonnes commerçantes entre l'Esplanade et la cathédrale : enseignes de mode, librairies, chocolatiers.",
+      "aRegarder": "Levez les yeux au-dessus des vitrines : beaucoup de façades anciennes en pierre de Jaumont.",
+      "anecdote": "La pierre de Jaumont, un calcaire couleur miel extrait au nord de Metz, donne à la ville sa teinte dorée, surtout au soleil couchant.",
+      "photo": "Les façades dorées en lumière rasante, en fin de journée.",
+      "image": "images/rues-palais-clercs.jpg",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Clercs_-_Metz_(FR57)_-_2022-02-25_-_1.jpg"
+    },
+    {
+      "id": "frac-lorraine",
+      "nom": "49 Nord 6 Est – FRAC Lorraine",
+      "lat": 49.1207,
+      "lng": 6.17947,
+      "categories": [
+        "art",
+        "histoire",
+        "architecture"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Fonds régional d'art contemporain installé dans l'hôtel Saint-Livier, une demeure médiévale de l'Ancienne Ville. Expositions temporaires d'art contemporain.",
+      "aRegarder": "Le contraste entre les murs médiévaux de l'hôtel Saint-Livier et les œuvres contemporaines exposées.",
+      "anecdote": "Son nom, « 49 Nord 6 Est », correspond aux coordonnées géographiques de Metz.",
+      "photo": "La façade médiévale depuis la rue des Trinitaires, puis un détail d'œuvre dans les salles (si les photos sont autorisées).",
+      "note": "Entrée gratuite et horaires à confirmer ; fermé entre deux expositions.",
+      "image": "images/frac-lorraine.jpg",
+      "imageCredit": "Jean-Pierre Dalbéra from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:LH%C3%B4tel_Saint-Livier_de_Metz_(5055895107).jpg"
+    },
+    {
       "id": "pause-mauricette",
       "type": "pause",
       "nom": "Chez Mauricette (Marché couvert)",

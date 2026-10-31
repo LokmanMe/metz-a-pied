@@ -11,7 +11,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `index.html` | Questionnaire et écran de parcours |
 | `style.css` | Thème pierre de Jaumont et vitraux, mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
-| `data/lieux.json` | 30 lieux + 6 adresses de pause (coordonnées vérifiées sur OpenStreetMap) |
+| `data/lieux.json` | 34 lieux + 6 adresses de pause (coordonnées vérifiées sur OpenStreetMap) |
 | `data/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `manifest.webmanifest` | Métadonnées d'installation |
 | `service-worker.js` | Cache de l'app, des données, de Leaflet et des tuiles déjà vues |
@@ -68,7 +68,7 @@ git push -u origin main
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v4`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v5`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
