@@ -114,6 +114,51 @@
     --shadow: 0 6px 20px rgba(0, 0, 0, .45);
 }
 
+/* ---------- Marseille : bleu Méditerranée, calcaire clair, ocre du soleil, croix d'azur ---------- */
+:root[data-ville="marseille"] {
+  --stone: #E2AE4F;
+  --stone-deep: #8F6420;
+  --stone-soft: #F7E9CB;
+  --on-stone: #10233A;
+  --bg: #F4F7F9;
+  --surface-2: #E7EEF3;
+  --text: #10233A;
+  --muted: #4C5E6E;
+  --line: #D0DCE5;
+  --ink: #10233A;
+  --c-blue: #1468B3;
+  --c-blue-deep: #0D4C86;
+  --c-red: #C8432B;
+  --c-green: #3E7D5A;
+  --c-violet: #4F5B8C;
+  --c-amber: #E2AE4F;
+  --chip-on: var(--c-blue);
+  --chip-on-border: var(--c-blue-deep);
+  --chip-on-text: #FFFFFF;
+  --badge: var(--c-blue);
+  --pin: var(--c-blue);
+  --pin-border: #FFFFFF;
+  --pin-current: var(--stone);
+  --route: #1468B3;
+  --route-inner: #FFFFFF;
+  --band: linear-gradient(180deg, #FFFFFF 0 30%, var(--c-blue) 30% 70%, #FFFFFF 70%);
+  --band-height: 10px;
+  --shadow: 0 6px 20px rgba(16, 35, 58, .12);
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-ville="marseille"]:not([data-theme="light"]) {
+    --bg: #0F1720; --surface: #17222E; --surface-2: #1F2C3A; --text: #EAF1F6; --muted: #A3B3C2;
+    --line: #2C3B4B; --stone-soft: #33291A; --accent: #6FB3F0; --ok: #5CBF8A; --c-red: #E8664E;
+    --c-blue: #2A7FCC; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-ville="marseille"][data-theme="dark"] {
+  --bg: #0F1720; --surface: #17222E; --surface-2: #1F2C3A; --text: #EAF1F6; --muted: #A3B3C2;
+  --line: #2C3B4B; --stone-soft: #33291A; --accent: #6FB3F0; --ok: #5CBF8A; --c-red: #E8664E;
+  --c-blue: #2A7FCC; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -157,6 +202,15 @@ button, input, select { font: inherit; color: inherit; }
   height: 26px; border-radius: 3px 3px 11px 11px;
   background: repeating-linear-gradient(180deg, var(--c-sky) 0 3px, #FFFFFF 3px 6px);
   border-color: var(--c-red);
+}
+:root[data-ville="marseille"] .brand-mark {
+  /* d'argent à la croix d'azur */
+  height: 26px; border-radius: 3px 3px 11px 11px;
+  background:
+    linear-gradient(var(--c-blue), var(--c-blue)) center / 100% 28% no-repeat,
+    linear-gradient(var(--c-blue), var(--c-blue)) center / 28% 100% no-repeat,
+    #FFFFFF;
+  border-color: var(--c-blue-deep);
 }
 :root:not([data-ville]) .brand-mark { background: var(--stone); }
 .topbar-actions { display: flex; gap: 8px; flex: none; }

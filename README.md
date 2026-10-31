@@ -1,6 +1,6 @@
 # À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz** et **Luxembourg**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
+PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz**, **Luxembourg** et **Marseille**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
 HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + tuiles OpenStreetMap.
 
@@ -12,7 +12,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
 | `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
-| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 34 + 6 ; Luxembourg : 35 + 6) |
+| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 34 + 6 ; Luxembourg : 35 + 6 ; Marseille : 37 + 6), parcours tout prêts |
 | `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 | `manifest.webmanifest` | Métadonnées d'installation |
@@ -77,7 +77,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v7`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v8`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -169,7 +169,7 @@ La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en 
 
 `duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
 
-Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020.
+Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
 
 ### Ordre des étapes (voyageur de commerce)
 

@@ -1,0 +1,1119 @@
+{
+  "version": 1,
+  "verification": "Coordonnées vérifiées via OpenStreetMap/Nominatim le 2026-10-31. Horaires, tarifs et adresses de pauses à confirmer sur place.",
+  "departs": {
+    "gare": {
+      "nom": "Gare Saint-Charles",
+      "lat": 43.30275,
+      "lng": 5.38065,
+      "id": "depart-gare"
+    },
+    "parkings": [
+      {
+        "id": "p-hotel-de-ville",
+        "nom": "Parking Vieux-Port – Hôtel de Ville",
+        "lat": 43.2964,
+        "lng": 5.3694
+      },
+      {
+        "id": "p-centre-bourse",
+        "nom": "Parking Centre Bourse",
+        "lat": 43.298,
+        "lng": 5.376
+      },
+      {
+        "id": "p-estienne-dorves",
+        "nom": "Parking Estienne d'Orves",
+        "lat": 43.2925,
+        "lng": 5.3733
+      },
+      {
+        "id": "p-joliette",
+        "nom": "Parking Joliette",
+        "lat": 43.30515,
+        "lng": 5.36613
+      }
+    ]
+  },
+  "lieux": [
+    {
+      "id": "notre-dame-garde",
+      "nom": "Basilique Notre-Dame-de-la-Garde",
+      "lat": 43.28395,
+      "lng": 5.37124,
+      "categories": [
+        "histoire",
+        "religieux",
+        "architecture",
+        "photo"
+      ],
+      "duree": 50,
+      "payant": false,
+      "importance": 3,
+      "description": "« La Bonne Mère » veille sur Marseille depuis sa colline calcaire, à près de 150 m d'altitude. La basilique néo-byzantine, bâtie de 1853 à 1864 par Henri-Jacques Espérandieu, est surmontée d'une Vierge à l'Enfant dorée de plus de 11 m.",
+      "aRegarder": "Les ex-voto qui tapissent la nef : maquettes de bateaux, tableaux de naufrages, maillots de l'OM. Les mosaïques à fond d'or, et le panorama à 360° sur la ville, les îles du Frioul et la mer.",
+      "anecdote": "Les murs portent encore des impacts de balles et d'obus : la colline fut l'un des derniers points tenus par les Allemands lors de la libération de Marseille, en août 1944.",
+      "photo": "Depuis le parvis sud, cadrez le Vieux-Port et le fort Saint-Jean en fin d'après-midi ; au coucher du soleil, les îles du Frioul se découpent en ombre chinoise.",
+      "note": "Montée raide (comptez plus que le temps indiqué) ; le bus 60 monte depuis le Vieux-Port. Entrée libre, tenue correcte demandée.",
+      "image": "villes/marseille/images/notre-dame-garde.jpg",
+      "imageCredit": "Benh LIEU SONG · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Notre_Dame_de_la_Garde.jpg"
+    },
+    {
+      "id": "vieux-port",
+      "nom": "Vieux-Port et ombrière",
+      "lat": 43.29464,
+      "lng": 5.37414,
+      "categories": [
+        "histoire",
+        "photo",
+        "architecture"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "Le cœur de Marseille depuis sa fondation par des marins grecs de Phocée, vers 600 av. J.-C. Sur le quai de la Fraternité, l'ombrière de Norman Foster (2013), un toit miroir de 46 m sur 22, reflète les passants.",
+      "aRegarder": "Le marché aux poissons du matin, quai de la Fraternité, où les pêcheurs vendent leur prise sur des étals ; les forts Saint-Jean et Saint-Nicolas qui gardent l'entrée du port.",
+      "anecdote": "Massalia, la ville grecque, est née ici : une plaque au sol rappelle l'arrivée des Phocéens et le mariage légendaire de leur chef Protis avec Gyptis, fille du roi local.",
+      "photo": "Sous l'ombrière, levez l'appareil pour photographier votre reflet et la foule dans le miroir. Le matin, la lumière rasante dore les façades du quai du Port.",
+      "image": "villes/marseille/images/vieux-port.jpg",
+      "imageCredit": "Ingo Mehling · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_Old_Port.jpg"
+    },
+    {
+      "id": "mucem",
+      "nom": "MuCEM et ses passerelles",
+      "lat": 43.29673,
+      "lng": 5.36103,
+      "categories": [
+        "art",
+        "architecture",
+        "histoire",
+        "photo"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 3,
+      "description": "Le musée des Civilisations de l'Europe et de la Méditerranée, inauguré en 2013 quand Marseille était capitale européenne de la culture. Le cube de Rudy Ricciotti est enveloppé d'une résille de béton qui évoque un filet ou des fonds marins.",
+      "aRegarder": "La rampe extérieure qui s'enroule entre la résille et les vitrages, le toit-terrasse, et la passerelle de 115 m lancée au-dessus de l'eau vers le fort Saint-Jean.",
+      "anecdote": "La résille est faite d'un béton fibré ultra-haute performance, si résistant qu'elle a pu être aussi fine que de la dentelle.",
+      "photo": "Dans la rampe, cadrez la mer à travers les motifs de la résille ; depuis la passerelle, alignez le cube, le fort et la Major.",
+      "note": "Accès libre aux passerelles, au toit-terrasse et au fort Saint-Jean ; expositions payantes. Horaires à confirmer.",
+      "image": "villes/marseille/images/mucem.jpg",
+      "imageCredit": "Suwannee.payne · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Fort_Saint-Jean%26Mus%C3%A9e_des_civilisations_de_l%27Europe_et_de_la_M%C3%A9diterran%C3%A9e.jpg"
+    },
+    {
+      "id": "fort-saint-jean",
+      "nom": "Fort Saint-Jean",
+      "lat": 43.29545,
+      "lng": 5.36181,
+      "categories": [
+        "histoire",
+        "nature",
+        "photo"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 3,
+      "description": "Construit sous Louis XIV autour de la tour du roi René (XVe siècle) et d'une commanderie des Hospitaliers de Saint-Jean, il garde l'entrée nord du Vieux-Port. Il fait aujourd'hui partie du MuCEM.",
+      "aRegarder": "Le jardin des Migrations sur les remparts, la tour du roi René, la vue sur l'entrée du port et sur le fort Saint-Nicolas en face.",
+      "anecdote": "Après une révolte des Marseillais, Louis XIV fit renforcer les deux forts du port : leurs canons étaient tournés autant vers la ville que vers la mer.",
+      "photo": "Depuis le chemin de ronde, cadrez Notre-Dame-de-la-Garde au-dessus des mâts du Vieux-Port.",
+      "note": "Accès libre, horaires du MuCEM.",
+      "image": "villes/marseille/images/fort-saint-jean.jpg",
+      "imageCredit": "Robert Valette · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Fort-Jean_%C3%A0_Marseille_3.jpg"
+    },
+    {
+      "id": "panier",
+      "nom": "Quartier du Panier",
+      "lat": 43.2987,
+      "lng": 5.36848,
+      "categories": [
+        "histoire",
+        "shopping",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 3,
+      "description": "Le plus vieux quartier de Marseille, sur la colline où s'installèrent les Grecs. Ruelles en pente, escaliers, façades colorées, linge aux fenêtres, ateliers d'artisans et savonneries.",
+      "aRegarder": "La place des Moulins (il y avait jadis des moulins à vent), la montée des Accoules, la rue du Panier et les nombreuses œuvres de street art.",
+      "anecdote": "En 1943, l'occupant allemand évacua puis dynamita tout le quartier situé entre le Panier et le Vieux-Port ; le Panier lui-même fut épargné.",
+      "photo": "Montez les escaliers depuis la Grand-Rue : les volées de marches encadrées de façades ocre font les meilleures images, de préférence le matin.",
+      "image": "villes/marseille/images/panier.jpg",
+      "imageCredit": "phgaillard2001 · CC BY-SA 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Panier_Marseille.jpg"
+    },
+    {
+      "id": "vieille-charite",
+      "nom": "Centre de la Vieille Charité",
+      "lat": 43.30057,
+      "lng": 5.36827,
+      "categories": [
+        "histoire",
+        "architecture",
+        "art"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "Ancien hospice bâti à partir de 1671 sur des plans de Pierre Puget pour enfermer les pauvres de la ville. Ses trois étages de galeries en pierre rose entourent une chapelle à coupole ovale.",
+      "aRegarder": "La chapelle baroque au centre de la cour, les galeries à arcades, la pierre rose et ocre de la Couronne.",
+      "anecdote": "Le bâtiment a tour à tour servi d'hospice, de caserne et de logement pour les sinistrés avant d'être sauvé de la ruine dans les années 1960.",
+      "photo": "Depuis la galerie du deuxième étage, cadrez la coupole de la chapelle encadrée par les arcades.",
+      "note": "Cour en accès libre ; musées d'archéologie méditerranéenne et des arts africains, océaniens et amérindiens payants.",
+      "image": "villes/marseille/images/vieille-charite.jpg",
+      "imageCredit": "Auteur inconnu · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:L%27hospice_de_La_Vieille_Charit%C3%A9_qui_abrite_le_Mus%C3%A9e_de_la_Vieille_Charit%C3%A9.jpg"
+    },
+    {
+      "id": "major",
+      "nom": "Cathédrale de la Major",
+      "lat": 43.29979,
+      "lng": 5.36494,
+      "categories": [
+        "religieux",
+        "architecture",
+        "photo"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 3,
+      "description": "La cathédrale Sainte-Marie-Majeure, bâtie de 1852 à 1893 dans un style romano-byzantin, est l'une des plus grandes églises de France. Ses façades alternent la pierre verte de Florence et la pierre blanche de Calissane.",
+      "aRegarder": "Les rayures vertes et blanches, les coupoles, les mosaïques et marbres colorés de l'intérieur.",
+      "anecdote": "À ses pieds survit une partie de l'ancienne cathédrale romane, la « Vieille Major », que le nouveau bâtiment devait remplacer.",
+      "photo": "Depuis l'esplanade de la Tourette ou la passerelle du MuCEM, les rayures se détachent sur le bleu du ciel en fin de journée.",
+      "note": "Entrée libre hors offices.",
+      "image": "villes/marseille/images/major.jpg",
+      "imageCredit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:1024_Cath%C3%A9drale_Notre-Dame-de-la-Major_in_Marseille_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+      "id": "saint-laurent",
+      "nom": "Église Saint-Laurent",
+      "lat": 43.29595,
+      "lng": 5.36341,
+      "categories": [
+        "religieux",
+        "photo",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Petite église romane provençale des XIIe et XIIIe siècles, l'église des pêcheurs, posée au-dessus de l'entrée du Vieux-Port.",
+      "aRegarder": "Le clocher octogonal, la nef sobre en pierre et le parvis, véritable balcon sur le port.",
+      "anecdote": "Elle fait partie des rares bâtiments du vieux quartier Saint-Jean épargnés par les destructions de 1943.",
+      "photo": "Depuis le parvis, vue plongeante sur le fort Saint-Jean et l'entrée du port.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/marseille/images/saint-laurent.jpg",
+      "imageCredit": "Robert Valette · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Eglise_Saint-Laurent_(Marseille)-1-.jpg"
+    },
+    {
+      "id": "palais-pharo",
+      "nom": "Palais et jardin du Pharo",
+      "lat": 43.29425,
+      "lng": 5.35803,
+      "categories": [
+        "nature",
+        "photo",
+        "histoire"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "Palais construit à partir de 1858 pour Napoléon III et l'impératrice Eugénie, sur un promontoire face à l'entrée du Vieux-Port. Son jardin public est l'un des plus beaux belvédères de la ville.",
+      "aRegarder": "La vue sur le fort Saint-Jean, le MuCEM et la Major de l'autre côté de l'eau, et la façade du palais tournée vers la mer.",
+      "anecdote": "L'empereur n'y a jamais séjourné : le Second Empire tomba avant qu'il ait l'occasion d'en profiter.",
+      "photo": "Au coucher du soleil, depuis les pelouses, le MuCEM et le fort se teintent d'orange.",
+      "note": "Jardin en accès libre.",
+      "image": "villes/marseille/images/palais-pharo.jpg",
+      "imageCredit": "Remontees · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Le_palais_du_Pharo.jpg"
+    },
+    {
+      "id": "abbaye-saint-victor",
+      "nom": "Abbaye Saint-Victor",
+      "lat": 43.29031,
+      "lng": 5.36558,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "L'un des plus anciens lieux de culte de France, fondé au Ve siècle par saint Jean Cassien. L'église fortifiée, avec ses tours crénelées, ressemble davantage à un château qu'à une abbaye.",
+      "aRegarder": "Les cryptes, avec leurs sarcophages paléochrétiens et la grotte de saint Victor, et les tours d'Isarn et de l'abbé.",
+      "anecdote": "Chaque 2 février, pour la Chandeleur, l'archevêque bénit ici les navettes, ces biscuits en forme de barque vendus juste à côté, au Four des Navettes.",
+      "photo": "Depuis le bas de la rue Sainte, cadrez les tours crénelées en contre-plongée.",
+      "note": "Église en accès libre ; cryptes payantes. Horaires à confirmer.",
+      "image": "villes/marseille/images/abbaye-saint-victor.jpg",
+      "imageCredit": "Bjs · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille-Saint-Victor-bjs180810-01.jpg"
+    },
+    {
+      "id": "canebiere",
+      "nom": "La Canebière",
+      "lat": 43.29623,
+      "lng": 5.37726,
+      "categories": [
+        "histoire",
+        "shopping",
+        "architecture"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 2,
+      "description": "La grande avenue de Marseille, du Vieux-Port à l'église des Réformés, bordée d'immeubles haussmanniens, d'anciens grands hôtels et du palais de la Bourse.",
+      "aRegarder": "Le palais de la Bourse (1860) et ses sculptures, les façades des anciens hôtels de voyageurs, le tramway.",
+      "anecdote": "Son nom vient du provençal « canebe », le chanvre : on y tressait autrefois les cordages des navires.",
+      "photo": "Depuis le haut de l'avenue, cadrez la perspective vers le Vieux-Port avec le tram.",
+      "image": "villes/marseille/images/canebiere.jpg",
+      "imageCredit": "Michiel1972 · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_Canebi%C3%A8re_and_Palais_de_la_Bourse.jpg"
+    },
+    {
+      "id": "noailles",
+      "nom": "Marché de Noailles",
+      "lat": 43.29637,
+      "lng": 5.38012,
+      "categories": [
+        "gastronomie",
+        "shopping"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "« Le ventre de Marseille » : un dédale de rues où épiceries, étals de poissons, boucheries et marchands d'épices venus de toute la Méditerranée et d'Afrique se côtoient.",
+      "aRegarder": "Le marché des Capucins, les sacs d'épices et de semoule, les herbes fraîches, les pâtisseries orientales.",
+      "anecdote": "Le quartier doit son nom aux ducs de Noailles, propriétaires d'un hôtel particulier qui se trouvait là au XVIIIe siècle.",
+      "photo": "Photographiez les couleurs des étals d'épices, en demandant poliment aux commerçants.",
+      "note": "Marché du lundi au samedi ; ambiance la plus vive le matin.",
+      "image": "villes/marseille/images/noailles.jpg",
+      "imageCredit": "Carl Ha · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Longue_des_Capucins,_Marseille_2.jpg"
+    },
+    {
+      "id": "palais-longchamp",
+      "nom": "Palais Longchamp",
+      "lat": 43.30424,
+      "lng": 5.39461,
+      "categories": [
+        "architecture",
+        "nature",
+        "photo",
+        "art"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Monument spectaculaire construit de 1862 à 1869 par Espérandieu pour célébrer l'arrivée de l'eau de la Durance par le canal de Marseille. Une colonnade en arc relie le musée des Beaux-Arts et le muséum d'histoire naturelle.",
+      "aRegarder": "La cascade et le groupe sculpté de la Durance tiré par des taureaux de Camargue, les colonnades, et le parc derrière le palais.",
+      "anecdote": "Avant le canal, Marseille manquait cruellement d'eau ; l'épidémie de choléra de 1832 décida la ville à faire venir l'eau de la Durance sur plus de 80 km.",
+      "photo": "Face à la cascade, depuis le bas de l'allée, toute la colonnade tient dans le cadre.",
+      "note": "Parc en accès libre ; musées payants.",
+      "image": "villes/marseille/images/palais-longchamp.jpg",
+      "imageCredit": "Arnaud 25 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Palais_Longchamp_(Marseille).jpg"
+    },
+    {
+      "id": "cours-julien",
+      "nom": "Cours Julien",
+      "lat": 43.29601,
+      "lng": 5.38169,
+      "categories": [
+        "art",
+        "shopping",
+        "nuit",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "L'ancien marché de gros aux fruits et légumes est devenu le quartier alternatif de Marseille : street art à chaque coin de mur, librairies, boutiques de créateurs, bars et salles de concert.",
+      "aRegarder": "Les fresques des rues adjacentes (rue Pastoret, rue des Trois-Rois), l'escalier peint qui monte depuis la rue d'Aubagne, les fontaines du cours.",
+      "anecdote": "Le marché de gros a quitté le cours en 1972 ; le quartier a ensuite été rénové et rendu aux piétons.",
+      "photo": "Les escaliers peints sont plus photogéniques en milieu de matinée, sans ombres dures.",
+      "image": "villes/marseille/images/cours-julien.jpg",
+      "imageCredit": "Fred Romero from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_-_Cours_Julien_(16272528157).jpg"
+    },
+    {
+      "id": "hotel-de-ville",
+      "nom": "Hôtel de Ville",
+      "lat": 43.29615,
+      "lng": 5.37124,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Bâti au XVIIe siècle sur le quai du Port, c'est l'un des plus anciens hôtels de ville de France encore en fonction. Sa façade porte un écusson royal d'après Pierre Puget.",
+      "aRegarder": "La façade baroque, l'écusson aux armes du roi, et le pont couvert qui le relie au bâtiment voisin.",
+      "anecdote": "Lors du dynamitage du quartier en 1943, l'Hôtel de Ville fut l'un des rares bâtiments du quai épargnés.",
+      "photo": "Depuis l'autre rive (quai de Rive-Neuve), la façade se reflète dans l'eau du port.",
+      "image": "villes/marseille/images/hotel-de-ville.jpg",
+      "imageCredit": "Bjs · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille-H%C3%B4tel_de_ville-bjs180810-02.jpg"
+    },
+    {
+      "id": "maison-diamantee",
+      "nom": "Maison Diamantée",
+      "lat": 43.29698,
+      "lng": 5.36938,
+      "categories": [
+        "architecture",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Hôtel particulier de la fin du XVIe siècle dont la façade est couverte de pierres taillées en pointe de diamant.",
+      "aRegarder": "La façade à bossages en pointe de diamant, unique à Marseille, et le portail.",
+      "anecdote": "Elle a survécu aux destructions de 1943 qui ont rasé presque tout le quartier autour.",
+      "photo": "Une lumière rasante (matin ou fin de journée) accentue le relief des pointes de diamant.",
+      "image": "villes/marseille/images/maison-diamantee.jpg",
+      "imageCredit": "Guiguilacagouille · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Maison_Diamant%C3%A9e_(3x2_crop).jpg"
+    },
+    {
+      "id": "musee-histoire",
+      "nom": "Musée d'Histoire et Jardin des Vestiges",
+      "lat": 43.29756,
+      "lng": 5.37569,
+      "categories": [
+        "histoire",
+        "art"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Le plus grand musée d'histoire urbaine de France raconte 26 siècles de Marseille. Il donne sur le Jardin des Vestiges, les restes du port grec et des remparts antiques.",
+      "aRegarder": "L'épave d'un navire romain, les maquettes de la ville antique, et dehors les quais grecs et la Corne du port.",
+      "anecdote": "Ces vestiges ont été découverts en 1967 en creusant les fondations du centre commercial voisin : le chantier a dû s'adapter pour les préserver.",
+      "photo": "Depuis la passerelle au-dessus du Jardin des Vestiges, cadrez les murs antiques avec les immeubles modernes en fond.",
+      "note": "Tarifs et horaires à confirmer ; gratuit le premier dimanche du mois en général.",
+      "image": "villes/marseille/images/musee-histoire.jpg",
+      "imageCredit": "Jean-Pierre Dalbéra from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Le_jardin_des_vestiges_(Marseille)_(14225076473).jpg"
+    },
+    {
+      "id": "musee-cantini",
+      "nom": "Musée Cantini",
+      "lat": 43.29221,
+      "lng": 5.37821,
+      "categories": [
+        "art"
+      ],
+      "duree": 50,
+      "payant": true,
+      "importance": 1,
+      "description": "Musée d'art moderne installé dans un hôtel particulier du XVIIe siècle légué par le sculpteur Jules Cantini. Collections du fauvisme au surréalisme.",
+      "aRegarder": "Les paysages de Marseille vus par Signac, Dufy ou Derain, et les surréalistes passés par la ville en 1940-1941.",
+      "anecdote": "En 1940-1941, Marseille fut un refuge pour André Breton et de nombreux artistes en attente de visa pour fuir la guerre.",
+      "photo": "La cour de l'hôtel particulier se prête aux photos d'architecture.",
+      "note": "Tarifs et horaires à confirmer ; fermé entre deux expositions.",
+      "image": "villes/marseille/images/musee-cantini.jpg",
+      "imageCredit": "Unknown authorUnknown author · Licence Ouverte · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_(Bouches-du-Rh%C3%B4ne)_-_la_fa%C3%A7ade_du_mus%C3%A9e_Cantini_rue_Grignan.tif"
+    },
+    {
+      "id": "vallon-auffes",
+      "nom": "Vallon des Auffes",
+      "lat": 43.28513,
+      "lng": 5.35222,
+      "categories": [
+        "photo",
+        "gastronomie",
+        "nature"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 3,
+      "description": "Un minuscule port de pêche niché sous la Corniche, avec ses cabanons, ses barques colorées (les « pointus ») et ses restaurants de bouillabaisse. On se croirait dans un village.",
+      "aRegarder": "Les pointus amarrés, les cabanons de pêcheurs et le grand viaduc de la Corniche qui enjambe le vallon.",
+      "anecdote": "« Auffes » vient de l'alfa, une plante dont on tressait ici les cordages et les filets de pêche.",
+      "photo": "Depuis le pont de la Corniche, vue plongeante sur le port ; au coucher du soleil, depuis le quai, le viaduc s'allume.",
+      "image": "villes/marseille/images/vallon-auffes.jpg",
+      "imageCredit": "No machine-readable author provided. Arnaud 25 assumed (b… · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Vallon_des_Auffes_7.jpg"
+    },
+    {
+      "id": "corniche-kennedy",
+      "nom": "Corniche Kennedy",
+      "lat": 43.2805,
+      "lng": 5.3527,
+      "categories": [
+        "photo",
+        "nature"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "La route en balcon sur la mer, aménagée au XIXe siècle, longe la côte du Vallon des Auffes jusqu'aux plages du Prado. Ses balustrades forment, dit-on, le plus long banc du monde.",
+      "aRegarder": "Les îles du Frioul et le château d'If au large, les villas accrochées aux rochers, les plongeurs de l'anse de Malmousque.",
+      "anecdote": "Le château d'If, visible au large, est la prison où Alexandre Dumas enferme Edmond Dantès dans « Le Comte de Monte-Cristo ».",
+      "photo": "Au coucher du soleil, le château d'If et les îles se découpent sur la mer ; un téléobjectif aide.",
+      "note": "Promenade le long de la route ; pour aller plus loin vers le Prado, prenez le bus 83.",
+      "image": "villes/marseille/images/corniche-kennedy.jpg",
+      "imageCredit": "Jay Bergesen · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Plage_du_Prophete,_Marseille.jpg"
+    },
+    {
+      "id": "plage-catalans",
+      "nom": "Plage des Catalans",
+      "lat": 43.29073,
+      "lng": 5.3555,
+      "categories": [
+        "nature"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "La plage la plus proche du centre, une petite anse de sable très populaire avec ses filets de beach-volley.",
+      "aRegarder": "Les parties de volley, l'eau turquoise par beau temps, la vue sur le château d'If.",
+      "anecdote": "Elle doit son nom aux pêcheurs catalans installés ici au XVIIIe siècle ; Dumas y fait vivre Mercédès, la fiancée d'Edmond Dantès.",
+      "photo": "Depuis la Corniche au-dessus, la plage forme une jolie courbe sur la mer.",
+      "note": "Baignade surveillée en saison.",
+      "image": "villes/marseille/images/plage-catalans.jpg",
+      "imageCredit": "Patrick Nouhailler's… · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:La_plage_des_catalans,_Marseille_-_panoramio_(2).jpg"
+    },
+    {
+      "id": "friche",
+      "nom": "Friche la Belle de Mai",
+      "lat": 43.31163,
+      "lng": 5.39207,
+      "categories": [
+        "art",
+        "nuit"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Ancienne manufacture de tabacs devenue un immense lieu culturel : expositions, concerts, ateliers d'artistes, skatepark et restaurant.",
+      "aRegarder": "Le toit-terrasse de 8 000 m² avec vue sur la ville et Notre-Dame-de-la-Garde, les expositions de la Tour Panorama.",
+      "anecdote": "Jusqu'en 1990, on y fabriquait des cigarettes ; les artistes ont investi les bâtiments dès 1992.",
+      "photo": "Depuis le toit-terrasse, au coucher du soleil, la Bonne Mère se détache sur la ville.",
+      "note": "Accès libre au site et au toit ; expositions et concerts payants.",
+      "image": "villes/marseille/images/friche.jpg",
+      "imageCredit": "Cecile30000 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_Friche_la_Belle_de_Mai_Toit_terrasse.jpg"
+    },
+    {
+      "id": "terrasses-port",
+      "nom": "Les Terrasses du Port",
+      "lat": 43.30694,
+      "lng": 5.36449,
+      "categories": [
+        "shopping",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Centre commercial ouvert en 2014 sur le port de la Joliette, avec une grande terrasse publique de 260 m qui donne directement sur les ferries et la mer.",
+      "aRegarder": "La terrasse, d'où l'on voit les ferries pour la Corse et l'Afrique du Nord appareiller.",
+      "anecdote": "La terrasse est accessible à tous, même sans faire de courses : un des balcons sur la mer les plus pratiques de la ville.",
+      "photo": "Au coucher du soleil, depuis la terrasse, les ferries se découpent sur la mer.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/marseille/images/terrasses-port.jpg",
+      "imageCredit": "Fred Romero from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_-_Les_Terrasses_du_Port_(15815127854).jpg"
+    },
+    {
+      "id": "docks",
+      "nom": "Les Docks de la Joliette",
+      "lat": 43.30729,
+      "lng": 5.36649,
+      "categories": [
+        "shopping",
+        "architecture",
+        "histoire"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 1,
+      "description": "Immense entrepôt portuaire du Second Empire reconverti en bureaux, boutiques et restaurants autour de cours intérieures.",
+      "aRegarder": "Les façades en pierre de taille et les cours vitrées où circulaient autrefois les marchandises.",
+      "anecdote": "On raconte que leurs dimensions suivent le calendrier : 365 m de long, quatre bâtiments pour les saisons, des portes pour les mois.",
+      "photo": "Dans les cours intérieures, cadrez la répétition des arcades.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/marseille/images/docks.jpg",
+      "imageCredit": "Acanivenc · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Direction_des_Docks_de_Marseille.jpg"
+    },
+    {
+      "id": "cmacgm",
+      "nom": "Tour CMA CGM",
+      "lat": 43.31508,
+      "lng": 5.36582,
+      "categories": [
+        "architecture",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Gratte-ciel de 147 m dessiné par Zaha Hadid et achevé en 2011, symbole du quartier d'affaires Euroméditerranée et du premier armateur français.",
+      "aRegarder": "Les courbes de verre qui s'écartent comme deux voiles, vues de près depuis le boulevard.",
+      "anecdote": "C'est la plus haute tour de Marseille ; elle se voit depuis la mer bien avant d'entrer dans le port.",
+      "photo": "En contre-plongée, au pied de la tour, ses courbes remplissent le cadre.",
+      "note": "À voir de l'extérieur.",
+      "image": "villes/marseille/images/cmacgm.jpg",
+      "imageCredit": "Jeanne Menjoulet from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Tour_CMA-CGM,_gros_Ferries._Petit_phare_(22650942945).jpg"
+    },
+    {
+      "id": "rue-saint-ferreol",
+      "nom": "Rue Saint-Ferréol",
+      "lat": 43.29271,
+      "lng": 5.37876,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "La principale rue piétonne commerçante de Marseille, entre la Canebière et la préfecture, avec les grandes enseignes.",
+      "aRegarder": "La perspective sur la préfecture au bout de la rue, et les rues voisines (Paradis, Rome) pour les boutiques.",
+      "anecdote": "La rue porte le nom de saint Ferréol, martyr du IIIe siècle.",
+      "photo": "Depuis le bas de la rue, cadrez la façade de la préfecture.",
+      "image": "villes/marseille/images/rue-saint-ferreol.jpg",
+      "imageCredit": "yisris · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Saint-Ferr%C3%A9ol_Marseille.jpg"
+    },
+    {
+      "id": "opera",
+      "nom": "Opéra de Marseille",
+      "lat": 43.29335,
+      "lng": 5.37588,
+      "categories": [
+        "architecture",
+        "art",
+        "nuit"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Reconstruit dans un style Art déco après l'incendie de 1919, il a conservé la colonnade du théâtre du XVIIIe siècle.",
+      "aRegarder": "La façade et ses colonnes, les bas-reliefs Art déco, la place animée autour.",
+      "anecdote": "Seule la façade et les murs extérieurs de l'ancien Grand-Théâtre ont résisté à l'incendie de 1919.",
+      "photo": "Le soir, la façade éclairée se photographie bien depuis le bas de la place.",
+      "note": "Spectacles payants, programme à consulter.",
+      "image": "villes/marseille/images/opera.jpg",
+      "imageCredit": "Philippe Alès · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_(France),_the_opera.JPG"
+    },
+    {
+      "id": "place-thiars",
+      "nom": "Place Thiars et quartier de l'Arsenal",
+      "lat": 43.29326,
+      "lng": 5.37308,
+      "categories": [
+        "nuit",
+        "gastronomie"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Un quartier piéton de restaurants et de terrasses juste derrière le quai de Rive-Neuve, très animé le soir.",
+      "aRegarder": "Les terrasses de la place Thiars et du cours Estienne-d'Orves, les façades XVIIe siècle.",
+      "anecdote": "Le quartier occupe l'emplacement de l'arsenal des galères de Louis XIV, où des milliers de forçats ramaient pour le roi.",
+      "photo": "Le soir, les terrasses éclairées donnent de belles scènes de rue.",
+      "image": "villes/marseille/images/place-thiars.jpg",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_Thiars_-_Marseille_I_(FR13)_-_2023-07-22_-_2.jpg"
+    },
+    {
+      "id": "place-lenche",
+      "nom": "Place de Lenche",
+      "lat": 43.29748,
+      "lng": 5.36586,
+      "categories": [
+        "photo",
+        "gastronomie",
+        "nuit"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Petite place du Panier où l'on situe l'ancienne agora grecque, bordée de terrasses et d'un théâtre.",
+      "aRegarder": "La vue sur Notre-Dame-de-la-Garde qui apparaît entre les immeubles, et les terrasses ombragées.",
+      "anecdote": "On pense que la place se trouve à l'emplacement de l'agora, la place publique de la Massalia grecque.",
+      "photo": "Cadrez la Bonne Mère dans l'échancrure de la rue qui descend vers le port.",
+      "image": "villes/marseille/images/place-lenche.jpg",
+      "imageCredit": "The original uploader was Christophe.moustier at French W… · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:DSC_0961Place_de_Lenche_-_Marseille.jpg"
+    },
+    {
+      "id": "reformes",
+      "nom": "Église des Réformés",
+      "lat": 43.29882,
+      "lng": 5.38592,
+      "categories": [
+        "religieux",
+        "architecture"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "L'église Saint-Vincent-de-Paul, néogothique, domine le haut de la Canebière de ses deux flèches.",
+      "aRegarder": "Les deux flèches, la rosace et les vitraux.",
+      "anecdote": "Les Marseillais l'appellent « les Réformés » car elle remplace la chapelle d'un couvent d'Augustins réformés.",
+      "photo": "Depuis le milieu de la Canebière, les flèches ferment la perspective.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/marseille/images/reformes.jpg",
+      "imageCredit": "Raimond Spekking · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint-Vincent-de-Paul_de_Marseille-7706.jpg"
+    },
+    {
+      "id": "escalier-saint-charles",
+      "nom": "Escalier de la gare Saint-Charles",
+      "lat": 43.3015,
+      "lng": 5.3805,
+      "categories": [
+        "architecture",
+        "photo",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Le grand escalier monumental, inauguré en 1927, descend de la gare vers le boulevard d'Athènes et la Canebière.",
+      "aRegarder": "Les statues allégoriques de « Marseille, colonie grecque » et « Marseille, porte de l'Orient », les lions et les balustres.",
+      "anecdote": "Il fut construit pour offrir aux voyageurs une entrée digne d'un grand port colonial ; la première vue sur la ville et Notre-Dame-de-la-Garde.",
+      "photo": "Depuis le haut des marches, cadrez la ville avec la Bonne Mère au loin.",
+      "image": "villes/marseille/images/escalier-saint-charles.jpg",
+      "imageCredit": "Carl Ha · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Escalier_monumental_de_la_gare_de_Marseille-Saint-Charles.jpg"
+    },
+    {
+      "id": "ferry-boat",
+      "nom": "Le Ferry-Boat du Vieux-Port",
+      "lat": 43.2959,
+      "lng": 5.3699,
+      "categories": [
+        "histoire",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": true,
+      "importance": 1,
+      "description": "Depuis 1880, un petit bateau traverse le Vieux-Port entre l'Hôtel de Ville et la place aux Huiles. Une traversée de quelques minutes, pour quelques centimes.",
+      "aRegarder": "La vue sur l'entrée du port et les forts depuis le milieu de l'eau.",
+      "anecdote": "Dans « Fanny », de Marcel Pagnol, on prononce « le ferry-boîte » à la marseillaise.",
+      "photo": "Depuis l'arrière du bateau, cadrez la Bonne Mère au-dessus du port.",
+      "note": "Traversée payante (tarif symbolique), horaires à confirmer.",
+      "image": "villes/marseille/images/ferry-boat.jpg",
+      "imageCredit": "Toutaitanous · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Ligne_du_ferry_boat.JPG"
+    },
+    {
+      "id": "cite-radieuse",
+      "nom": "Cité radieuse Le Corbusier",
+      "lat": 43.26146,
+      "lng": 5.39628,
+      "categories": [
+        "architecture",
+        "art"
+      ],
+      "duree": 45,
+      "payant": false,
+      "importance": 1,
+      "description": "« Unité d'habitation » construite par Le Corbusier de 1947 à 1952, inscrite au patrimoine mondial de l'UNESCO : un immeuble village sur pilotis, avec rue commerçante intérieure.",
+      "aRegarder": "Les pilotis, les façades aux loggias colorées, la rue intérieure au 3e étage et le toit-terrasse.",
+      "anecdote": "Les Marseillais l'ont d'abord surnommée « la maison du fada » (du fou), avant qu'elle ne devienne un modèle étudié dans le monde entier.",
+      "photo": "Sous les pilotis, la contre-plongée montre toute la masse du bâtiment.",
+      "note": "À environ 5 km au sud du Vieux-Port : prenez le métro ou le bus. Toit-terrasse ouvert selon les expositions, à confirmer.",
+      "image": "villes/marseille/images/cite-radieuse.jpg",
+      "imageCredit": "Carl Ha · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:View_from_the_Cit%C3%A9_radieuse_towards_the_sea_with_%C3%8Eles_du_Frioul,_Marseille.jpg"
+    },
+    {
+      "id": "la-plaine",
+      "nom": "La Plaine (place Jean-Jaurès)",
+      "lat": 43.29509,
+      "lng": 5.38656,
+      "categories": [
+        "nuit",
+        "shopping"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Grande place populaire entourée de bars, de restaurants et de salles de concert, qui accueille un marché plusieurs matins par semaine.",
+      "aRegarder": "Le marché (mardi, jeudi et samedi en général), les bars de la place et des rues vers le cours Julien.",
+      "anecdote": "Officiellement place Jean-Jaurès, personne ne l'appelle ainsi : pour tous les Marseillais, c'est « la Plaine ».",
+      "photo": "Le soir, l'animation des terrasses autour de la place.",
+      "note": "Jours de marché à confirmer.",
+      "image": "villes/marseille/images/la-plaine.jpg",
+      "imageCredit": "LaloMassalia · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_Jean_Jaur%C3%A8s_R%C3%A9nov%C3%A9e_(Marseille).jpg"
+    },
+    {
+      "id": "accoules",
+      "nom": "Clocher des Accoules",
+      "lat": 43.29766,
+      "lng": 5.36863,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Haut clocher gothique, seul vestige de l'église médiévale des Accoules, au pied du Panier.",
+      "aRegarder": "Le clocher et sa flèche de pierre, la montée des Accoules qui grimpe vers le Panier.",
+      "anecdote": "L'église médiévale a été démolie après la Révolution ; seul le clocher a été conservé.",
+      "photo": "Depuis le bas de la montée, cadrez le clocher au-dessus des escaliers.",
+      "image": "villes/marseille/images/accoules.jpg",
+      "imageCredit": "Robert Valette · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille,%C3%A9glisedesaccoules.JPG"
+    },
+    {
+      "id": "cosquer",
+      "nom": "Cosquer Méditerranée",
+      "lat": 43.29707,
+      "lng": 5.36207,
+      "categories": [
+        "art",
+        "histoire"
+      ],
+      "duree": 75,
+      "payant": true,
+      "importance": 2,
+      "description": "Réplique de la grotte Cosquer, ornée il y a plus de 30 000 ans et aujourd'hui en partie engloutie sous la mer, près des calanques. On la visite à bord de petits modules qui glissent dans la pénombre.",
+      "aRegarder": "Les mains négatives, les chevaux, les pingouins et les phoques peints ou gravés sur les parois.",
+      "anecdote": "La grotte a été découverte en 1985 par le plongeur Henri Cosquer : son entrée se trouve à 37 m sous la mer.",
+      "photo": "Le bâtiment, la Villa Méditerranée, a un spectaculaire porte-à-faux au-dessus d'un bassin.",
+      "note": "Réservation conseillée. Tarifs à confirmer.",
+      "image": "villes/marseille/images/cosquer.jpg",
+      "imageCredit": "Jean-Pierre Dalbéra from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:La_Villa_M%C3%A9diterran%C3%A9e_(Marseille)_(14043586448).jpg"
+    },
+    {
+      "id": "colline-puget",
+      "nom": "Jardin de la colline Puget",
+      "lat": 43.28976,
+      "lng": 5.37059,
+      "categories": [
+        "nature",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Jardin en terrasses et pinède sur une colline au-dessus du Vieux-Port, l'un des plus anciens jardins publics de Marseille.",
+      "aRegarder": "Les allées ombragées, les grottes et la cascade, la vue sur le port et le Panier.",
+      "anecdote": "La colline porte le nom de Pierre Puget, architecte et sculpteur marseillais du XVIIe siècle.",
+      "photo": "Depuis le belvédère, cadrez le Vieux-Port et la Major.",
+      "note": "Horaires d'ouverture du parc à confirmer.",
+      "image": "villes/marseille/images/colline-puget.jpg",
+      "imageCredit": "El Comandante · CC BY 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Buste_de_Louis_Braille_au_Parc_de_la_Colline_Puget_%C3%A0_Marseille.jpg"
+    },
+    {
+      "id": "pause-navettes",
+      "type": "pause",
+      "nom": "Le Four des Navettes",
+      "lat": 43.29071,
+      "lng": 5.3664,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 25,
+      "payant": true,
+      "importance": 1,
+      "description": "La plus ancienne boulangerie de Marseille (1781), qui fabrique les navettes, biscuits à la fleur d'oranger en forme de barque.",
+      "aRegarder": "Le four, la boutique ancienne et les sachets de navettes.",
+      "anecdote": "La forme de barque rappellerait celle qui aurait amené les saintes Maries sur les côtes de Provence.",
+      "photo": "Les piles de navettes dans la vitrine.",
+      "note": "Adresse indicative : vérifiez les horaires.",
+      "image": "villes/marseille/images/pause-navettes.jpg",
+      "imageCredit": "Alexmar983 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Four_des_navettes_Marseille_2015.JPG",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-rive-neuve",
+      "type": "pause",
+      "nom": "Terrasses du quai de Rive-Neuve",
+      "lat": 43.2933,
+      "lng": 5.3716,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe",
+        "dejeuner"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Cafés et restaurants face au Vieux-Port, pour une pause avec vue sur les bateaux.",
+      "aRegarder": "Le va-et-vient des bateaux et la façade de l'Hôtel de Ville en face.",
+      "anecdote": "Le quai de Rive-Neuve était autrefois occupé par l'arsenal des galères.",
+      "photo": "Le port depuis votre table.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/marseille/images/pause-rive-neuve.jpg",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Quai_Rive_Neuve_-_Marseille_VII_(FR13)_-_2023-07-22_-_1.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-panier",
+      "type": "pause",
+      "nom": "Restaurants du Panier",
+      "lat": 43.2987,
+      "lng": 5.3681,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner",
+        "cafe"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Petites tables provençales et méditerranéennes dans les ruelles du Panier.",
+      "aRegarder": "Les terrasses dans les ruelles et sur les petites places.",
+      "anecdote": "Le Panier a longtemps été le quartier d'arrivée des immigrés italiens, corses puis maghrébins, et sa cuisine s'en ressent.",
+      "photo": "Une terrasse dans une ruelle en pente.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/marseille/images/pause-panier.jpg",
+      "imageCredit": "Sentausa · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_des_moulins_le_panier_marseille.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-fonfon",
+      "type": "pause",
+      "nom": "Chez Fonfon (Vallon des Auffes)",
+      "lat": 43.28554,
+      "lng": 5.35143,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner"
+      ],
+      "duree": 75,
+      "payant": true,
+      "importance": 1,
+      "description": "Restaurant de poissons du Vallon des Auffes, réputé pour sa bouillabaisse servie dans les règles.",
+      "aRegarder": "La salle qui donne sur le petit port de pêche.",
+      "anecdote": "Une vraie bouillabaisse se sert en deux temps : d'abord la soupe avec les croûtons et la rouille, puis les poissons découpés devant vous.",
+      "photo": "Le port depuis la fenêtre.",
+      "note": "Adresse indicative : vérifiez qu'il est ouvert et réservez (bouillabaisse coûteuse).",
+      "image": "villes/marseille/images/pause-fonfon.jpg",
+      "imageCredit": "Arnaud 25 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Bouillabaisse_01.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-noailles",
+      "type": "pause",
+      "nom": "Pâtisseries orientales de Noailles",
+      "lat": 43.2956,
+      "lng": 5.3811,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Cornes de gazelle, baklavas et thé à la menthe dans les pâtisseries autour du marché de Noailles.",
+      "aRegarder": "Les plateaux de pâtisseries au miel et aux amandes.",
+      "anecdote": "À Noailles, on trouve les saveurs de toute la Méditerranée en quelques rues.",
+      "photo": "Les vitrines de pâtisseries colorées.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/marseille/images/pause-noailles.jpg",
+      "imageCredit": "Saïd IDRI · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Cornes_de_gazelle.JPG",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-cours-julien",
+      "type": "pause",
+      "nom": "Terrasses du cours Julien",
+      "lat": 43.2936,
+      "lng": 5.3832,
+      "categories": [
+        "gastronomie",
+        "nuit"
+      ],
+      "pause": [
+        "cafe",
+        "gouter"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Cafés et bars sous les arbres du cours Julien, l'endroit idéal pour une pause entre deux fresques.",
+      "aRegarder": "Le street art autour des terrasses.",
+      "anecdote": "Le cours est piéton depuis sa rénovation, après le départ du marché de gros en 1972.",
+      "photo": "Les fresques derrière les terrasses.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/marseille/images/pause-cours-julien.jpg",
+      "imageCredit": "Fred Romero from Paris, France · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille_-_Cours_Julien_(15835866734).jpg",
+      "imageIllustration": true
+    }
+  ],
+  "parcours": [
+    {
+      "id": "essentiel",
+      "emoji": "⭐",
+      "titre": "L'essentiel de Marseille",
+      "duree": "day",
+      "resume": "Le Vieux-Port, le Panier, la Major, le MuCEM et la Bonne Mère : la ville en une journée.",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [
+        "cafe",
+        "dejeuner"
+      ],
+      "lieux": [
+        "vieux-port",
+        "ferry-boat",
+        "hotel-de-ville",
+        "panier",
+        "vieille-charite",
+        "major",
+        "fort-saint-jean",
+        "mucem",
+        "abbaye-saint-victor",
+        "notre-dame-garde"
+      ]
+    },
+    {
+      "id": "panier",
+      "emoji": "🏘",
+      "titre": "Le Panier et les forts",
+      "duree": "half",
+      "resume": "Ruelles du plus vieux quartier de France, Vieille Charité, Major et fort Saint-Jean.",
+      "interets": [
+        "histoire",
+        "photo"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "vieux-port",
+        "hotel-de-ville",
+        "accoules",
+        "panier",
+        "vieille-charite",
+        "place-lenche",
+        "major",
+        "saint-laurent",
+        "fort-saint-jean"
+      ]
+    },
+    {
+      "id": "nuit",
+      "emoji": "🌙",
+      "titre": "Marseille by night",
+      "duree": "2h",
+      "heure": "20:30",
+      "resume": "Le Vieux-Port illuminé, les terrasses de l'Arsenal, puis les bars du cours Julien et de la Plaine.",
+      "interets": [
+        "nuit",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "vieux-port",
+        "place-thiars",
+        "opera",
+        "cours-julien",
+        "la-plaine"
+      ]
+    },
+    {
+      "id": "mer",
+      "emoji": "🌊",
+      "titre": "Corniche et Vallon des Auffes",
+      "duree": "half",
+      "resume": "Du Pharo à la Corniche, en passant par la plage des Catalans, et une bouillabaisse au Vallon des Auffes.",
+      "interets": [
+        "nature",
+        "photo"
+      ],
+      "pauses": [
+        "dejeuner"
+      ],
+      "lieux": [
+        "colline-puget",
+        "palais-pharo",
+        "plage-catalans",
+        "vallon-auffes",
+        "corniche-kennedy"
+      ]
+    },
+    {
+      "id": "art",
+      "emoji": "🎨",
+      "titre": "Musées et street art",
+      "duree": "day",
+      "resume": "MuCEM, Vieille Charité, musée d'Histoire, Cantini, les fresques du cours Julien et le palais Longchamp.",
+      "interets": [
+        "art",
+        "architecture"
+      ],
+      "pauses": [
+        "cafe",
+        "dejeuner"
+      ],
+      "lieux": [
+        "mucem",
+        "vieille-charite",
+        "musee-histoire",
+        "musee-cantini",
+        "cours-julien",
+        "palais-longchamp"
+      ]
+    },
+    {
+      "id": "enfants",
+      "emoji": "🧒",
+      "titre": "Spécial enfants",
+      "duree": "half",
+      "resume": "Traversée en ferry-boat, remparts du fort Saint-Jean, grotte Cosquer et goûter de navettes.",
+      "interets": [
+        "histoire",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "vieux-port",
+        "ferry-boat",
+        "fort-saint-jean",
+        "cosquer",
+        "abbaye-saint-victor"
+      ]
+    }
+  ]
+}

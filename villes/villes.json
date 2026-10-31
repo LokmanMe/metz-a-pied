@@ -61,6 +61,37 @@
         }
       },
       "trajetBus": "🚋 bus/tram gratuit"
+    },
+    {
+      "id": "marseille",
+      "nom": "Marseille",
+      "pays": "France",
+      "dossier": "villes/marseille",
+      "centre": {
+        "lat": 43.2965,
+        "lng": 5.3698
+      },
+      "image": "villes/marseille/images/notre-dame-garde.jpg",
+      "resume": "Vieux-Port, Bonne Mère, Panier et Corniche",
+      "accroche": "Quelques questions, et je vous trace un parcours dans la plus vieille ville de France, entre colline et Méditerranée.",
+      "couleur": {
+        "clair": "#1468B3",
+        "sombre": "#0F1720"
+      },
+      "libelles": {
+        "interests": {
+          "nature": "🌊 Mer & nature",
+          "gastronomie": "🐟 Saveurs marseillaises"
+        },
+        "transport": {
+          "bus": "🚶+🚇 Pied + métro/bus RTM"
+        },
+        "pauses": {
+          "dejeuner": "🍽 Déjeuner (bouillabaisse…)",
+          "gouter": "⛵ Goûter navettes"
+        }
+      },
+      "trajetBus": "🚇 métro/bus RTM"
     }
   ]
 }
