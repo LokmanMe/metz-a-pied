@@ -2,7 +2,7 @@
  * - app shell + données : précache, puis « stale-while-revalidate »
  * - tuiles OpenStreetMap : cache d'abord (les zones consultées restent dispo hors ligne)
  */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL_CACHE = `metz-shell-${VERSION}`;
 const TILE_CACHE = 'metz-tiles';           // non versionné : on garde les tuiles entre mises à jour
 const MAX_TILES = 1500;
@@ -13,6 +13,7 @@ const SHELL = [
   'style.css',
   'app.js',
   'data/lieux.json',
+  'data/distances.json',
   'manifest.webmanifest',
   'icons/icon-192.png',
   'icons/icon-512.png',

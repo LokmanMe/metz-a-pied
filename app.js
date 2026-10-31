@@ -35,6 +35,7 @@ const DEFAULT_PREFS = {
 
 // ---------- État ----------
 let DATA = null;          // contenu de lieux.json
+let DIST = null;          // distances piétonnes réelles précalculées (data/distances.json)
 let BY_ID = {};
 let prefs = { ...DEFAULT_PREFS, ...load(STORE.prefs, DEFAULT_PREFS) };
 let route = load(STORE.route, null);
@@ -63,7 +64,13 @@ function haversineKm(a, b) {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLng / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
-const walkKm = (a, b) => haversineKm(a, b) * DETOUR;
+/** Distance à pied : matrice OSRM précalculée si les deux points y figurent, sinon vol d'oiseau × détour. */
+function walkKm(a, b) {
+  if (a === b) return 0;
+  const i = DIST?.index[a.id], j = DIST?.index[b.id];
+  if (i !== undefined && j !== undefined && DIST.m[i][j] != null) return DIST.m[i][j] / 1000;
+  return haversineKm(a, b) * DETOUR;
+}
 
 /** Trajet entre deux points : marche, ou bus Le Met' si plus rapide et autorisé. */
 function leg(a, b, p = prefs) {
@@ -76,39 +83,131 @@ function leg(a, b, p = prefs) {
   return { km, min: Math.round(walkMin), bus: false };
 }
 
-// ---------- Ordonnancement : plus proche voisin + 2-opt (chemin ouvert) ----------
-function nearestNeighbor(start, pts) {
-  const left = pts.slice(), order = [];
-  let cur = start;
-  while (left.length) {
-    let bi = 0, bd = Infinity;
-    left.forEach((p, i) => { const d = walkKm(cur, p); if (d < bd) { bd = d; bi = i; } });
-    cur = left.splice(bi, 1)[0];
+// ---------- Voyageur de commerce : chemin ouvert depuis le départ, sans retour ----------
+// Jusqu'à EXACT_MAX étapes : Held-Karp (optimum garanti). Au-delà : plusieurs départs
+// « plus proche voisin » randomisés, améliorés par 2-opt + Or-opt, on garde le meilleur.
+const EXACT_MAX = 15;
+
+const legCost = (T, a, b) => (b === undefined ? 0 : a < 0 ? T.s[b] : T.d[a][b]);   // a = -1 : point de départ
+
+function distTable(start, pts) {
+  return {
+    n: pts.length,
+    s: pts.map((p) => walkKm(start, p)),
+    d: pts.map((a) => pts.map((b) => walkKm(a, b))),
+  };
+}
+function pathLength(T, order) {
+  let L = 0;
+  order.forEach((j, k) => { L += legCost(T, k ? order[k - 1] : -1, j); });
+  return L;
+}
+
+/** Programmation dynamique de Held-Karp : cost[masque][j] = plus court chemin départ → … → j couvrant le masque. */
+function heldKarp(T) {
+  const { n, s, d } = T, full = (1 << n) - 1;
+  const cost = new Float64Array((full + 1) * n).fill(Infinity);
+  const prev = new Int8Array((full + 1) * n).fill(-1);
+  for (let j = 0; j < n; j++) cost[(1 << j) * n + j] = s[j];
+  for (let mask = 1; mask <= full; mask++) {
+    for (let j = 0; j < n; j++) {
+      const c = cost[mask * n + j];
+      if (c === Infinity) continue;
+      for (let k = 0; k < n; k++) {
+        if (mask & (1 << k)) continue;
+        const idx = (mask | (1 << k)) * n + k, v = c + d[j][k];
+        if (v < cost[idx]) { cost[idx] = v; prev[idx] = j; }
+      }
+    }
+  }
+  let end = 0;
+  for (let j = 1; j < n; j++) if (cost[full * n + j] < cost[full * n + end]) end = j;
+  const order = [];
+  for (let mask = full, j = end; j !== -1;) {
+    order.push(j);
+    const pj = prev[mask * n + j];
+    mask &= ~(1 << j);
+    j = pj;
+  }
+  return order.reverse();
+}
+
+function mulberry32(seed) {
+  return () => {
+    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function nearestNeighborOrder(T, rnd) {
+  const left = new Set(T.d.keys()), order = [];
+  let cur = -1;
+  while (left.size) {
+    const cand = [...left].sort((a, b) => legCost(T, cur, a) - legCost(T, cur, b));
+    cur = rnd && cand.length > 1 && rnd() < 0.3 ? cand[1] : cand[0];
+    left.delete(cur);
     order.push(cur);
   }
   return order;
 }
-function twoOpt(start, order) {
-  const best = order.slice(), n = best.length;
-  const at = (i) => (i < 0 ? start : best[i]);
-  let improved = true, guard = 0;
-  while (improved && guard++ < 200) {
-    improved = false;
-    for (let i = 0; i < n - 1; i++) {
-      for (let k = i + 1; k < n; k++) {
-        const a = at(i - 1), b = best[i], c = best[k], d = k + 1 < n ? best[k + 1] : null;
-        const before = walkKm(a, b) + (d ? walkKm(c, d) : 0);
-        const after = walkKm(a, c) + (d ? walkKm(b, d) : 0);
-        if (after < before - 1e-9) {
-          for (let x = i, y = k; x < y; x++, y--) [best[x], best[y]] = [best[y], best[x]];
-          improved = true;
+function twoOptPass(T, order) {
+  let improved = false;
+  for (let i = 0; i < order.length - 1; i++) {
+    for (let k = i + 1; k < order.length; k++) {
+      const a = i ? order[i - 1] : -1, b = order[i], c = order[k], d = order[k + 1];
+      if (legCost(T, a, c) + legCost(T, b, d) < legCost(T, a, b) + legCost(T, c, d) - 1e-9) {
+        for (let x = i, y = k; x < y; x++, y--) [order[x], order[y]] = [order[y], order[x]];
+        improved = true;
+      }
+    }
+  }
+  return improved;
+}
+/** Or-opt : déplace un bloc de 1 à 3 étapes consécutives (éventuellement retourné) à un meilleur endroit. */
+function orOptPass(T, order) {
+  const n = order.length;
+  for (let len = 1; len <= 3; len++) {
+    for (let i = 0; i + len <= n; i++) {
+      const p = i ? order[i - 1] : -1, first = order[i], last = order[i + len - 1], next = order[i + len];
+      const gain = legCost(T, p, first) + legCost(T, last, next) - legCost(T, p, next);
+      const seg = order.slice(i, i + len), rest = order.slice(0, i).concat(order.slice(i + len));
+      for (let j = 0; j <= rest.length; j++) {
+        if (j === i) continue;
+        const a = j ? rest[j - 1] : -1, b = rest[j];
+        for (const rev of [false, true]) {
+          const s0 = rev ? last : first, s1 = rev ? first : last;
+          if (legCost(T, a, s0) + legCost(T, s1, b) - legCost(T, a, b) < gain - 1e-9) {
+            const moved = rev ? seg.reverse() : seg;
+            order.splice(0, n, ...rest.slice(0, j), ...moved, ...rest.slice(j));
+            return true;
+          }
         }
       }
     }
   }
+  return false;
+}
+function localSearch(T, restarts) {
+  const rnd = mulberry32(2026);
+  let best = null, bestLen = Infinity;
+  for (let r = 0; r < restarts; r++) {
+    const order = nearestNeighborOrder(T, r ? rnd : null);
+    for (let guard = 0; guard < 200 && (twoOptPass(T, order) || orOptPass(T, order)); guard++);
+    const len = pathLength(T, order);
+    if (len < bestLen - 1e-9) { best = order; bestLen = len; }
+  }
   return best;
 }
-const optimize = (start, pts) => (pts.length < 3 ? nearestNeighbor(start, pts) : twoOpt(start, nearestNeighbor(start, pts)));
+
+/** Ordre de visite le plus court. `thorough` : calcul final (exact plus loin, plus de redémarrages). */
+function solveTsp(start, pts, { thorough = false } = {}) {
+  if (pts.length < 2) return pts.slice();
+  const T = distTable(start, pts);
+  const order = pts.length <= (thorough ? EXACT_MAX : 9) ? heldKarp(T) : localSearch(T, thorough ? 24 : 2);
+  return order.map((i) => pts[i]);
+}
+const optimize = (start, pts) => solveTsp(start, pts);
 
 function pathStats(start, order, p = prefs) {
   let min = 0, km = 0, prev = start;
@@ -151,7 +250,7 @@ function generateRoute(p, start, { jitter = false } = {}) {
     if (st.min <= budget && st.km <= maxKm) chosen = trial;
   }
   if (!chosen.length && candidates.length) chosen = [candidates[0]];
-  chosen = optimize(start, chosen);
+  chosen = solveTsp(start, chosen, { thorough: true });
 
   // Découpage en jours, chaque jour repart du point de départ.
   const dayLists = [];
@@ -165,7 +264,7 @@ function generateRoute(p, start, { jitter = false } = {}) {
       day1.push(pl); t += add; prev = pl;
     }
     const rest = chosen.filter((pl) => !day1.includes(pl));
-    dayLists.push(day1, optimize(start, rest));
+    dayLists.push(solveTsp(start, day1, { thorough: true }), solveTsp(start, rest, { thorough: true }));
   }
 
   const startClock = parseClock(p.startTime) ?? DAY_START_DEFAULT;
@@ -329,7 +428,7 @@ function initQuiz() {
 async function resolveStart(p) {
   if (p.start === 'parking') {
     const pk = DATA.departs.parkings.find((x) => x.id === p.parking) || DATA.departs.parkings[0];
-    return { lat: pk.lat, lng: pk.lng, nom: pk.nom };
+    return { id: pk.id, lat: pk.lat, lng: pk.lng, nom: pk.nom };
   }
   if (p.start === 'gps') {
     try {
@@ -463,6 +562,7 @@ function renderRoute(fit = false) {
   ol.innerHTML = html.join('');
 
   drawMap(sch, fit);
+  fetchStreetPaths(sch);
 }
 
 function drawMap(sch, fit) {
@@ -471,7 +571,8 @@ function drawMap(sch, fit) {
   const start = route.start;
   L.marker([start.lat, start.lng], { icon: pinIcon('D', 'start'), title: start.nom }).addTo(layers);
   sch.days.forEach((d, di) => {
-    const pts = [[start.lat, start.lng], ...d.rows.map((r) => [r.pl.lat, r.pl.lng])];
+    const path = route.paths?.[di];
+    const pts = path && path.key === dayKey(d) ? path.latlngs : [[start.lat, start.lng], ...d.rows.map((r) => [r.pl.lat, r.pl.lng])];
     L.polyline(pts, { color: '#1F4E8C', weight: 5, opacity: 0.85, dashArray: di ? '10 8' : null }).addTo(layers);
     L.polyline(pts, { color: '#E9C766', weight: 2, opacity: 0.9 }).addTo(layers);
   });
@@ -484,6 +585,29 @@ function drawMap(sch, fit) {
   if (fit) {
     const b = L.latLngBounds([[start.lat, start.lng], ...sch.flat.map((r) => [r.pl.lat, r.pl.lng])]);
     map.fitBounds(b, { padding: [28, 28] });
+  }
+}
+// ---------- Tracé le long des rues (en ligne uniquement ; hors ligne : lignes droites) ----------
+const ROUTING_URL = 'https://routing.openstreetmap.de/routed-foot/route/v1/driving/';
+let pathsInFlight = false;
+const dayKey = (d) => [route.start, ...d.rows.map((r) => r.pl)].map((p) => `${p.lng.toFixed(5)},${p.lat.toFixed(5)}`).join(';');
+
+async function fetchStreetPaths(sch) {
+  if (pathsInFlight || !navigator.onLine || !map) return;
+  route.paths ||= [];
+  const todo = sch.days.map((d, i) => ({ i, key: dayKey(d) })).filter(({ i, key }) => key.includes(';') && route.paths[i]?.key !== key);
+  if (!todo.length) return;
+  pathsInFlight = true;
+  try {
+    for (const { i, key } of todo) {
+      const res = await fetch(`${ROUTING_URL}${key}?overview=full&geometries=geojson`);
+      const coords = res.ok ? (await res.json()).routes?.[0]?.geometry?.coordinates : null;
+      if (coords) route.paths[i] = { key, latlngs: coords.map(([lng, lat]) => [+lat.toFixed(5), +lng.toFixed(5)]) };
+    }
+    saveRoute();
+    drawMap(schedule(route), false);
+  } catch { /* service indisponible : on garde les lignes droites */ } finally {
+    pathsInFlight = false;
   }
 }
 const pinIcon = (label, cls) => L.divIcon({ className: '', html: `<div class="pin ${cls}">${label}</div>`, iconSize: [32, 32], iconAnchor: [16, 16] });
@@ -681,6 +805,10 @@ async function main() {
     return;
   }
   BY_ID = Object.fromEntries(DATA.lieux.map((pl) => [pl.id, pl]));
+  try {
+    const dj = await (await fetch('data/distances.json')).json();
+    DIST = { index: Object.fromEntries(dj.ids.map((id, i) => [id, i])), m: dj.m };
+  } catch { /* repli : vol d'oiseau × 1,3 */ }
   // Un parcours sauvegardé qui référence un lieu disparu est abandonné.
   if (route && !route.days?.flat().every((it) => BY_ID[it.id])) route = null;
 

@@ -10,8 +10,9 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 |---|---|
 | `index.html` | Questionnaire et écran de parcours |
 | `style.css` | Thème pierre de Jaumont et vitraux, mode sombre automatique |
-| `app.js` | Sélection des lieux, ordonnancement (plus proche voisin + 2-opt, Haversine × 1,3), horaires, GPS, suivi de visite |
+| `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
 | `data/lieux.json` | 30 lieux + 6 adresses de pause (coordonnées vérifiées sur OpenStreetMap) |
+| `data/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `manifest.webmanifest` | Métadonnées d'installation |
 | `service-worker.js` | Cache de l'app, des données, de Leaflet et des tuiles déjà vues |
 | `icons/` | Icônes 192, 512 et maskable 512 |
@@ -67,7 +68,7 @@ git push -u origin main
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (par ex. `v2`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v3`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -113,6 +114,14 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
 ```
 
 Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables.
+
+### Ordre des étapes (voyageur de commerce)
+
+- **Distances réelles à pied** : `data/distances.json` contient la matrice des distances piétonnes entre tous les lieux, la gare et les parkings, calculée sur les rues OpenStreetMap (OSRM, profil piéton). Pour un départ GPS, la première étape utilise le vol d'oiseau × 1,3.
+- **Ordre optimal** : l'ordre de visite minimise la distance totale à pied, sans retour au point de départ. Jusqu'à 15 étapes par jour, il est exact (programmation dynamique de Held-Karp) ; au-delà, l'app enchaîne plusieurs départs « plus proche voisin » améliorés par 2-opt et Or-opt.
+- **Tracé sur la carte** : en ligne, le parcours suit les rues (service de routage piéton routing.openstreetmap.de, qui reçoit les coordonnées des étapes et du point de départ, y compris la position GPS si vous l'avez choisie) ; hors ligne, il est dessiné en lignes droites.
+
+Pour recalculer la matrice après avoir ajouté un lieu, interroger `https://routing.openstreetmap.de/routed-foot/table/v1/driving/<lng,lat;…>?annotations=distance` avec les points dans l'ordre de `ids` (gare, parkings, puis lieux).
 
 ### Photos
 

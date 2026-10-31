@@ -5,7 +5,8 @@
     "gare": {
       "nom": "Gare de Metz",
       "lat": 49.10952,
-      "lng": 6.17682
+      "lng": 6.17682,
+      "id": "depart-gare"
     },
     "parkings": [
       {
