@@ -27,6 +27,7 @@ const CATEGORY_LABELS = {
   histoire: 'Histoire', architecture: 'Architecture', art: 'Art', religieux: 'Religieux',
   nature: 'Nature', gastronomie: 'Gastronomie', shopping: 'Shopping', photo: 'Photo', nuit: 'Vie nocturne',
 };
+const SPARSE_MSG = "Peu de lieux correspondent à vos centres d'intérêt : le parcours est plus court que la durée choisie. Ajoutez-en un pour l'allonger.";
 const DEFAULT_PREFS = {
   interests: ['histoire', 'architecture', 'photo'], duration: 'half', pace: 'normal',
   transport: 'walk', start: 'gare', parking: 'p-cathedrale', budget: 'paid', pauses: ['cafe'],
@@ -209,11 +210,14 @@ function solveTsp(start, pts, { thorough = false } = {}) {
 }
 const optimize = (start, pts) => solveTsp(start, pts);
 
+/** Temps passé sur place ; une adresse de pause prise comme étape (dégustation, verre) compte au plus 30 min. */
+const stayMin = (pl, p = prefs) => Math.round((pl.type === 'pause' ? Math.min(pl.duree, 30) : pl.duree) * PACE[p.pace].visit);
+
 function pathStats(start, order, p = prefs) {
   let min = 0, km = 0, prev = start;
   for (const pl of order) {
     const l = leg(prev, pl, p);
-    min += l.min + Math.round(pl.duree * PACE[p.pace].visit);
+    min += l.min + stayMin(pl, p);
     if (!l.bus) km += l.km;
     prev = pl;
   }
@@ -221,11 +225,17 @@ function pathStats(start, order, p = prefs) {
 }
 
 // ---------- Sélection des lieux ----------
+const matchCount = (pl, p) => pl.categories.filter((c) => p.interests.includes(c)).length;
+
+/** Lieux proposables : uniquement ceux qui correspondent à au moins un centre d'intérêt choisi
+ *  (les adresses gourmandes et les bars en font partie) ; sans centre d'intérêt, tous les lieux de visite. */
+function isCandidate(pl, p) {
+  if (!p.interests.length) return pl.type !== 'pause';
+  return matchCount(pl, p) > 0;
+}
+
 function scorePlace(pl, p, jitter) {
-  const matches = pl.categories.filter((c) => p.interests.includes(c)).length;
-  let s = pl.importance + matches * 2.2;
-  if (p.interests.length && matches === 0) s *= 0.35;
-  return s + (jitter ? Math.random() * 2 : 0);
+  return pl.importance + matchCount(pl, p) * 2.2 + (jitter ? Math.random() * 2 : 0);
 }
 
 function generateRoute(p, start, { jitter = false } = {}) {
@@ -236,7 +246,7 @@ function generateRoute(p, start, { jitter = false } = {}) {
   const maxKm = pace.maxKmPerDay * days;
 
   const candidates = DATA.lieux
-    .filter((pl) => pl.type !== 'pause')
+    .filter((pl) => isCandidate(pl, p))
     .filter((pl) => p.budget === 'paid' || !pl.payant)
     .map((pl) => ({ pl, s: scorePlace(pl, p, jitter) }))
     .sort((a, b) => b.s - a.s)
@@ -251,6 +261,8 @@ function generateRoute(p, start, { jitter = false } = {}) {
   }
   if (!chosen.length && candidates.length) chosen = [candidates[0]];
   chosen = solveTsp(start, chosen, { thorough: true });
+  // Trop peu de lieux pour les centres d'intérêt choisis : le parcours est nettement plus court que demandé.
+  const sparse = p.interests.length > 0 && pathStats(start, chosen, p).min < budget * 0.6;
 
   // Découpage en jours, chaque jour repart du point de départ.
   const dayLists = [];
@@ -259,7 +271,7 @@ function generateRoute(p, start, { jitter = false } = {}) {
     const day1 = [];
     let prev = start, t = 0;
     for (const pl of chosen) {
-      const add = leg(prev, pl, p).min + Math.round(pl.duree * pace.visit);
+      const add = leg(prev, pl, p).min + stayMin(pl, p);
       if (t + add > perDay - pauseMin && day1.length) break;
       day1.push(pl); t += add; prev = pl;
     }
@@ -283,13 +295,13 @@ function generateRoute(p, start, { jitter = false } = {}) {
     startClock,
     days: itemsByDay,
     current: 0,
+    sparse,
   };
 }
 
 /** Insère une pause au moment le plus proche de l'heure cible, dans l'adresse qui fait le moins de détour. */
 function insertPause(items, type, start, startClock, p) {
   const venues = DATA.lieux.filter((pl) => pl.pause?.includes(type) && !items.some((it) => it.id === pl.id));
-  if (!venues.length) return items;
   const pts = items.map((it) => BY_ID[it.id]);
   // Heure d'arrivée à chaque position d'insertion possible.
   const clocks = [];
@@ -311,14 +323,22 @@ function insertPause(items, type, start, startClock, p) {
       if (!best || cost < best.cost) best = { k, v, cost };
     }
   }
+  // Une étape gourmande déjà au parcours peut servir de pause, sans détour.
+  for (let k = 1; k < pts.length; k++) {
+    if (items[k].pause || !pts[k].pause?.includes(type)) continue;
+    const cost = Math.abs(clocks[k] - PAUSES[type].target) / 8;
+    if (!best || cost < best.cost) best = { k, v: pts[k], cost, reuse: true };
+  }
+  if (!best) return items;
   const out = items.slice();
-  out.splice(best.k, 0, { id: best.v.id, pause: type });
+  if (best.reuse) out[best.k] = { id: best.v.id, pause: type };
+  else out.splice(best.k, 0, { id: best.v.id, pause: type });
   return out;
 }
 
 function visitMinutes(item, p = prefs) {
   if (item.pause) return PAUSES[item.pause].dur;
-  return Math.round(BY_ID[item.id].duree * PACE[p.pace].visit);
+  return stayMin(BY_ID[item.id], p);
 }
 
 // ---------- Planning (horaires) ----------
@@ -418,6 +438,7 @@ function initQuiz() {
       route = generateRoute(prefs, start);
       saveRoute();
       showRoute();
+      if (route.sparse) toast(SPARSE_MSG, 6000);
     } finally {
       btn.disabled = false; btn.textContent = 'Tracer mon parcours';
     }
@@ -635,15 +656,16 @@ function inRoute(id) { return route.days.some((d) => d.some((it) => it.id === id
 
 function openSuggestions() {
   const stops = route.days.flat().map((it) => BY_ID[it.id]).concat([route.start]);
+  const p = route.prefs;
   const list = DATA.lieux
-    .filter((pl) => pl.type !== 'pause' && !inRoute(pl.id))
-    .map((pl) => ({ pl, d: Math.min(...stops.map((s) => walkKm(s, pl))) }))
-    .sort((a, b) => a.d - b.d)
+    .filter((pl) => (pl.type !== 'pause' || isCandidate(pl, p)) && !inRoute(pl.id))
+    .map((pl) => ({ pl, d: Math.min(...stops.map((s) => walkKm(s, pl))), match: matchCount(pl, p) > 0 }))
+    .sort((a, b) => b.match - a.match || a.d - b.d)
     .slice(0, 8);
   $('#suggest-list').innerHTML = list.length
     ? list.map(({ pl, d }) => `<li><button type="button" data-add="${pl.id}">
         <strong>${esc(pl.nom)}</strong>
-        <small>à ${fmtKm(d)} du parcours · ${pl.duree} min${pl.payant ? ' · payant' : ' · gratuit'} · ${pl.categories.map((c) => CATEGORY_LABELS[c]).join(', ')}</small>
+        <small>à ${fmtKm(d)} du parcours · ${stayMin(pl, p)} min${pl.payant ? ' · payant' : ' · gratuit'} · ${pl.categories.map((c) => CATEGORY_LABELS[c]).join(', ')}</small>
       </button></li>`).join('')
     : '<li>Tous les lieux sont déjà dans votre parcours !</li>';
   $('#suggest').showModal();
@@ -676,7 +698,7 @@ function regenerate() {
   route = generateRoute(route.prefs, route.start, { jitter: true });
   saveRoute();
   renderRoute(true);
-  toast('Nouveau parcours proposé.');
+  toast(route.sparse ? SPARSE_MSG : 'Nouveau parcours proposé.', route.sparse ? 6000 : 3500);
 }
 
 // ---------- Visite ----------

@@ -68,7 +68,7 @@ git push -u origin main
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v3`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v4`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
