@@ -5,6 +5,7 @@
 const CITY_KEY = 'apied.ville';
 const LEGACY_PREFIX = { metz: 'metz', luxembourg: 'lux' };   // clés des anciennes apps séparées (même origine)
 const DETOUR = 1.3;                 // facteur de détour piéton vs vol d'oiseau
+const FAR_KM = 4.5;                 // à pied seulement : lieux au-delà (≈ 1 h de marche depuis le départ) écartés
 const DAY_START_DEFAULT = 9 * 60 + 30;
 
 const DURATIONS = {                 // minutes disponibles par jour, nombre de jours
@@ -26,7 +27,7 @@ const PAUSES = {
 const CATEGORY_LABELS = {
   histoire: 'Histoire', architecture: 'Architecture', art: 'Art', religieux: 'Religieux',
   nature: 'Nature', gastronomie: 'Gastronomie', shopping: 'Shopping', photo: 'Photo', nuit: 'Vie nocturne',
-  insolite: 'Insolite',
+  insolite: 'Insolite', sport: 'Sport',
 };
 const SPARSE_MSG = "Peu de lieux correspondent à vos centres d'intérêt : le parcours est plus court que la durée choisie. Ajoutez-en un pour l'allonger.";
 const DEFAULT_PREFS = {
@@ -252,6 +253,7 @@ function generateRoute(p, start, { jitter = false } = {}) {
   const candidates = DATA.lieux
     .filter((pl) => isCandidate(pl, p))
     .filter((pl) => p.budget === 'paid' || !pl.payant)
+    .filter((pl) => p.transport !== 'walk' || walkKm(start, pl) <= FAR_KM)
     .map((pl) => ({ pl, s: scorePlace(pl, p, jitter) }))
     .sort((a, b) => b.s - a.s)
     .map((x) => x.pl);
@@ -312,11 +314,11 @@ function buildRoute(p, start, dayLists, extra = {}) {
 // ---------- Parcours tout prêts ----------
 const DURATION_LABELS = { '2h': '2 h', half: '½ journée', day: 'Journée', '2days': '2 jours' };
 
-/** Préférences d'un parcours tout prêt : thème, durée, pauses et heure du parcours ; rythme, transport et départ du visiteur. */
+/** Préférences d'un parcours tout prêt : thème, durée, pauses et heure du parcours (et transport s'il l'impose) ; rythme, transport et départ du visiteur. */
 function presetPrefs(pr) {
   return {
     ...prefs,
-    interests: pr.interets, duration: pr.duree, pauses: pr.pauses, budget: 'paid',
+    interests: pr.interets, duration: pr.duree, pauses: pr.pauses, budget: 'paid', transport: pr.transport || prefs.transport,
     startTime: pr.heure || $('#start-time').value || defaultStartTime(),
   };
 }

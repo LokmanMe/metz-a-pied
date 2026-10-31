@@ -92,6 +92,40 @@
         }
       },
       "trajetBus": "🚇 métro/bus RTM"
+    },
+    {
+      "id": "santa-cruz",
+      "nom": "Santa Cruz",
+      "pays": "Espagne · Tenerife, îles Canaries",
+      "dossier": "villes/santa-cruz",
+      "centre": {
+        "lat": 28.466,
+        "lng": -16.251
+      },
+      "image": "villes/santa-cruz/images/auditorio.jpg",
+      "resume": "Auditorio de Calatrava, marché de l'Afrique, Palmetum, Rambla",
+      "accroche": "Quelques questions, et je vous trace un parcours dans la capitale de Tenerife, entre océan et montagnes d'Anaga.",
+      "couleur": {
+        "clair": "#0768A9",
+        "sombre": "#121417"
+      },
+      "libelles": {
+        "interests": {
+          "nature": "🌋 Nature & océan",
+          "gastronomie": "🥔 Saveurs canariennes"
+        },
+        "transport": {
+          "bus": "🚶+🚋 Pied + tram/guagua"
+        },
+        "start": {
+          "gare": "🚌 Gare routière"
+        },
+        "pauses": {
+          "dejeuner": "🍽 Déjeuner (papas, mojo…)",
+          "gouter": "☕ Barraquito"
+        }
+      },
+      "trajetBus": "🚋 tram/guagua"
     }
   ]
 }

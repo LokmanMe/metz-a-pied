@@ -159,6 +159,51 @@
   --c-blue: #2A7FCC; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
 }
 
+/* ---------- Santa Cruz : drapeau canarien (blanc, bleu, jaune) et pierre volcanique ---------- */
+:root[data-ville="santa-cruz"] {
+  --stone: #F2C230;
+  --stone-deep: #8A6A0A;
+  --stone-soft: #FBEFC4;
+  --on-stone: #15181C;
+  --bg: #F6F6F3;
+  --surface-2: #ECEDE8;
+  --text: #15181C;
+  --muted: #535A62;
+  --line: #D8DAD3;
+  --ink: #2A2D31;            /* basalte */
+  --c-blue: #0768A9;
+  --c-blue-deep: #04507F;
+  --c-red: #C2452D;
+  --c-green: #3F7A3A;
+  --c-violet: #55507F;
+  --c-amber: #F2C230;
+  --chip-on: var(--c-blue);
+  --chip-on-border: var(--c-blue-deep);
+  --chip-on-text: #FFFFFF;
+  --badge: var(--c-blue);
+  --pin: var(--c-blue);
+  --pin-border: #F2C230;
+  --pin-current: #FFFFFF;
+  --route: #0768A9;
+  --route-inner: #F2C230;
+  --band: linear-gradient(90deg, #FFFFFF 0 33.3%, #0768A9 33.3% 66.6%, #F2C230 66.6%);
+  --band-height: 10px;
+  --shadow: 0 6px 20px rgba(20, 24, 28, .13);
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-ville="santa-cruz"]:not([data-theme="light"]) {
+    --bg: #121417; --surface: #1B1E22; --surface-2: #24282D; --text: #EEEFEA; --muted: #A9AEB4;
+    --line: #353A40; --stone-soft: #3A3215; --accent: #5FA9E0; --ok: #5CBF7F; --c-red: #E2694F;
+    --c-blue: #1F84C9; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-ville="santa-cruz"][data-theme="dark"] {
+  --bg: #121417; --surface: #1B1E22; --surface-2: #24282D; --text: #EEEFEA; --muted: #A9AEB4;
+  --line: #353A40; --stone-soft: #3A3215; --accent: #5FA9E0; --ok: #5CBF7F; --c-red: #E2694F;
+  --c-blue: #1F84C9; --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -211,6 +256,12 @@ button, input, select { font: inherit; color: inherit; }
     linear-gradient(var(--c-blue), var(--c-blue)) center / 28% 100% no-repeat,
     #FFFFFF;
   border-color: var(--c-blue-deep);
+}
+:root[data-ville="santa-cruz"] .brand-mark {
+  /* drapeau des Canaries : blanc, bleu, jaune */
+  height: 26px; border-radius: 3px 3px 11px 11px;
+  background: linear-gradient(90deg, #FFFFFF 0 33.3%, #0768A9 33.3% 66.6%, #F2C230 66.6%);
+  border-color: var(--ink);
 }
 :root:not([data-ville]) .brand-mark { background: var(--stone); }
 .topbar-actions { display: flex; gap: 8px; flex: none; }

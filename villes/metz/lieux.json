@@ -333,7 +333,8 @@
       "lng": 6.166,
       "categories": [
         "nature",
-        "photo"
+        "photo",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -353,7 +354,8 @@
       "lng": 6.18497,
       "categories": [
         "nature",
-        "photo"
+        "photo",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -373,7 +375,8 @@
       "lng": 6.16744,
       "categories": [
         "nature",
-        "photo"
+        "photo",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -870,6 +873,89 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Jardin_botanique_de_metz.JPG"
     },
     {
+      "id": "stade-saint-symphorien",
+      "nom": "Stade Saint-Symphorien",
+      "lat": 49.10963,
+      "lng": 6.1596,
+      "categories": [
+        "sport"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Le stade du FC Metz, sur une île de la Moselle à Longeville-lès-Metz, à une vingtaine de minutes à pied du centre.",
+      "aRegarder": "Les tribunes au bord de l'eau et, un soir de match, l'ambiance des supporters grenat.",
+      "anecdote": "Le FC Metz y joue depuis 1923 ; le stade tient son nom de l'île Saint-Symphorien, sur laquelle il est construit.",
+      "photo": "Depuis la passerelle sur la Moselle, le stade se reflète dans l'eau.",
+      "note": "Matchs payants, calendrier à consulter.",
+      "image": "villes/metz/images/stade-saint-symphorien.jpg",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Match_Football_FC_Metz_x_FC_Nantes_-_Stade_Saint_Symphorien_-_Longeville-l%C3%A8s-Metz_(FR57)_-_2022-02-27_-_16.jpg"
+    },
+    {
+      "id": "patinoire",
+      "nom": "Patinoire Ice Arena",
+      "lat": 49.1129,
+      "lng": 6.16259,
+      "categories": [
+        "sport"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "La patinoire de Metz, à côté du stade Saint-Symphorien, ouverte au public en dehors des entraînements et des matchs de hockey.",
+      "aRegarder": "La glace et, certains soirs, les matchs de hockey.",
+      "anecdote": "Elle est installée sur la même île que le stade et le plan d'eau de Metz Plage : le quartier sportif de la ville.",
+      "photo": "Les reflets des lumières sur la glace.",
+      "note": "Créneaux publics et tarifs à confirmer ; location de patins sur place.",
+      "image": "villes/metz/images/patinoire.jpg",
+      "imageCredit": "Rowanswiki · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Servus_Place_Leisure_Ice_Skating_Rink_2014.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "metz-plage",
+      "nom": "Metz Plage",
+      "lat": 49.11525,
+      "lng": 6.16437,
+      "categories": [
+        "sport",
+        "nature"
+      ],
+      "duree": 60,
+      "payant": false,
+      "importance": 1,
+      "description": "Chaque été, une plage de sable s'installe au bord du plan d'eau, avec beach-volley, transats et activités nautiques.",
+      "aRegarder": "Les terrains de beach-volley, les pédalos et paddles, la vue sur la cathédrale au loin.",
+      "anecdote": "On peut y faire du paddle avec la cathédrale en toile de fond, un point de vue que peu de visiteurs connaissent.",
+      "photo": "Depuis l'eau ou la rive, cadrez la cathédrale au-dessus du plan d'eau.",
+      "note": "Ouvert l'été seulement (juillet-août en général) ; activités et tarifs à confirmer.",
+      "image": "villes/metz/images/metz-plage.jpg",
+      "imageCredit": "No machine-readable author provided. FrauAntje82~commonsw… · CC BY-SA 2.5 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Plan_d%27Eau.jpg"
+    },
+    {
+      "id": "piscine-lothaire",
+      "nom": "Piscine Lothaire",
+      "lat": 49.10102,
+      "lng": 6.18618,
+      "categories": [
+        "sport"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Piscine municipale du quartier de l'Amphithéâtre, à quelques minutes du Centre Pompidou et de la gare.",
+      "aRegarder": "Le bassin et les vestiaires rénovés.",
+      "anecdote": "Après une matinée de musées, quelques longueurs sont la meilleure façon de se reposer les jambes.",
+      "photo": "Pas de photo dans l'enceinte : respectez les autres nageurs.",
+      "note": "Horaires d'ouverture au public et tarifs à confirmer.",
+      "image": "villes/metz/images/piscine-lothaire.jpg",
+      "imageCredit": "www.localfitness.com.au · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Indoor_Swimming_Pool.JPG",
+      "imageIllustration": true
+    },
+    {
       "id": "pause-mauricette",
       "type": "pause",
       "nom": "Chez Mauricette (Marché couvert)",
@@ -1156,6 +1242,27 @@
         "moyen-pont",
         "temple-neuf",
         "jardins-pelt"
+      ]
+    },
+    {
+      "id": "sport",
+      "emoji": "🏃",
+      "titre": "Sport au fil de la Moselle",
+      "duree": "half",
+      "resume": "Footing dans les jardins, tour du plan d'eau, stade du FC Metz et patinoire : Metz côté plein air.",
+      "interets": [
+        "sport",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "jardins-pelt",
+        "plan-eau",
+        "quais-moselle",
+        "stade-saint-symphorien",
+        "patinoire"
       ]
     },
     {

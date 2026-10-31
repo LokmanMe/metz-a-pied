@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "verification": "Coordonnées vérifiées via OpenStreetMap/Nominatim le 2026-10-31. Horaires, tarifs et adresses de pauses à confirmer sur place.",
+  "departs": {
+    "gare": {
+      "nom": "Gare routière (Intercambiador)",
+      "lat": 28.45901,
+      "lng": -16.251,
+      "id": "depart-gare"
+    },
+    "parkings": [
+      {
+        "id": "p-plaza-espana",
+        "nom": "Parking Plaza de España",
+        "lat": 28.46829,
+        "lng": -16.2471
+      },
+      {
+        "id": "p-mercado",
+        "nom": "Parking près du marché de l'Afrique",
+        "lat": 28.4635,
+        "lng": -16.25147
+      },
+      {
+        "id": "p-auditorio",
+        "nom": "Parking de l'Auditorio (av. de la Constitución)",
+        "lat": 28.45469,
+        "lng": -16.255
+      }
+    ]
+  },
+  "lieux": [
+    {
+      "id": "auditorio",
+      "nom": "Auditorio de Tenerife",
+      "lat": 28.45607,
+      "lng": -16.2512,
+      "categories": [
+        "architecture",
+        "art",
+        "photo",
+        "nuit"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 3,
+      "description": "La grande vague de béton blanc signée Santiago Calatrava, inaugurée en 2003 au bord de l'océan, est devenue le symbole de Santa Cruz. Elle accueille l'orchestre symphonique de Tenerife et des concerts.",
+      "aRegarder": "L'immense aile courbe qui s'élance au-dessus de la salle, les escaliers extérieurs et le contraste avec l'océan.",
+      "anecdote": "Le bâtiment est revêtu de trencadís, une mosaïque de céramique blanche brisée ; il a fallu entièrement refaire ce revêtement quelques années après l'inauguration.",
+      "photo": "Depuis la jetée en face ou le Castillo de San Juan, cadrez l'aile avec l'océan ; au coucher du soleil, le béton blanc devient rose.",
+      "note": "Visites guidées et concerts payants, programme à consulter.",
+      "image": "villes/santa-cruz/images/auditorio.jpg",
+      "imageCredit": "Wladyslaw · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Auditorio_de_Tenerife_Pano.jpg"
+    },
+    {
+      "id": "plaza-espana",
+      "nom": "Plaza de España",
+      "lat": 28.46706,
+      "lng": -16.2467,
+      "categories": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "La grande place face au port, réaménagée en 2008 par Herzog & de Meuron autour d'un vaste bassin miroir, avec le monument aux morts en forme de croix.",
+      "aRegarder": "Le bassin qui reflète le ciel et la ville, le monument aux morts et, sous la place, les vestiges du château de San Cristóbal.",
+      "anecdote": "Les travaux ont mis au jour les fondations du château de San Cristóbal, qui défendait la ville lorsque l'amiral Nelson l'attaqua en 1797 ; Nelson y perdit son bras droit.",
+      "photo": "Accroupissez-vous au bord du bassin pour cadrer les reflets des façades, de préférence par temps calme.",
+      "note": "Vestiges du château visibles dans une salle souterraine, horaires à confirmer.",
+      "image": "villes/santa-cruz/images/plaza-espana.jpg",
+      "imageCredit": "Enrique Castrillo Núñez · CC BY-SA 2.5 es · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_Espa%C3%B1a(Santa_Cruz_de_Tenerife).jpg"
+    },
+    {
+      "id": "iglesia-concepcion",
+      "nom": "Iglesia de la Concepción",
+      "lat": 28.46438,
+      "lng": -16.2489,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "La plus ancienne église de Santa Cruz, fondée au début du XVIe siècle et reconstruite après un incendie au XVIIIe. Son clocher est l'un des emblèmes de la ville.",
+      "aRegarder": "Le clocher, les plafonds de bois mudéjars et les retables baroques.",
+      "anecdote": "On y conserve la Croix de la Conquête, plantée en 1494 par Alonso Fernández de Lugo à son débarquement sur l'île.",
+      "photo": "Depuis la place, cadrez le clocher au-dessus des toits.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/santa-cruz/images/iglesia-concepcion.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Nuestra_Se%C3%B1ora_de_la_Concepci%C3%B3n,_Santa_Cruz_de_Tenerife,_Espa%C3%B1a,_2012-12-15,_DD_06.jpg"
+    },
+    {
+      "id": "mercado-africa",
+      "nom": "Mercado Nuestra Señora de África",
+      "lat": 28.46359,
+      "lng": -16.2513,
+      "categories": [
+        "gastronomie",
+        "shopping",
+        "architecture"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "Le grand marché de Santa Cruz, ouvert en 1943 dans un bâtiment de style colonial avec patios et arcades. Fruits tropicaux, poissons de l'Atlantique, fromages de chèvre et mojos.",
+      "aRegarder": "Les étals de fruits exotiques, les fromages canariens et les petits bars où l'on mange sur le pouce.",
+      "anecdote": "Le dimanche matin, les rues autour du marché accueillent le Rastro, un grand marché aux puces.",
+      "photo": "Le patio central et ses arcades, avec les étals colorés en contrebas.",
+      "note": "Ouvert le matin, fermé le dimanche après-midi ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/mercado-africa.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Mercado_de_Nuestra_Se%C3%B1ora_de_%C3%81frica,_Santa_Cruz_de_Tenerife,_Espa%C3%B1a,_2012-12-15,_DD_01.jpg"
+    },
+    {
+      "id": "garcia-sanabria",
+      "nom": "Parc García Sanabria",
+      "lat": 28.47239,
+      "lng": -16.2541,
+      "categories": [
+        "nature",
+        "art",
+        "photo"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "Le grand parc du centre, inauguré en 1926 et nommé d'après le maire qui l'a voulu. Plantes tropicales, fontaines, horloge florale et sculptures en plein air.",
+      "aRegarder": "L'horloge florale, la fontaine centrale, et les sculptures modernes réparties dans les allées.",
+      "anecdote": "Plusieurs sculptures viennent de l'Exposition internationale de sculpture dans la rue de 1973, qui a laissé à la ville un vrai musée à ciel ouvert.",
+      "photo": "L'horloge florale en plongée depuis l'allée qui la domine.",
+      "image": "villes/santa-cruz/images/garcia-sanabria.jpg",
+      "imageCredit": "Noemi M.M. · Public domain · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Parque_Garcia_Sanabria.JPG"
+    },
+    {
+      "id": "tea",
+      "nom": "TEA – Tenerife Espacio de las Artes",
+      "lat": 28.46389,
+      "lng": -16.2505,
+      "categories": [
+        "art",
+        "architecture"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Centre d'art contemporain dessiné par Herzog & de Meuron, ouvert en 2008 au bord du ravin de Santos. Il présente notamment l'œuvre du surréaliste canarien Óscar Domínguez.",
+      "aRegarder": "Les façades de béton perforé, le patio triangulaire et les tableaux d'Óscar Domínguez.",
+      "anecdote": "Óscar Domínguez, né à Tenerife, a fréquenté André Breton et les surréalistes à Paris ; une exposition surréaliste internationale a même eu lieu à Santa Cruz en 1935.",
+      "photo": "La lumière qui passe à travers les perforations des façades dessine des motifs au sol.",
+      "note": "Tarifs et horaires à confirmer.",
+      "image": "villes/santa-cruz/images/tea.jpg",
+      "imageCredit": "Spigidbe83 · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:TEA_-_Tenerife_Espacio_de_las_Artes.JPG"
+    },
+    {
+      "id": "muna",
+      "nom": "Musée de la Nature et de l'Archéologie (MUNA)",
+      "lat": 28.46386,
+      "lng": -16.2494,
+      "categories": [
+        "histoire",
+        "art"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Installé dans l'ancien hôpital civil, le musée raconte l'histoire naturelle des Canaries et la vie des Guanches, les premiers habitants de l'île.",
+      "aRegarder": "Les momies guanches, les objets de la vie quotidienne avant la conquête, et les collections de volcanologie.",
+      "anecdote": "Les Guanches momifiaient certains de leurs morts, une pratique rare en dehors de l'Égypte ancienne.",
+      "photo": "Le patio de l'ancien hôpital, avec sa galerie.",
+      "note": "Tarifs et horaires à confirmer.",
+      "image": "villes/santa-cruz/images/muna.jpg",
+      "imageCredit": "VolcánTeide · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Fachada_del_Museo_de_la_Naturaleza_y_el_Hombre,_Santa_Cruz_de_Tenerife.JPG"
+    },
+    {
+      "id": "castillo-san-juan",
+      "nom": "Castillo de San Juan Bautista",
+      "lat": 28.45541,
+      "lng": -16.2523,
+      "categories": [
+        "histoire",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Petit fort du XVIIe siècle, surnommé le « château noir » pour sa pierre volcanique, posé à côté de l'Auditorio.",
+      "aRegarder": "Les murs de basalte sombre et le contraste avec le béton blanc de l'Auditorio.",
+      "anecdote": "C'était l'un des forts qui protégeaient la ville des corsaires et des flottes anglaises.",
+      "photo": "Cadrez le château noir et la vague blanche de l'Auditorio dans la même image.",
+      "note": "À voir de l'extérieur.",
+      "image": "villes/santa-cruz/images/castillo-san-juan.jpg",
+      "imageCredit": "Pepelopex · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Juan_Bautista-Santa_Cruz_de_Tenerife.jpg"
+    },
+    {
+      "id": "palmetum",
+      "nom": "Palmetum",
+      "lat": 28.45287,
+      "lng": -16.2562,
+      "categories": [
+        "nature",
+        "photo",
+        "insolite"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Un jardin botanique consacré aux palmiers du monde entier, sur une colline au bord de l'océan. Il a été aménagé sur une ancienne décharge.",
+      "aRegarder": "Les centaines d'espèces de palmiers, les cascades et la vue sur l'océan et l'Auditorio.",
+      "anecdote": "Il y a quelques décennies, cette colline était la décharge de la ville ; elle a été recouverte et plantée pour devenir l'un des grands jardins de palmiers d'Europe.",
+      "photo": "Depuis le sommet, cadrez les palmiers avec l'Auditorio en arrière-plan.",
+      "note": "Tarifs et horaires à confirmer.",
+      "image": "villes/santa-cruz/images/palmetum.jpg",
+      "imageCredit": "Enrique Castrillo Núñez · CC BY-SA 2.5 es · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Palmetum_(Santa_Cruz_de_Tenerife).jpg"
+    },
+    {
+      "id": "parque-maritimo",
+      "nom": "Parque Marítimo César Manrique",
+      "lat": 28.45421,
+      "lng": -16.2538,
+      "categories": [
+        "sport",
+        "nature"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 1,
+      "description": "Un complexe de piscines d'eau de mer en plein air au bord de l'océan, dessiné d'après les idées de l'artiste lanzarotéen César Manrique.",
+      "aRegarder": "Les bassins bordés de pierre volcanique et de palmiers, face à l'Atlantique.",
+      "anecdote": "César Manrique a marqué l'architecture des Canaries en défendant une construction intégrée au paysage volcanique.",
+      "photo": "Les bassins turquoise avec les rochers noirs en premier plan.",
+      "note": "Entrée payante ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/parque-maritimo.jpg",
+      "imageCredit": "elduendesuarez · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Colecci%C3%B3n_Parque_Mar%C3%ADtimo_C%C3%A9sar_Manrique_by_elduendesuarez_11.JPG"
+    },
+    {
+      "id": "calle-castillo",
+      "nom": "Calle del Castillo",
+      "lat": 28.46724,
+      "lng": -16.2522,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "La principale rue piétonne commerçante de Santa Cruz, entre la place de la Candelaria et la place Weyler.",
+      "aRegarder": "Les façades anciennes au-dessus des vitrines et l'animation de la rue.",
+      "anecdote": "Son nom vient du château de San Cristóbal, qui se trouvait au bas de la rue.",
+      "photo": "La perspective de la rue depuis la place de la Candelaria.",
+      "image": "villes/santa-cruz/images/calle-castillo.jpg",
+      "imageCredit": "Koppchen · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Calle_del_Castillo_01.jpg"
+    },
+    {
+      "id": "plaza-candelaria",
+      "nom": "Plaza de la Candelaria",
+      "lat": 28.46686,
+      "lng": -16.2484,
+      "categories": [
+        "histoire",
+        "shopping",
+        "photo"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Place historique du centre, bordée de palais, avec le Triomphe de la Candelaria, monument de marbre de la fin du XVIIIe siècle.",
+      "aRegarder": "Le monument : la Vierge de la Candelaria, patronne des Canaries, au-dessus de quatre rois guanches.",
+      "anecdote": "La Vierge de la Candelaria serait apparue à des bergers guanches avant même la conquête espagnole, selon la tradition.",
+      "photo": "Cadrez le monument avec les façades à balcons de bois derrière.",
+      "image": "villes/santa-cruz/images/plaza-candelaria.jpg",
+      "imageCredit": "Maesi64 · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_-_Plaza_de_la_Candelaria.jpg"
+    },
+    {
+      "id": "teatro-guimera",
+      "nom": "Teatro Guimerá",
+      "lat": 28.46594,
+      "lng": -16.2506,
+      "categories": [
+        "art",
+        "nuit",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Le théâtre historique de la ville, inauguré en 1851, avec sa salle à l'italienne.",
+      "aRegarder": "La façade néoclassique et, si vous assistez à un spectacle, la salle en fer à cheval.",
+      "anecdote": "Il porte le nom d'Ángel Guimerá, grand dramaturge de langue catalane, né à Santa Cruz.",
+      "photo": "La façade éclairée le soir.",
+      "note": "Spectacles payants, programme à consulter.",
+      "image": "villes/santa-cruz/images/teatro-guimera.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Guimer%C3%A1,_Plaza_de_la_Isla_de_Madeira,_Santa_Cruz_de_Tenerife,_Espa%C3%B1a,_2012-12-15,_DD_01.jpg"
+    },
+    {
+      "id": "san-francisco",
+      "nom": "Iglesia de San Francisco",
+      "lat": 28.46799,
+      "lng": -16.2495,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Église baroque de l'ancien couvent franciscain, l'une des plus belles de la ville.",
+      "aRegarder": "Les retables dorés, les plafonds de bois et la façade blanche à pierre volcanique.",
+      "anecdote": "Le couvent franciscain a disparu au XIXe siècle, mais son église est restée ; la place du Prince voisine était son jardin.",
+      "photo": "La façade blanche soulignée de pierre sombre, typique des Canaries.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/santa-cruz/images/san-francisco.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Francisco_de_As%C3%ADs,_Santa_Cruz_de_Tenerife,_Espa%C3%B1a,_2012-12-15,_DD_01.jpg"
+    },
+    {
+      "id": "bellas-artes",
+      "nom": "Musée municipal des Beaux-Arts",
+      "lat": 28.46829,
+      "lng": -16.2496,
+      "categories": [
+        "art"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Un musée gratuit et tranquille : peinture flamande, espagnole et canarienne, sculptures et monnaies.",
+      "aRegarder": "Les peintres canariens du XIXe siècle et les paysages de l'île.",
+      "anecdote": "Ses salles calmes, à l'écart de l'animation des rues commerçantes, en font une pause culturelle idéale.",
+      "photo": "La façade et ses bustes d'artistes canariens.",
+      "note": "Entrée libre ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/bellas-artes.jpg",
+      "imageCredit": "Mataparda · Public domain · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Museo_Municipal_Sta_Cruz_de_Tenerife.JPG"
+    },
+    {
+      "id": "toscal",
+      "nom": "Quartier d'El Toscal",
+      "lat": 28.47255,
+      "lng": -16.25,
+      "categories": [
+        "histoire",
+        "photo",
+        "insolite"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "L'ancien quartier populaire de pêcheurs et d'artisans, juste derrière le centre : petites maisons basses peintes de couleurs vives et ruelles calmes.",
+      "aRegarder": "Les façades colorées, les fenêtres de bois et les petites places.",
+      "anecdote": "Son nom viendrait de la « tosca », une pierre volcanique tendre qu'on extrayait autrefois dans le secteur.",
+      "photo": "Les façades multicolores, en rasant les murs en milieu de matinée.",
+      "image": "villes/santa-cruz/images/toscal.jpg",
+      "imageCredit": "Mentxuwiki · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Pasaje_Santiago,_Santa_Cruz_de_Tenerife_2.jpg"
+    },
+    {
+      "id": "rambla",
+      "nom": "Rambla de Santa Cruz",
+      "lat": 28.4705,
+      "lng": -16.258,
+      "categories": [
+        "nature",
+        "art",
+        "sport"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Large promenade ombragée de lauriers d'Inde, parfaite pour un footing ou une balade, ponctuée de sculptures en plein air.",
+      "aRegarder": "Les sculptures de l'exposition de 1973, dont une œuvre d'Henry Moore, et les kiosques à café.",
+      "anecdote": "La Rambla est le grand lieu de promenade des habitants, à l'écart des touristes.",
+      "photo": "Sous les lauriers, la lumière filtre en taches sur le pavé.",
+      "image": "villes/santa-cruz/images/rambla.jpg",
+      "imageCredit": "Photograph by Mike Peel (www.mikepeel.net). · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:At_Santa_Cruz_de_Tenerife_2021_007.jpg"
+    },
+    {
+      "id": "plaza-weyler",
+      "nom": "Plaza Weyler",
+      "lat": 28.46771,
+      "lng": -16.2553,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Place ornée d'une fontaine de marbre italien de la fin du XIXe siècle, face à l'ancienne Capitainerie générale des Canaries.",
+      "aRegarder": "La fontaine et le bâtiment militaire de la Capitainerie générale.",
+      "anecdote": "La place porte le nom du général Valeriano Weyler, capitaine général des Canaries à la fin du XIXe siècle.",
+      "photo": "La fontaine avec la Capitainerie en arrière-plan.",
+      "image": "villes/santa-cruz/images/plaza-weyler.jpg",
+      "imageCredit": "Photograph: Frank C. Müller, Baden-Baden · CC BY-SA 2.5 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_Brunnen_auf_der_Plaza_Weyler_(fcm).jpg"
+    },
+    {
+      "id": "noria",
+      "nom": "Calle La Noria",
+      "lat": 28.46497,
+      "lng": -16.251,
+      "categories": [
+        "nuit",
+        "gastronomie",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Une rue piétonne aux façades colorées, bordée de bars et de restaurants, très animée le soir.",
+      "aRegarder": "Les maisons anciennes aux couleurs vives et les terrasses.",
+      "anecdote": "Son nom officiel est Calle Antonio Domínguez Alfonso, mais tout le monde l'appelle La Noria, « la noria ».",
+      "photo": "Le soir, les terrasses éclairées devant les façades colorées.",
+      "image": "villes/santa-cruz/images/noria.jpg",
+      "imageCredit": "MiguelGuerra · CC BY-SA 3.0 es · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_la_Concepci%C3%B3n,_Santa_Cruz_de_Tenerife1.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "casa-carnaval",
+      "nom": "Casa del Carnaval",
+      "lat": 28.46463,
+      "lng": -16.256,
+      "categories": [
+        "art",
+        "insolite"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Un musée consacré au carnaval de Santa Cruz, l'un des plus grands du monde : costumes géants des reines, photos et histoire de la fête.",
+      "aRegarder": "Les costumes spectaculaires des reines du carnaval, qui pèsent plusieurs dizaines de kilos.",
+      "anecdote": "En 1987, un concert de Celia Cruz pendant le carnaval a réuni environ 200 000 personnes, un record entré au Guinness.",
+      "photo": "Les costumes à plumes et paillettes sous les projecteurs.",
+      "note": "Tarifs et horaires à confirmer.",
+      "image": "villes/santa-cruz/images/casa-carnaval.jpg",
+      "imageCredit": "No machine-readable author provided. Nami~commonswiki ass… · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Reina_carnaval.jpg"
+    },
+    {
+      "id": "plaza-principe",
+      "nom": "Plaza del Príncipe",
+      "lat": 28.46819,
+      "lng": -16.2511,
+      "categories": [
+        "nature",
+        "nuit"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une place ombragée par d'énormes lauriers d'Inde, avec un kiosque, dans l'ancien jardin du couvent franciscain.",
+      "aRegarder": "Les troncs et les racines aériennes des lauriers, le kiosque central.",
+      "anecdote": "La place occupe l'emplacement du verger du couvent de San Francisco.",
+      "photo": "Le kiosque sous la voûte des lauriers.",
+      "image": "villes/santa-cruz/images/plaza-principe.jpg",
+      "imageCredit": "Mentxuwiki · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Templete,_Plaza_del_Pr%C3%ADncipe_de_Asturias.jpg"
+    },
+    {
+      "id": "la-granja",
+      "nom": "Parque La Granja",
+      "lat": 28.46307,
+      "lng": -16.266,
+      "categories": [
+        "nature",
+        "sport"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Grand parc de quartier avec allées de footing, aires de jeux et installations sportives, fréquenté par les habitants.",
+      "aRegarder": "Les allées plantées et les espaces de sport en plein air.",
+      "anecdote": "Son nom, « la ferme », rappelle le domaine agricole qui occupait autrefois le terrain.",
+      "photo": "Les allées bordées d'arbres tropicaux.",
+      "image": "villes/santa-cruz/images/la-granja.jpg",
+      "imageCredit": "Mentxuwiki · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Parque_La_Granja,_Santa_Cruz_de_Tenerife.jpg"
+    },
+    {
+      "id": "heliodoro",
+      "nom": "Stade Heliodoro Rodríguez López",
+      "lat": 28.46324,
+      "lng": -16.2605,
+      "categories": [
+        "sport"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Le stade du CD Tenerife, le club de football de l'île, en plein centre-ville.",
+      "aRegarder": "Les tribunes depuis l'extérieur et, un soir de match, l'ambiance des supporters.",
+      "anecdote": "Dans les années 1990, le CD Tenerife a privé deux fois le Real Madrid du titre lors de la dernière journée du championnat.",
+      "photo": "Un soir de match, les projecteurs du stade au-dessus du quartier.",
+      "note": "Matchs payants, calendrier à consulter.",
+      "image": "villes/santa-cruz/images/heliodoro.jpg",
+      "imageCredit": "Edub · CC BY-SA 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:RodriguezLopez2008.jpg"
+    },
+    {
+      "id": "teresitas",
+      "nom": "Playa de Las Teresitas",
+      "lat": 28.50793,
+      "lng": -16.1873,
+      "categories": [
+        "nature",
+        "sport",
+        "photo"
+      ],
+      "duree": 90,
+      "payant": false,
+      "importance": 2,
+      "description": "La plage de sable doré de Santa Cruz, au pied des montagnes d'Anaga, à San Andrés. Eau calme protégée par une digue, palmiers et kiosques.",
+      "aRegarder": "Le contraste entre le sable doré et les montagnes vertes et sombres d'Anaga.",
+      "anecdote": "Le sable a été apporté du Sahara dans les années 1970 : l'île n'a naturellement que des plages de sable noir.",
+      "photo": "Depuis le mirador sur la route d'Anaga, la plage dessine une longue courbe dorée.",
+      "note": "À environ 8 km du centre : bus 910 depuis la gare routière.",
+      "image": "villes/santa-cruz/images/teresitas.jpg",
+      "imageCredit": "Sergio Martín González · Public domain · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Playa_de_Las_Teresitas_en_Santa_Cruz.jpg"
+    },
+    {
+      "id": "pause-mercado",
+      "type": "pause",
+      "nom": "Bars du marché de l'Afrique",
+      "lat": 28.4634,
+      "lng": -16.2516,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner",
+        "cafe"
+      ],
+      "duree": 45,
+      "payant": true,
+      "importance": 1,
+      "description": "Petits bars et comptoirs dans le marché : poisson frit, papas arrugadas et jus de fruits frais.",
+      "aRegarder": "Les comptoirs où les habitants déjeunent sur le pouce.",
+      "anecdote": "Les papas arrugadas, petites pommes de terre cuites dans l'eau très salée, se mangent avec les mojos rouge et vert.",
+      "photo": "Une assiette de papas arrugadas et de mojo.",
+      "note": "Ouvert le matin et à midi ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/pause-mercado.jpg",
+      "imageCredit": "Fer.. · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Papasarrugadas.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-noria",
+      "type": "pause",
+      "nom": "Restaurants de La Noria",
+      "lat": 28.4648,
+      "lng": -16.2507,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Cuisine canarienne et tapas dans la rue la plus animée du centre.",
+      "aRegarder": "Les terrasses devant les façades colorées.",
+      "anecdote": "Le gofio, farine de céréales grillées héritée des Guanches, se retrouve encore dans de nombreux plats.",
+      "photo": "Une terrasse dans la rue colorée.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/pause-noria.jpg",
+      "imageCredit": "Koppchen · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Gofio_01.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-principe",
+      "type": "pause",
+      "nom": "Kiosque de la Plaza del Príncipe",
+      "lat": 28.4681,
+      "lng": -16.251,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe",
+        "gouter"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Un café à l'ombre des lauriers d'Inde, au cœur du centre.",
+      "aRegarder": "La place et ses arbres géants.",
+      "anecdote": "Les kiosques à café sur les places sont une tradition de la ville.",
+      "photo": "Le kiosque sous les arbres.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/santa-cruz/images/pause-principe.jpg",
+      "imageCredit": "Mentxuwiki · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Plaza_del_Pr%C3%ADncipe_de_Asturias.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-candelaria",
+      "type": "pause",
+      "nom": "Cafés de la Plaza de la Candelaria",
+      "lat": 28.4669,
+      "lng": -16.2488,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe",
+        "gouter"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Terrasses pour goûter un barraquito, le café gourmand typique de Tenerife.",
+      "aRegarder": "La place et le monument de la Candelaria.",
+      "anecdote": "Le barraquito superpose lait concentré, liqueur 43, café, lait moussé, cannelle et zeste de citron dans un verre.",
+      "photo": "Les couches du barraquito dans le verre.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/santa-cruz/images/pause-candelaria.jpg",
+      "imageCredit": "Jürgen Lindert, Lindi44 · CC BY-SA 3.0 de · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Barraquito_Tenerife.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-rambla",
+      "type": "pause",
+      "nom": "Kiosques de la Rambla",
+      "lat": 28.4702,
+      "lng": -16.259,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe",
+        "gouter"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Une pause café sous les lauriers de la Rambla, avec les habitants du quartier.",
+      "aRegarder": "Les promeneurs et les sculptures alentour.",
+      "anecdote": "La Rambla est le lieu de promenade du dimanche des familles de Santa Cruz.",
+      "photo": "La terrasse sous les arbres.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/santa-cruz/images/pause-rambla.jpg",
+      "imageCredit": "Photograph by Mike Peel (www.mikepeel.net). · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:At_Santa_Cruz_de_Tenerife_2021_007.jpg",
+      "imageIllustration": true
+    }
+  ],
+  "parcours": [
+    {
+      "id": "essentiel",
+      "emoji": "⭐",
+      "titre": "L'essentiel de Santa Cruz",
+      "duree": "half",
+      "resume": "Plaza de España, église de la Concepción, marché de l'Afrique et la vague blanche de l'Auditorio.",
+      "interets": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "plaza-espana",
+        "plaza-candelaria",
+        "calle-castillo",
+        "teatro-guimera",
+        "iglesia-concepcion",
+        "mercado-africa",
+        "castillo-san-juan",
+        "auditorio"
+      ]
+    },
+    {
+      "id": "insolite",
+      "emoji": "🔍",
+      "titre": "Santa Cruz insolite",
+      "duree": "half",
+      "resume": "Le quartier coloré d'El Toscal, un château enfoui sous la place d'Espagne, le musée du carnaval et un jardin né d'une décharge.",
+      "interets": [
+        "insolite"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "toscal",
+        "plaza-espana",
+        "casa-carnaval",
+        "castillo-san-juan",
+        "palmetum"
+      ]
+    },
+    {
+      "id": "nuit",
+      "emoji": "🌙",
+      "titre": "Santa Cruz by night",
+      "duree": "2h",
+      "heure": "20:30",
+      "resume": "L'Auditorio illuminé, la place d'Espagne, puis les terrasses de La Noria et de la place du Prince.",
+      "interets": [
+        "nuit",
+        "photo"
+      ],
+      "pauses": [],
+      "lieux": [
+        "auditorio",
+        "plaza-espana",
+        "teatro-guimera",
+        "noria",
+        "plaza-principe"
+      ]
+    },
+    {
+      "id": "art",
+      "emoji": "🎨",
+      "titre": "Art, musées et sculptures",
+      "duree": "day",
+      "resume": "TEA et Óscar Domínguez, momies guanches du MUNA, Beaux-Arts et sculptures en plein air de la Rambla.",
+      "interets": [
+        "art",
+        "architecture"
+      ],
+      "pauses": [
+        "cafe",
+        "dejeuner"
+      ],
+      "lieux": [
+        "tea",
+        "muna",
+        "bellas-artes",
+        "garcia-sanabria",
+        "rambla",
+        "auditorio"
+      ]
+    },
+    {
+      "id": "plage",
+      "emoji": "🏖",
+      "titre": "Journée à Las Teresitas",
+      "duree": "day",
+      "transport": "bus",
+      "resume": "Courses au marché de l'Afrique, puis bus 910 pour la plage de sable doré au pied des montagnes d'Anaga.",
+      "interets": [
+        "nature",
+        "sport"
+      ],
+      "pauses": [
+        "dejeuner"
+      ],
+      "lieux": [
+        "mercado-africa",
+        "teresitas"
+      ]
+    },
+    {
+      "id": "sport",
+      "emoji": "🏃",
+      "titre": "Sport et plein air",
+      "duree": "half",
+      "resume": "Footing sur la Rambla et au parc García Sanabria, le parc La Granja, le stade du CD Tenerife et les piscines d'eau de mer.",
+      "interets": [
+        "sport",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "rambla",
+        "garcia-sanabria",
+        "la-granja",
+        "heliodoro",
+        "parque-maritimo"
+      ]
+    },
+    {
+      "id": "enfants",
+      "emoji": "🧒",
+      "titre": "Spécial enfants",
+      "duree": "half",
+      "resume": "Momies guanches, palmiers géants, piscines d'eau de mer et horloge florale.",
+      "interets": [
+        "nature",
+        "histoire"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "muna",
+        "garcia-sanabria",
+        "castillo-san-juan",
+        "palmetum",
+        "parque-maritimo"
+      ]
+    }
+  ]
+}

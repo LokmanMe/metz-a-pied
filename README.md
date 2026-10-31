@@ -1,6 +1,6 @@
 # À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz**, **Luxembourg** et **Marseille**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
+PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz**, **Luxembourg**, **Marseille** et **Santa Cruz de Tenerife**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
 HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + tuiles OpenStreetMap.
 
@@ -12,7 +12,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
 | `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
-| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 39 + 6 ; Luxembourg : 40 + 6 ; Marseille : 43 + 6), parcours tout prêts |
+| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 43 + 6 ; Luxembourg : 43 + 6 ; Marseille : 47 + 6 ; Santa Cruz : 24 + 5), parcours tout prêts |
 | `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 | `manifest.webmanifest` | Métadonnées d'installation |
@@ -77,7 +77,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v10`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v11`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -142,18 +142,18 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
   "id": "identifiant-unique",
   "nom": "Nom affiché",
   "lat": 49.12, "lng": 6.17,
-  "categories": ["histoire", "architecture", "art", "religieux", "nature", "gastronomie", "shopping", "photo", "nuit", "insolite"],
+  "categories": ["histoire", "architecture", "art", "religieux", "nature", "gastronomie", "shopping", "photo", "nuit", "insolite", "sport"],
   "duree": 20, "payant": false, "importance": 1,
   "description": "…", "aRegarder": "…", "anecdote": "…", "photo": "…",
   "note": "facultatif"
 }
 ```
 
-Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables. Un parcours ne propose que les lieux qui correspondent aux centres d'intérêt choisis ; les adresses de pause en font partie (gastronomie, vie nocturne), avec au plus 30 min sur place.
+Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables. Un parcours ne propose que les lieux qui correspondent aux centres d'intérêt choisis, et, en mode « À pied », à moins de 4,5 km du départ (Bowl du Prado, plage de Las Teresitas… demandent l'option transports) ; les adresses de pause en font partie (gastronomie, vie nocturne), avec au plus 30 min sur place.
 
 ### Parcours tout prêts
 
-La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (7 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
+La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (7 ou 8 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
 
 ```json
 {
@@ -167,9 +167,9 @@ La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en 
 }
 ```
 
-`duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
+`duree` vaut `2h`, `half` ou `day`. `heure` est facultative (sinon l'heure de départ du questionnaire). `transport` est facultatif : `"bus"` impose les transports en commun quand un lieu est trop loin à pied (Bowl du Prado, plage de Las Teresitas). `interets` sert aux suggestions « Ajouter un lieu proche ». `pauses` accepte `cafe`, `dejeuner` et `gouter`.
 
-Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
+Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020. À Marseille, elle combine métro, tram et bus RTM. À Santa Cruz de Tenerife, elle utilise le tram et les bus (« guaguas ») de Titsa ; le point de départ « gare » y est la gare routière (Intercambiador), d'où part aussi le bus 910 pour la plage de Las Teresitas. Les distances à pied ne tiennent pas compte du relief : la montée à Notre-Dame-de-la-Garde (environ 150 m de dénivelé) prend plus longtemps qu'annoncé.
 
 ### Ordre des étapes (voyageur de commerce)
 

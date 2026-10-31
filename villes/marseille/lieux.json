@@ -452,7 +452,8 @@
       "lng": 5.3527,
       "categories": [
         "photo",
-        "nature"
+        "nature",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -472,7 +473,8 @@
       "lat": 43.29073,
       "lng": 5.3555,
       "categories": [
-        "nature"
+        "nature",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -872,7 +874,8 @@
       "categories": [
         "insolite",
         "nature",
-        "photo"
+        "photo",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -950,6 +953,90 @@
       "image": "villes/marseille/images/saint-ferreol-augustins.jpg",
       "imageCredit": "Rbert Valette · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint-Ferr%C3%A9ol-les-Augustins.jpg"
+    },
+    {
+      "id": "velodrome",
+      "nom": "Stade Vélodrome",
+      "lat": 43.26984,
+      "lng": 5.39591,
+      "categories": [
+        "sport",
+        "architecture"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Le stade de l'Olympique de Marseille, avec sa grande toiture ondulée. Des visites guidées font découvrir les vestiaires et la pelouse.",
+      "aRegarder": "La toiture blanche et, pendant la visite, le couloir des joueurs et les tribunes.",
+      "anecdote": "L'OM est le seul club français à avoir remporté la Ligue des champions, en 1993.",
+      "photo": "Depuis les tribunes, la pelouse et la courbe de la toiture.",
+      "note": "À environ 4 km du Vieux-Port : métro 2, station Rond-Point du Prado. Visites payantes, à réserver.",
+      "image": "villes/marseille/images/velodrome.jpg",
+      "imageCredit": "Hombrey · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Stade_V%C3%A9lodrome_(20150405).jpg"
+    },
+    {
+      "id": "bowl-prado",
+      "nom": "Bowl du Prado",
+      "lat": 43.25188,
+      "lng": 5.37462,
+      "categories": [
+        "sport",
+        "insolite"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Un skatepark mythique en béton face à la mer, construit au début des années 1990 et connu des skateurs du monde entier.",
+      "aRegarder": "Les skateurs dans le grand bowl, avec la mer juste derrière.",
+      "anecdote": "C'est une référence pour les skateurs du monde entier, qui viennent rouler dans ce bowl face à la Méditerranée.",
+      "photo": "Un skateur au bord du bowl, la mer en fond.",
+      "note": "À environ 6 km du Vieux-Port : bus 19 ou 83. Accès libre.",
+      "image": "villes/marseille/images/bowl-prado.jpg",
+      "imageCredit": "Irønie · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Bowl-Marseille2020-2.jpg"
+    },
+    {
+      "id": "plages-prado",
+      "nom": "Plages du Prado",
+      "lat": 43.26419,
+      "lng": 5.36873,
+      "categories": [
+        "sport",
+        "nature"
+      ],
+      "duree": 60,
+      "payant": false,
+      "importance": 1,
+      "description": "Les grandes plages du sud de Marseille : baignade, beach-volley, planche à voile et longue promenade pour courir ou rouler.",
+      "aRegarder": "Les pelouses en bord de mer, les spots de kitesurf par vent fort et la statue du David.",
+      "anecdote": "Ces plages sont artificielles : elles ont été créées dans les années 1970 avec les déblais du creusement du métro.",
+      "photo": "Au coucher du soleil, les îles du Frioul au large.",
+      "note": "À environ 5 km du Vieux-Port : bus 19 ou 83.",
+      "image": "villes/marseille/images/plages-prado.jpg",
+      "imageCredit": "Alpha du centaure · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Mistral_gagnant_Plages_du_Prado,_Marseille.jpg"
+    },
+    {
+      "id": "parc-borely",
+      "nom": "Parc Borély",
+      "lat": 43.25961,
+      "lng": 5.38289,
+      "categories": [
+        "sport",
+        "nature"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Grand parc à la française près des plages, avec un lac, un jardin botanique et le château Borély. Les Marseillais y courent et y font du vélo.",
+      "aRegarder": "Le lac, les allées et la façade du château Borély.",
+      "anecdote": "Le château Borély, construit au XVIIIe siècle pour une famille de négociants, abrite aujourd'hui le musée des Arts décoratifs.",
+      "photo": "Le château qui se reflète dans le bassin.",
+      "note": "À environ 6 km du Vieux-Port : bus 19 ou 83.",
+      "image": "villes/marseille/images/parc-borely.jpg",
+      "imageCredit": "Charliemoon · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille-Ch%C3%A2teau_Bor%C3%A9ly(2).jpg"
     },
     {
       "id": "pause-navettes",
@@ -1246,6 +1333,27 @@
         "musee-cantini",
         "cours-julien",
         "palais-longchamp"
+      ]
+    },
+    {
+      "id": "sport",
+      "emoji": "🏃",
+      "titre": "Sport au Prado",
+      "duree": "half",
+      "transport": "bus",
+      "resume": "Le Vélodrome de l'OM, le parc Borély, le mythique Bowl du Prado et les plages, avec métro et bus.",
+      "interets": [
+        "sport",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "velodrome",
+        "parc-borely",
+        "bowl-prado",
+        "plages-prado"
       ]
     },
     {

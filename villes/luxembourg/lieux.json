@@ -365,7 +365,8 @@
       "lng": 6.13409,
       "categories": [
         "nature",
-        "photo"
+        "photo",
+        "sport"
       ],
       "duree": 40,
       "payant": false,
@@ -512,7 +513,8 @@
       "lng": 6.12242,
       "categories": [
         "nature",
-        "art"
+        "art",
+        "sport"
       ],
       "duree": 30,
       "payant": false,
@@ -883,6 +885,68 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg,_place_de_Metz_BCEE_(101).jpg"
     },
     {
+      "id": "coque",
+      "nom": "d'Coque (centre sportif national)",
+      "lat": 49.62337,
+      "lng": 6.1519,
+      "categories": [
+        "sport",
+        "architecture"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 1,
+      "description": "Le grand centre sportif du Kirchberg, reconnaissable à son toit en forme de coquille : piscine olympique, mur d'escalade, salles de sport et centre aquatique.",
+      "aRegarder": "Le toit courbe en forme de coque et, à l'intérieur, le mur d'escalade.",
+      "anecdote": "Son nom luxembourgeois, « d'Coque », vient de la forme de son toit, qui évoque une coquille.",
+      "photo": "Le toit vu depuis l'avenue John F. Kennedy.",
+      "note": "Accès payant ; horaires et créneaux d'escalade à confirmer.",
+      "image": "villes/luxembourg/images/coque.jpg",
+      "imageCredit": "Pudelek (Marcin Szala) · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_-_Avenue_John_F._Kennedy_and_La_coque.jpg"
+    },
+    {
+      "id": "skatepark-petrusse",
+      "nom": "Skatepark de la Pétrusse",
+      "lat": 49.60663,
+      "lng": 6.1329,
+      "categories": [
+        "sport",
+        "insolite"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Un grand skatepark ouvert en 2016 au fond de la vallée de la Pétrusse, au pied des remparts de la vieille ville.",
+      "aRegarder": "Les riders dans les bowls, avec les fortifications et le pont Adolphe au-dessus.",
+      "anecdote": "On y fait du skate au pied de murailles classées au patrimoine mondial de l'UNESCO.",
+      "photo": "En contre-plongée, un rider en l'air avec les remparts derrière.",
+      "note": "Accès libre ; casque conseillé.",
+      "image": "villes/luxembourg/images/skatepark-petrusse.jpg",
+      "imageCredit": "Flanierer · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Skatepark_P%C3%A9trusse_-_DSC05291.jpg"
+    },
+    {
+      "id": "parc-merl",
+      "nom": "Parc de Merl",
+      "lat": 49.60604,
+      "lng": 6.11226,
+      "categories": [
+        "sport",
+        "nature"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Un parc tranquille à l'ouest du centre, avec étang, pelouses, aires de jeux et allées de footing.",
+      "aRegarder": "L'étang et ses canards, les grands arbres et les sentiers.",
+      "anecdote": "C'est l'un des parcs préférés des familles luxembourgeoises, peu connu des visiteurs.",
+      "photo": "L'étang au premier plan, les arbres qui s'y reflètent.",
+      "image": "villes/luxembourg/images/parc-merl.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxemb_City_Parc_de_Merl_01.jpg"
+    },
+    {
       "id": "pause-oberweis",
       "type": "pause",
       "nom": "Oberweis (Grand-Rue)",
@@ -1170,6 +1234,26 @@
         "wenzel",
         "ascenseur-grund",
         "parc-municipal"
+      ]
+    },
+    {
+      "id": "sport",
+      "emoji": "🏃",
+      "titre": "Sport et vallées",
+      "duree": "half",
+      "resume": "Skatepark au pied des remparts, footing dans la vallée de la Pétrusse et le parc municipal, puis le parc de Merl.",
+      "interets": [
+        "sport",
+        "nature"
+      ],
+      "pauses": [
+        "gouter"
+      ],
+      "lieux": [
+        "skatepark-petrusse",
+        "petrusse",
+        "parc-municipal",
+        "parc-merl"
       ]
     },
     {
