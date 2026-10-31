@@ -386,7 +386,8 @@
       "categories": [
         "religieux",
         "histoire",
-        "photo"
+        "photo",
+        "insolite"
       ],
       "duree": 10,
       "payant": false,
@@ -760,7 +761,8 @@
       "categories": [
         "religieux",
         "histoire",
-        "art"
+        "art",
+        "insolite"
       ],
       "duree": 15,
       "payant": false,
@@ -773,6 +775,112 @@
       "image": "villes/luxembourg/images/saint-jean-grund.jpg",
       "imageCredit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Saint-Jean-du-Grund_church_in_Luxembourg_City.jpg"
+    },
+    {
+      "id": "villa-pauly",
+      "nom": "Villa Pauly",
+      "lat": 49.60609,
+      "lng": 6.12502,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une élégante villa du boulevard de la Pétrusse qui fut, de 1940 à 1944, le siège de la Gestapo au Luxembourg. Elle abrite aujourd'hui un lieu de mémoire de la Résistance.",
+      "aRegarder": "La façade de la villa et les plaques commémoratives.",
+      "anecdote": "Derrière cette façade bourgeoise, des centaines de résistants luxembourgeois ont été interrogés pendant l'occupation.",
+      "photo": "Une photo sobre de la façade depuis le boulevard.",
+      "note": "À voir surtout de l'extérieur ; visites à confirmer.",
+      "image": "villes/luxembourg/images/villa-pauly.jpg",
+      "imageCredit": "GilPe · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg,_Villa_Pauly_(1).JPG"
+    },
+    {
+      "id": "mansfeld",
+      "nom": "Ruines du château de Mansfeld",
+      "lat": 49.61468,
+      "lng": 6.14412,
+      "categories": [
+        "insolite",
+        "histoire",
+        "nature",
+        "photo"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Dans un petit parc de Clausen se cachent les vestiges du palais Renaissance de Pierre-Ernest de Mansfeld, gouverneur du Luxembourg au XVIe siècle.",
+      "aRegarder": "Les arcs et murs en ruine envahis de verdure, au pied des falaises de la ville haute.",
+      "anecdote": "Le palais était réputé l'un des plus somptueux de la région, avec jardins et collections d'antiques ; il n'en reste que ces quelques pans de murs.",
+      "photo": "Cadrez les arcades en ruine avec la végétation au premier plan.",
+      "image": "villes/luxembourg/images/mansfeld.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 1.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:SchlassMansfeld01.jpg"
+    },
+    {
+      "id": "tour-jacob",
+      "nom": "Tour Jacob (Dinselpuert)",
+      "lat": 49.61051,
+      "lng": 6.13928,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Une tour de l'enceinte médiévale de Wenceslas, à l'écart des grands circuits, sur les hauteurs du Rham.",
+      "aRegarder": "La tour et les restes du mur d'enceinte qui descend vers l'Alzette.",
+      "anecdote": "Son surnom luxembourgeois, Dinselpuert, désigne une ancienne porte de l'enceinte.",
+      "photo": "Depuis le bas du chemin, la tour domine la vallée.",
+      "note": "À voir de l'extérieur.",
+      "image": "villes/luxembourg/images/tour-jacob.jpg",
+      "imageCredit": "Paul Braun · CC BY 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Tour_Jacob_1_2019-05-17.jpg"
+    },
+    {
+      "id": "solidarite",
+      "nom": "Monument de la Solidarité nationale",
+      "lat": 49.60704,
+      "lng": 6.13408,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Un mémorial des années 1970 sur la colline du Kanounenhiwwel, dédié aux victimes luxembourgeoises de la Seconde Guerre mondiale. Peu de visiteurs y montent.",
+      "aRegarder": "La crypte et sa flamme éternelle, la vue sur le Grund et le Pfaffenthal.",
+      "anecdote": "On l'appelle aussi Kanounenhiwwel, « la colline aux canons », en souvenir des batteries de la forteresse.",
+      "photo": "Depuis l'esplanade, la vallée de l'Alzette s'ouvre sous vos pieds.",
+      "note": "Crypte ouverte selon les horaires, à confirmer.",
+      "image": "villes/luxembourg/images/solidarite.jpg",
+      "imageCredit": "Jwh · CC BY-SA 3.0 lu · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:F%C3%A4ndelen_op_hallefmast_um_Kanounenhiwwel-101.jpg"
+    },
+    {
+      "id": "musee-banque",
+      "nom": "Musée de la Banque",
+      "lat": 49.60729,
+      "lng": 6.12853,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Un petit musée gratuit dans le siège historique de la Spuerkeess, la caisse d'épargne de l'État : coffres-forts, tirelires et 150 ans d'histoire bancaire du Luxembourg.",
+      "aRegarder": "Les vieux coffres, les guichets reconstitués et la collection de tirelires.",
+      "anecdote": "Dans un pays devenu place financière internationale, c'est l'un des rares endroits où l'on peut voir l'intérieur d'une banque sans compte.",
+      "photo": "La façade monumentale du siège, place de Metz.",
+      "note": "Entrée libre ; horaires à confirmer.",
+      "image": "villes/luxembourg/images/musee-banque.jpg",
+      "imageCredit": "GilPe · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg,_place_de_Metz_BCEE_(101).jpg"
     },
     {
       "id": "pause-oberweis",
@@ -954,6 +1062,28 @@
         "corniche",
         "casemates-bock",
         "neumunster"
+      ]
+    },
+    {
+      "id": "insolite",
+      "emoji": "🔍",
+      "titre": "Luxembourg insolite",
+      "duree": "half",
+      "resume": "Une villa au passé sombre, un musée dans une banque, une chapelle creusée dans la roche et les ruines d'un palais oublié.",
+      "interets": [
+        "insolite"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "villa-pauly",
+        "musee-banque",
+        "saint-quirin",
+        "solidarite",
+        "tour-jacob",
+        "saint-jean-grund",
+        "mansfeld"
       ]
     },
     {

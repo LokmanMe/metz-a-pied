@@ -369,7 +369,8 @@
       "lng": 5.36938,
       "categories": [
         "architecture",
-        "histoire"
+        "histoire",
+        "insolite"
       ],
       "duree": 10,
       "payant": false,
@@ -701,7 +702,8 @@
       "lng": 5.3699,
       "categories": [
         "histoire",
-        "photo"
+        "photo",
+        "insolite"
       ],
       "duree": 10,
       "payant": true,
@@ -764,7 +766,8 @@
       "lng": 5.36863,
       "categories": [
         "religieux",
-        "histoire"
+        "histoire",
+        "insolite"
       ],
       "duree": 10,
       "payant": false,
@@ -818,6 +821,135 @@
       "image": "villes/marseille/images/colline-puget.jpg",
       "imageCredit": "El Comandante · CC BY 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Buste_de_Louis_Braille_au_Parc_de_la_Colline_Puget_%C3%A0_Marseille.jpg"
+    },
+    {
+      "id": "docks-romains",
+      "nom": "Musée des Docks romains",
+      "lat": 43.29683,
+      "lng": 5.36804,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Un petit musée méconnu, bâti au-dessus d'un entrepôt romain découvert lors de la reconstruction du quartier après 1943. Les grandes jarres (dolia) sont restées en place.",
+      "aRegarder": "Les dolia enterrées où l'on stockait vin et huile, les amphores et les objets du port antique.",
+      "anecdote": "Les vestiges ont été découverts en 1947, en creusant les fondations des immeubles qui remplacent le quartier dynamité.",
+      "photo": "Les rangées de jarres vues d'en haut font une image saisissante.",
+      "note": "Tarifs et horaires à confirmer.",
+      "image": "villes/marseille/images/docks-romains.jpg",
+      "imageCredit": "Robert Valette · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_des_docks_romains_vue_g%C3%A9n%C3%A9rale.jpg"
+    },
+    {
+      "id": "memorial-marseillaise",
+      "nom": "Mémorial de la Marseillaise",
+      "lat": 43.29779,
+      "lng": 5.37844,
+      "categories": [
+        "insolite",
+        "histoire"
+      ],
+      "duree": 40,
+      "payant": true,
+      "importance": 1,
+      "description": "Dans une ancienne salle du jeu de paume de la rue Thubaneau, un musée raconte comment un chant de guerre écrit à Strasbourg est devenu « la Marseillaise ».",
+      "aRegarder": "Le parcours sonore et scénographié, et la salle d'époque.",
+      "anecdote": "En 1792, les volontaires marseillais montant à Paris chantaient ce « Chant de guerre pour l'armée du Rhin » ; les Parisiens l'ont baptisé du nom de ceux qui le chantaient.",
+      "photo": "La façade discrète de la rue Thubaneau : rien n'y annonce un lieu aussi chargé d'histoire.",
+      "note": "Horaires réduits, à confirmer.",
+      "image": "villes/marseille/images/memorial-marseillaise.jpg",
+      "imageCredit": "Alkhimov Maxim · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B5%D1%81%D1%82%D0%BE_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F_%D0%9C%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D1%8C%D0%B5%D0%B7%D1%8B_-_panoramio.jpg"
+    },
+    {
+      "id": "malmousque",
+      "nom": "Anse de Malmousque",
+      "lat": 43.28275,
+      "lng": 5.34839,
+      "categories": [
+        "insolite",
+        "nature",
+        "photo"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Un quartier de pêcheurs sur une petite presqu'île de la Corniche : ruelles, cabanons, criques rocheuses où les Marseillais viennent plonger.",
+      "aRegarder": "Les petites anses rocheuses, les cabanons et la vue sur le château d'If.",
+      "anecdote": "Beaucoup de Marseillais n'y viennent jamais : on n'y passe pas par hasard, la presqu'île est en cul-de-sac.",
+      "photo": "Depuis les rochers, cadrez le château d'If au large en fin de journée.",
+      "note": "Rochers glissants ; baignade non surveillée.",
+      "image": "villes/marseille/images/malmousque.jpg",
+      "imageCredit": "TouN · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Anse_de_Malmousque.JPG"
+    },
+    {
+      "id": "arcenaulx",
+      "nom": "Les Arcenaulx",
+      "lat": 43.29246,
+      "lng": 5.37313,
+      "categories": [
+        "insolite",
+        "histoire",
+        "gastronomie"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Les derniers bâtiments de l'arsenal des galères de Louis XIV, aujourd'hui une librairie et un restaurant sous de hautes voûtes de pierre.",
+      "aRegarder": "Les voûtes et les murs de l'ancien arsenal, la librairie dans les anciens magasins.",
+      "anecdote": "L'arsenal construisait et armait les galères royales, où ramaient des milliers de forçats et d'esclaves.",
+      "photo": "Sous les voûtes, cadrez les rayonnages de livres et la pierre.",
+      "note": "Horaires à confirmer.",
+      "image": "villes/marseille/images/arcenaulx.jpg",
+      "imageCredit": "Charliemoon · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Marseille.Arsenal_des_gal%C3%A8res.jpg"
+    },
+    {
+      "id": "armee-orient",
+      "nom": "Monument aux morts de l'Armée d'Orient",
+      "lat": 43.28601,
+      "lng": 5.35048,
+      "categories": [
+        "insolite",
+        "histoire",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Un grand arc monumental sur la Corniche, ouvert sur la mer, dédié aux soldats de l'armée d'Orient partis de Marseille pendant la Première Guerre mondiale.",
+      "aRegarder": "L'arc qui encadre la mer et les îles, et les inscriptions.",
+      "anecdote": "Il fait face au large, dans la direction où partaient les navires vers les Dardanelles et Salonique.",
+      "photo": "Placez-vous dans l'axe de l'arc : il encadre la mer et le château d'If.",
+      "image": "villes/marseille/images/armee-orient.jpg",
+      "imageCredit": "Robert Valette · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Vallon_des_auffes_et_morts_d%27orient.JPG"
+    },
+    {
+      "id": "saint-ferreol-augustins",
+      "nom": "Église Saint-Ferréol les Augustins",
+      "lat": 43.29627,
+      "lng": 5.37447,
+      "categories": [
+        "insolite",
+        "religieux",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Une église coincée entre les immeubles du haut du Vieux-Port : la plupart des passants ne la remarquent même pas.",
+      "aRegarder": "La nef gothique à l'intérieur, le décor baroque, et le contraste avec l'agitation du port.",
+      "anecdote": "C'est l'ancienne église du couvent des Augustins, l'une des rares églises anciennes du centre-ville.",
+      "photo": "Depuis le quai, cadrez sa façade serrée entre deux immeubles.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/marseille/images/saint-ferreol-augustins.jpg",
+      "imageCredit": "Rbert Valette · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint-Ferr%C3%A9ol-les-Augustins.jpg"
     },
     {
       "id": "pause-navettes",
@@ -1003,6 +1135,28 @@
         "mucem",
         "abbaye-saint-victor",
         "notre-dame-garde"
+      ]
+    },
+    {
+      "id": "insolite",
+      "emoji": "🔍",
+      "titre": "Marseille insolite",
+      "duree": "half",
+      "resume": "Le berceau de la Marseillaise, des jarres romaines restées en place, une église cachée et la traversée en ferry-boat.",
+      "interets": [
+        "insolite"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "memorial-marseillaise",
+        "saint-ferreol-augustins",
+        "ferry-boat",
+        "maison-diamantee",
+        "docks-romains",
+        "accoules",
+        "arcenaulx"
       ]
     },
     {

@@ -26,6 +26,7 @@ const PAUSES = {
 const CATEGORY_LABELS = {
   histoire: 'Histoire', architecture: 'Architecture', art: 'Art', religieux: 'Religieux',
   nature: 'Nature', gastronomie: 'Gastronomie', shopping: 'Shopping', photo: 'Photo', nuit: 'Vie nocturne',
+  insolite: 'Insolite',
 };
 const SPARSE_MSG = "Peu de lieux correspondent à vos centres d'intérêt : le parcours est plus court que la durée choisie. Ajoutez-en un pour l'allonger.";
 const DEFAULT_PREFS = {

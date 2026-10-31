@@ -12,7 +12,7 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 | `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
 | `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
-| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 34 + 6 ; Luxembourg : 35 + 6 ; Marseille : 37 + 6), parcours tout prêts |
+| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 39 + 6 ; Luxembourg : 40 + 6 ; Marseille : 43 + 6), parcours tout prêts |
 | `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
 | `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 | `manifest.webmanifest` | Métadonnées d'installation |
@@ -77,7 +77,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v8`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v9`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -142,7 +142,7 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
   "id": "identifiant-unique",
   "nom": "Nom affiché",
   "lat": 49.12, "lng": 6.17,
-  "categories": ["histoire", "architecture", "art", "religieux", "nature", "gastronomie", "shopping", "photo", "nuit"],
+  "categories": ["histoire", "architecture", "art", "religieux", "nature", "gastronomie", "shopping", "photo", "nuit", "insolite"],
   "duree": 20, "payant": false, "importance": 1,
   "description": "…", "aRegarder": "…", "anecdote": "…", "photo": "…",
   "note": "facultatif"
@@ -153,7 +153,7 @@ Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "deje
 
 ### Parcours tout prêts
 
-La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (6 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
+La clé `parcours` de `lieux.json` liste les parcours thématiques proposés en haut du questionnaire (7 par ville). L'ordre de visite est recalculé depuis le point de départ du visiteur ; son rythme et son mode de déplacement s'appliquent, et la durée affichée sur la carte est calculée.
 
 ```json
 {

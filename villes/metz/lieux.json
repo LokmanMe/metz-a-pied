@@ -246,7 +246,8 @@
       "categories": [
         "religieux",
         "histoire",
-        "art"
+        "art",
+        "insolite"
       ],
       "duree": 15,
       "payant": false,
@@ -412,7 +413,8 @@
       "lng": 6.18376,
       "categories": [
         "religieux",
-        "art"
+        "art",
+        "insolite"
       ],
       "duree": 20,
       "payant": false,
@@ -555,7 +557,8 @@
       "lng": 6.17351,
       "categories": [
         "histoire",
-        "nature"
+        "nature",
+        "insolite"
       ],
       "duree": 10,
       "payant": false,
@@ -754,6 +757,119 @@
       "imageUrl": "https://commons.wikimedia.org/wiki/File:LH%C3%B4tel_Saint-Livier_de_Metz_(5055895107).jpg"
     },
     {
+      "id": "maison-des-tetes",
+      "nom": "Maison des Têtes",
+      "lat": 49.11814,
+      "lng": 6.17808,
+      "categories": [
+        "insolite",
+        "architecture",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Une façade Renaissance de 1529, au cœur de la vieille ville, ornée de bustes sculptés dans des médaillons. Elle passe inaperçue pour qui ne lève pas les yeux.",
+      "aRegarder": "Les têtes sculptées au-dessus des fenêtres, les pilastres et le décor Renaissance, rare à Metz.",
+      "anecdote": "On ignore qui représentent ces têtes : les hypothèses vont bon train depuis des siècles.",
+      "photo": "Depuis le trottoir d'en face, cadrez la façade entière ; un zoom permet d'isoler chaque visage.",
+      "note": "À voir de l'extérieur.",
+      "image": "villes/metz/images/maison-des-tetes.jpg",
+      "imageCredit": "No machine-readable author provided. Zusammen030378~commo… · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Maisontetemetz.jpg"
+    },
+    {
+      "id": "cloitre-recollets",
+      "nom": "Cloître des Récollets",
+      "lat": 49.11949,
+      "lng": 6.18056,
+      "categories": [
+        "insolite",
+        "histoire",
+        "religieux",
+        "nature"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Un cloître franciscain médiéval caché derrière une porte de la colline Sainte-Croix. Le botaniste messin Jean-Marie Pelt y a installé l'Institut européen d'écologie dans les années 1970.",
+      "aRegarder": "Les galeries gothiques autour du jardin, et le silence, à deux pas des rues commerçantes.",
+      "anecdote": "Beaucoup de Messins n'y sont jamais entrés : il faut savoir que la porte de la rue des Récollets s'ouvre sur un cloître.",
+      "photo": "Depuis un angle de la galerie, cadrez la succession des arcades et le jardin.",
+      "note": "Accès selon les horaires de l'institut, à confirmer.",
+      "image": "villes/metz/images/cloitre-recollets.jpg",
+      "imageCredit": "Auteur inconnu · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Lesrecolletscloitre.jpg"
+    },
+    {
+      "id": "sainte-therese",
+      "nom": "Église Sainte-Thérèse-de-l'Enfant-Jésus",
+      "lat": 49.1061,
+      "lng": 6.16694,
+      "categories": [
+        "insolite",
+        "religieux",
+        "architecture",
+        "art"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Grande église en béton armé du quartier de la Nouvelle Ville, loin des circuits touristiques, avec son haut clocher et d'immenses verrières colorées.",
+      "aRegarder": "La nef en béton, les verrières qui inondent l'intérieur de couleurs, le clocher-tour vu depuis l'avenue.",
+      "anecdote": "Le chantier, commencé dans les années 1930, a été interrompu par la guerre et achevé seulement dans les années 1950.",
+      "photo": "À l'intérieur par grand soleil, les verrières projettent leurs couleurs sur le béton.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/metz/images/sainte-therese.jpg",
+      "imageCredit": "MOSSOT · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_-_Eglise_Sainte-Th%C3%A9r%C3%A8se-de-l%27Enfant-J%C3%A9sus_-_Nef.JPG"
+    },
+    {
+      "id": "temple-garnison",
+      "nom": "Ruines du temple de Garnison",
+      "lat": 49.12261,
+      "lng": 6.17002,
+      "categories": [
+        "insolite",
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Il ne reste qu'une tour et quelques murs de la grande église protestante néogothique construite pour la garnison allemande pendant l'annexion. Une ruine inattendue en pleine ville.",
+      "aRegarder": "La tour isolée et ses arcs gothiques qui ne mènent plus nulle part.",
+      "anecdote": "Endommagée, l'église a été démolie dans les années 1960 ; seule la tour a été conservée, comme un vestige de la période allemande.",
+      "photo": "En contre-plongée, la tour se découpe sur le ciel à travers les arcs vides.",
+      "note": "À voir de l'extérieur.",
+      "image": "villes/metz/images/temple-garnison.jpg",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Tour_Temple_Garnison_-_Metz_(FR57)_-_2022-02-25_-_11.jpg"
+    },
+    {
+      "id": "jardin-botanique",
+      "nom": "Jardin botanique de Metz",
+      "lat": 49.10466,
+      "lng": 6.16054,
+      "categories": [
+        "insolite",
+        "nature",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 1,
+      "description": "Un jardin botanique du XIXe siècle, gratuit et méconnu, avec ses serres, ses arbres remarquables et son petit étang, à la limite de Montigny-lès-Metz.",
+      "aRegarder": "Les serres tropicales, les grands arbres centenaires et les collections de plantes étiquetées.",
+      "anecdote": "Il est né d'une propriété privée rachetée par la ville au XIXe siècle ; beaucoup de Messins ne le connaissent que de nom.",
+      "photo": "Dans les serres, cadrez les feuillages à contre-jour.",
+      "note": "Un peu excentré (environ 2 km de la gare). Horaires des serres à confirmer.",
+      "image": "villes/metz/images/jardin-botanique.jpg",
+      "imageCredit": "Pierregunther · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Jardin_botanique_de_metz.JPG"
+    },
+    {
       "id": "pause-mauricette",
       "type": "pause",
       "nom": "Chez Mauricette (Marché couvert)",
@@ -931,6 +1047,27 @@
         "place-saint-louis",
         "place-armes",
         "gare-imperial"
+      ]
+    },
+    {
+      "id": "insolite",
+      "emoji": "🔍",
+      "titre": "Metz insolite",
+      "duree": "half",
+      "resume": "Têtes sculptées, cloître caché, chapelle des Templiers, vitraux de Cocteau et ruine d'un temple : le Metz que même les Messins ne connaissent pas.",
+      "interets": [
+        "insolite"
+      ],
+      "pauses": [
+        "cafe"
+      ],
+      "lieux": [
+        "maison-des-tetes",
+        "cloitre-recollets",
+        "templiers",
+        "saint-maximin",
+        "tour-camoufle",
+        "temple-garnison"
       ]
     },
     {
