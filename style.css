@@ -1,22 +1,42 @@
-/* Metz à pied — pierre de Jaumont et vitraux */
+/* À pied — thème commun ; chaque ville redéfinit ses couleurs via :root[data-ville="…"] */
 :root {
-  --jaumont: #C9A043;
-  --jaumont-deep: #8C6A1C;
-  --jaumont-soft: #F1E2B8;
+  --stone: #C9A043;          /* pierre de la ville (Metz : Jaumont) */
+  --stone-deep: #8C6A1C;
+  --stone-soft: #F1E2B8;
+  --on-stone: #1C1810;
   --bg: #FBF6EA;
   --surface: #FFFFFF;
   --surface-2: #F5ECD6;
   --text: #1C1810;
   --muted: #5E5442;
   --line: #E2D4AE;
-  --lead: #2A241A;           /* plomb des vitraux */
-  --v-bleu: #1F4E8C;
-  --v-rubis: #B3263A;
-  --v-emeraude: #2E7D5B;
-  --v-violet: #5B3A8C;
-  --v-ambre: #E0A526;
-  --accent: var(--v-bleu);
-  --ok: var(--v-emeraude);
+  --ink: #2A241A;            /* Metz : plomb des vitraux */
+  --c-blue: #1F4E8C;
+  --c-blue-deep: #163A6A;
+  --c-red: #B3263A;
+  --c-green: #2E7D5B;
+  --c-violet: #5B3A8C;
+  --c-amber: #E0A526;
+  --accent: var(--c-blue);
+  --ok: var(--c-green);
+  --chip-on: var(--stone);
+  --chip-on-border: var(--stone-deep);
+  --chip-on-text: var(--on-stone);
+  --badge: var(--c-blue);
+  --pin: var(--c-blue);
+  --pin-border: #E9C766;
+  --pin-current: #FFFFFF;
+  --route: #1F4E8C;          /* tracé sur la carte (lu par app.js) */
+  --route-inner: #E9C766;
+  --band: linear-gradient(90deg,
+      var(--c-blue) 0 14%, var(--ink) 14% 15%,
+      var(--c-red) 15% 29%, var(--ink) 29% 30%,
+      var(--c-amber) 30% 44%, var(--ink) 44% 45%,
+      var(--c-green) 45% 59%, var(--ink) 59% 60%,
+      var(--c-violet) 60% 74%, var(--ink) 74% 75%,
+      var(--c-blue) 75% 89%, var(--ink) 89% 90%,
+      var(--c-red) 90% 100%);
+  --band-height: 10px;
   --shadow: 0 6px 20px rgba(60, 45, 10, .14);
   --radius: 16px;
   --tap: 52px;
@@ -33,18 +53,65 @@
     --text: #F4EBD5;
     --muted: #C2B391;
     --line: #3F3420;
-    --jaumont-soft: #3A2F18;
+    --stone-soft: #3A2F18;
     --accent: #6FA0E6;
     --ok: #5CC195;
-    --v-rubis: #E2566A;
+    --c-red: #E2566A;
     --shadow: 0 6px 20px rgba(0, 0, 0, .45);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #17130C; --surface: #221C12; --surface-2: #2C2416; --text: #F4EBD5; --muted: #C2B391;
-  --line: #3F3420; --jaumont-soft: #3A2F18; --accent: #6FA0E6; --ok: #5CC195; --v-rubis: #E2566A;
+  --line: #3F3420; --stone-soft: #3A2F18; --accent: #6FA0E6; --ok: #5CC195; --c-red: #E2566A;
   --shadow: 0 6px 20px rgba(0, 0, 0, .45); color-scheme: dark;
+}
+
+/* ---------- Luxembourg : grès du Bock, ardoise et couleurs du drapeau ---------- */
+:root[data-ville="luxembourg"] {
+  --stone: #C79F6E;
+  --stone-deep: #7A5730;
+  --stone-soft: #EFE4D3;
+  --on-stone: #14191E;
+  --bg: #F6F3EE;
+  --surface-2: #EDE7DE;
+  --text: #14191E;
+  --muted: #52606C;
+  --line: #D9D0C2;
+  --ink: #26313B;
+  --c-sky: #00A1DE;
+  --c-blue: #0A6797;
+  --c-blue-deep: #064C70;
+  --c-red: #D7262E;
+  --c-green: #3B7A4C;
+  --c-violet: #3F4A55;
+  --c-amber: #E3A83A;
+  --chip-on: var(--c-blue);
+  --chip-on-border: var(--c-blue-deep);
+  --chip-on-text: #FFFFFF;
+  --badge: var(--c-red);
+  --pin: var(--c-red);
+  --pin-border: #FFFFFF;
+  --pin-current: var(--c-sky);
+  --route: #D7262E;
+  --route-inner: #FFFFFF;
+  --band: linear-gradient(180deg, #ED2939 0 33.3%, #FFFFFF 33.3% 66.6%, var(--c-sky) 66.6%);
+  --band-height: 12px;
+  --shadow: 0 6px 20px rgba(20, 30, 40, .13);
+  --radius: 14px;
+  --font-title: Rockwell, "Roboto Slab", "Zilla Slab", "Rockwell Nova", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-ville="luxembourg"]:not([data-theme="light"]) {
+    --bg: #111519; --surface: #1A2026; --surface-2: #232B32; --text: #EEF1F3; --muted: #A8B3BD;
+    --line: #333D46; --stone-soft: #2E2A24; --accent: #5BC3EE; --ok: #5CBF7F; --c-red: #F0525A;
+    --shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  }
+}
+:root[data-ville="luxembourg"][data-theme="dark"] {
+  --bg: #111519; --surface: #1A2026; --surface-2: #232B32; --text: #EEF1F3; --muted: #A8B3BD;
+  --line: #333D46; --stone-soft: #2E2A24; --accent: #5BC3EE; --ok: #5CBF7F; --c-red: #F0525A;
+    --shadow: 0 6px 20px rgba(0, 0, 0, .45);
 }
 
 * { box-sizing: border-box; }
@@ -65,40 +132,51 @@ button, input, select { font: inherit; color: inherit; }
   background: var(--bg);
   padding-top: env(safe-area-inset-top);
 }
-.vitrail {
-  height: 10px;
-  background:
-    linear-gradient(90deg,
-      var(--v-bleu) 0 14%, var(--lead) 14% 15%,
-      var(--v-rubis) 15% 29%, var(--lead) 29% 30%,
-      var(--v-ambre) 30% 44%, var(--lead) 44% 45%,
-      var(--v-emeraude) 45% 59%, var(--lead) 59% 60%,
-      var(--v-violet) 60% 74%, var(--lead) 74% 75%,
-      var(--v-bleu) 75% 89%, var(--lead) 89% 90%,
-      var(--v-rubis) 90% 100%);
-}
+.band { height: var(--band-height); background: var(--band); }
 .topbar-row {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
   padding: 10px 16px;
-  border-bottom: 2px solid var(--jaumont);
+  border-bottom: 2px solid var(--stone);
 }
 .brand {
-  margin: 0; font: 600 26px/1.1 var(--font-title); letter-spacing: .01em;
-  display: flex; align-items: center; gap: 10px;
+  margin: 0; font: 600 clamp(20px, 6.4vw, 26px)/1.1 var(--font-title); letter-spacing: .01em; white-space: nowrap;
+  display: flex; align-items: center; gap: 10px; min-width: 0;
 }
-.brand em { color: var(--jaumont-deep); font-style: italic; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand em { color: var(--jaumont); } }
-:root[data-theme="dark"] .brand em { color: var(--jaumont); }
+.brand em { color: var(--stone-deep); font-style: italic; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand em { color: var(--stone); } }
+:root[data-theme="dark"] .brand em { color: var(--stone); }
 .brand-mark {
+  flex: none;
   width: 22px; height: 28px; border-radius: 11px 11px 2px 2px;
   background:
-    conic-gradient(from 180deg at 50% 60%, var(--v-bleu) 0 25%, var(--v-rubis) 0 50%, var(--v-ambre) 0 75%, var(--v-emeraude) 0);
-  border: 2.5px solid var(--jaumont-deep);
+    conic-gradient(from 180deg at 50% 60%, var(--c-blue) 0 25%, var(--c-red) 0 50%, var(--c-amber) 0 75%, var(--c-green) 0);
+  border: 2.5px solid var(--stone-deep);
 }
+:root[data-ville="luxembourg"] .brand-mark {
+  /* écu burelé argent et azur, bordé du rouge du lion */
+  height: 26px; border-radius: 3px 3px 11px 11px;
+  background: repeating-linear-gradient(180deg, var(--c-sky) 0 3px, #FFFFFF 3px 6px);
+  border-color: var(--c-red);
+}
+:root:not([data-ville]) .brand-mark { background: var(--stone); }
+.topbar-actions { display: flex; gap: 8px; flex: none; }
 .icon-btn {
   min-width: var(--tap); min-height: 44px; border-radius: 12px;
   border: 1px solid var(--line); background: var(--surface); font-size: 22px;
 }
+
+/* ---------- Choix de la ville ---------- */
+.cities { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 14px; }
+.city-card {
+  position: relative; display: block; width: 100%; padding: 0; overflow: hidden; cursor: pointer;
+  border: 2px solid var(--line); border-radius: var(--radius); background: var(--surface);
+  box-shadow: var(--shadow); text-align: left;
+}
+.city-card[aria-current="true"] { border-color: var(--stone-deep); }
+.city-card img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; background: var(--surface-2); }
+.city-card .city-text { display: block; padding: 10px 14px 12px; }
+.city-card strong { display: block; font: 600 22px/1.2 var(--font-title); }
+.city-card small { color: var(--muted); font-size: 15px; }
 
 /* ---------- Questionnaire ---------- */
 .screen { padding: 0 16px 24px; max-width: 640px; margin: 0 auto; }
@@ -107,13 +185,13 @@ button, input, select { font: inherit; color: inherit; }
   border: 0; margin: 14px 0; padding: 14px;
   background: var(--surface); border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border-top: 4px solid var(--jaumont);
+  border-top: 4px solid var(--stone);
 }
-.q:nth-of-type(7n+2) { border-top-color: var(--v-bleu); }
-.q:nth-of-type(7n+3) { border-top-color: var(--v-rubis); }
-.q:nth-of-type(7n+4) { border-top-color: var(--v-emeraude); }
-.q:nth-of-type(7n+5) { border-top-color: var(--v-violet); }
-.q:nth-of-type(7n+6) { border-top-color: var(--v-ambre); }
+.q:nth-of-type(7n+2) { border-top-color: var(--c-blue); }
+.q:nth-of-type(7n+3) { border-top-color: var(--c-red); }
+.q:nth-of-type(7n+4) { border-top-color: var(--c-green); }
+.q:nth-of-type(7n+5) { border-top-color: var(--c-violet); }
+.q:nth-of-type(7n+6) { border-top-color: var(--c-amber); }
 .q legend {
   float: left; width: 100%;
   font: 600 19px/1.3 var(--font-title); margin-bottom: 10px;
@@ -122,7 +200,7 @@ button, input, select { font: inherit; color: inherit; }
 .q-num {
   display: inline-grid; place-items: center;
   width: 28px; height: 28px; border-radius: 50%;
-  background: var(--jaumont); color: #1C1810; font: 700 15px var(--font-ui);
+  background: var(--stone); color: var(--on-stone); font: 700 15px var(--font-ui);
 }
 .chips { clear: both; display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
@@ -134,7 +212,7 @@ button, input, select { font: inherit; color: inherit; }
 }
 .chip:active { transform: scale(.97); }
 .chip[aria-pressed="true"] {
-  background: var(--jaumont); border-color: var(--jaumont-deep); color: #1C1810; font-weight: 700;
+  background: var(--chip-on); border-color: var(--chip-on-border); color: var(--chip-on-text); font-weight: 700;
 }
 .chip[aria-pressed="true"]::before { content: "✓ "; }
 .seg .chip { flex: 1 1 auto; text-align: center; }
@@ -152,8 +230,8 @@ button, input, select { font: inherit; color: inherit; }
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
 }
 .btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--v-bleu); color: #fff; border-color: #163a6a; }
-.btn-secondary { background: var(--jaumont); color: #1C1810; border-color: var(--jaumont-deep); }
+.btn-primary { background: var(--c-blue); color: #fff; border-color: var(--c-blue-deep); }
+.btn-secondary { background: var(--stone); color: var(--on-stone); border-color: var(--stone-deep); }
 .btn-ghost { background: var(--surface); border-color: var(--line); color: var(--text); }
 .btn-xl { width: 100%; min-height: 60px; font-size: 19px; margin-top: 8px; }
 .btn-round { width: var(--tap); padding: 0; border-radius: 50%; background: var(--surface); border-color: var(--line); font-size: 24px; }
@@ -163,7 +241,7 @@ button, input, select { font: inherit; color: inherit; }
 #screen-route { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
 #map {
   height: 44dvh; min-height: 260px;
-  margin: 0 -16px; border-bottom: 3px solid var(--jaumont);
+  margin: 0 -16px; border-bottom: 3px solid var(--stone);
   background: var(--surface-2);
 }
 .summary {
@@ -177,38 +255,38 @@ button, input, select { font: inherit; color: inherit; }
 .stat strong { display: block; font: 700 19px/1.2 var(--font-title); }
 .stat span { font-size: 13px; color: var(--muted); }
 .progress { height: 8px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin: 8px 0 12px; }
-#progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--v-emeraude), var(--jaumont)); transition: width .3s; }
+#progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--c-green), var(--stone)); transition: width .3s; }
 
 .notice {
-  background: var(--jaumont-soft); border-left: 5px solid var(--v-ambre);
+  background: var(--stone-soft); border-left: 5px solid var(--c-amber);
   padding: 10px 12px; border-radius: 10px; margin-bottom: 12px; font-size: 15px;
 }
 
 .day-title {
   list-style: none; margin: 16px 0 6px; font: 600 20px var(--font-title);
-  color: var(--jaumont-deep);
+  color: var(--stone-deep);
 }
 .stops { list-style: none; padding: 0; margin: 0; }
 .leg {
   list-style: none; font-size: 14px; color: var(--muted);
   padding: 2px 0 2px 32px; margin-left: 4px;
-  border-left: 3px dotted var(--jaumont);
+  border-left: 3px dotted var(--stone);
 }
 .stop {
   display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; align-items: center;
   background: var(--surface); border-radius: var(--radius); padding: 10px;
   box-shadow: var(--shadow); border: 2px solid transparent;
 }
-.stop.current { border-color: var(--v-bleu); }
+.stop.current { border-color: var(--c-blue); }
 .stop.visited { opacity: .7; }
 .stop.visited .stop-name { text-decoration: line-through; text-decoration-thickness: 2px; }
 .badge {
   width: 40px; height: 40px; border-radius: 50%;
   display: grid; place-items: center;
   font: 700 17px var(--font-ui); color: #fff;
-  background: var(--v-bleu); border: 3px solid var(--jaumont);
+  background: var(--badge); border: 3px solid var(--stone);
 }
-.badge.pause { background: var(--v-ambre); color: #1C1810; }
+.badge.pause { background: var(--c-amber); color: var(--on-stone); }
 .badge.done { background: var(--ok); }
 .stop-main {
   min-width: 0; text-align: left; background: none; border: 0; padding: 4px 0; cursor: pointer;
@@ -218,7 +296,7 @@ button, input, select { font: inherit; color: inherit; }
 .stop-text { min-width: 0; }
 .stop-name { font-weight: 700; display: block; line-height: 1.25; }
 .stop-meta { font-size: 14px; color: var(--muted); }
-.tag-pay { color: var(--v-rubis); font-weight: 700; }
+.tag-pay { color: var(--c-red); font-weight: 700; }
 .stop-remove {
   width: 44px; height: 44px; border-radius: 12px;
   border: 1px solid var(--line); background: var(--surface-2); font-size: 18px; cursor: pointer;
@@ -231,7 +309,7 @@ button, input, select { font: inherit; color: inherit; }
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
   background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(8px);
-  border-top: 2px solid var(--jaumont);
+  border-top: 2px solid var(--stone);
 }
 
 /* ---------- Marqueurs carte ---------- */
@@ -239,13 +317,13 @@ button, input, select { font: inherit; color: inherit; }
   width: 32px; height: 32px; border-radius: 50%;
   display: grid; place-items: center;
   font: 700 14px var(--font-ui); color: #fff;
-  background: var(--v-bleu); border: 3px solid #E9C766;
+  background: var(--pin); border: 3px solid var(--pin-border);
   box-shadow: 0 2px 6px rgba(0,0,0,.4);
 }
-.pin.pause { background: #E0A526; color: #1C1810; }
-.pin.done { background: #2E7D5B; }
-.pin.current { transform: scale(1.25); border-color: #fff; }
-.pin.start { background: #2A241A; }
+.pin.pause { background: var(--c-amber); color: var(--on-stone); }
+.pin.done { background: var(--c-green); }
+.pin.current { transform: scale(1.25); border-color: var(--pin-current); }
+.pin.start { background: var(--ink); }
 .me-dot {
   width: 18px; height: 18px; border-radius: 50%;
   background: #1A73E8; border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(26,115,232,.25);
@@ -267,14 +345,14 @@ button, input, select { font: inherit; color: inherit; }
 .sheet-inner { padding: 8px 18px calc(18px + env(safe-area-inset-bottom)); }
 .sheet-grip { width: 48px; height: 5px; border-radius: 9px; background: var(--line); margin: 6px auto 12px; }
 .sheet h2 { font: 600 24px/1.2 var(--font-title); margin: 0 0 6px; }
-.sheet h3 { font: 600 16px var(--font-ui); margin: 16px 0 4px; color: var(--jaumont-deep); text-transform: uppercase; letter-spacing: .05em; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sheet h3 { color: var(--jaumont); } }
+.sheet h3 { font: 600 16px var(--font-ui); margin: 16px 0 4px; color: var(--stone-deep); text-transform: uppercase; letter-spacing: .05em; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sheet h3 { color: var(--stone); } }
 .sheet p { margin: 0 0 8px; }
 .pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
 .pill { font-size: 14px; padding: 4px 10px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--line); }
 .pill.free { background: color-mix(in srgb, var(--ok) 18%, var(--surface)); }
-.pill.paid { background: color-mix(in srgb, var(--v-rubis) 15%, var(--surface)); }
-.callout { background: var(--jaumont-soft); border-radius: 12px; padding: 10px 12px; }
+.pill.paid { background: color-mix(in srgb, var(--c-red) 15%, var(--surface)); }
+.callout { background: var(--stone-soft); border-radius: 12px; padding: 10px 12px; }
 .sheet-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
 .btn-close { width: 100%; margin-top: 10px; }
 .visited-toggle[aria-pressed="true"] { background: var(--ok); color: #fff; border-color: var(--ok); }
@@ -289,11 +367,11 @@ button, input, select { font: inherit; color: inherit; }
 
 .toast {
   position: fixed; left: 16px; right: 16px; bottom: calc(92px + env(safe-area-inset-bottom)); z-index: 2000;
-  background: var(--lead); color: #F4EBD5; padding: 12px 14px; border-radius: 12px;
+  background: var(--ink); color: #F4EBD5; padding: 12px 14px; border-radius: 12px;
   box-shadow: var(--shadow); font-size: 15px;
 }
 
-:focus-visible { outline: 3px solid var(--v-ambre); outline-offset: 2px; }
+:focus-visible { outline: 3px solid var(--c-amber); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 .actionbar .btn { padding: 10px 8px; font-size: 16px; white-space: nowrap; }
 

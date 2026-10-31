@@ -1,0 +1,66 @@
+{
+  "villes": [
+    {
+      "id": "metz",
+      "nom": "Metz",
+      "pays": "France",
+      "dossier": "villes/metz",
+      "centre": {
+        "lat": 49.1193,
+        "lng": 6.1757
+      },
+      "image": "villes/metz/images/cathedrale.jpg",
+      "resume": "Cathédrale aux vitraux, Centre Pompidou, quais de la Moselle",
+      "accroche": "Quelques questions, et je vous trace un parcours dans la ville de la pierre de Jaumont.",
+      "couleur": {
+        "clair": "#C9A043",
+        "sombre": "#17130C"
+      },
+      "libelles": {
+        "interests": {
+          "nature": "🌿 Nature & Moselle",
+          "gastronomie": "🥧 Gastronomie lorraine"
+        },
+        "transport": {
+          "bus": "🚶+🚌 Pied + bus Le Met'"
+        },
+        "pauses": {
+          "dejeuner": "🍽 Déjeuner lorrain",
+          "gouter": "🟡 Goûter mirabelle"
+        }
+      },
+      "trajetBus": "🚌 bus Le Met'"
+    },
+    {
+      "id": "luxembourg",
+      "nom": "Luxembourg",
+      "pays": "Luxembourg",
+      "dossier": "villes/luxembourg",
+      "centre": {
+        "lat": 49.611,
+        "lng": 6.131
+      },
+      "image": "villes/luxembourg/images/casemates-bock.jpg",
+      "resume": "Casemates du Bock, Corniche, quartier du Grund",
+      "accroche": "Quelques questions, et je vous trace un parcours dans la forteresse aux mille ans d'histoire.",
+      "couleur": {
+        "clair": "#00A1DE",
+        "sombre": "#121518"
+      },
+      "libelles": {
+        "interests": {
+          "nature": "🌿 Nature & vallées",
+          "gastronomie": "🥧 Gastronomie luxembourgeoise"
+        },
+        "transport": {
+          "bus": "🚶+🚋 Pied + bus/tram (gratuits)"
+        },
+        "pauses": {
+          "dejeuner": "🍽 Déjeuner luxembourgeois",
+          "gouter": "🥧 Goûter (Quetschentaart, chocolat)"
+        }
+      },
+      "trajetBus": "🚋 bus/tram gratuit"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
-/* Service worker — Metz à pied
- * - app shell + données : précache, puis « stale-while-revalidate »
+/* Service worker — À pied
+ * - app shell + données de toutes les villes : précache, puis « stale-while-revalidate »
  * - tuiles OpenStreetMap : cache d'abord (les zones consultées restent dispo hors ligne)
  */
-const VERSION = 'v5';
-const SHELL_CACHE = `metz-shell-${VERSION}`;
-const TILE_CACHE = 'metz-tiles';           // non versionné : on garde les tuiles entre mises à jour
+const VERSION = 'v6';
+const SHELL_CACHE = `apied-shell-${VERSION}`;
+const TILE_CACHE = 'apied-tiles';           // non versionné : on garde les tuiles entre mises à jour
 const MAX_TILES = 1500;
 
 const SHELL = [
@@ -12,8 +12,7 @@ const SHELL = [
   'index.html',
   'style.css',
   'app.js',
-  'data/lieux.json',
-  'data/distances.json',
+  'villes/villes.json',
   'manifest.webmanifest',
   'icons/icon-192.png',
   'icons/icon-512.png',
@@ -28,12 +27,16 @@ self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(SHELL_CACHE);
     await cache.addAll(SHELL);
-    // Photos des lieux : précachées pour être disponibles hors ligne pendant la visite.
-    try {
-      const data = await (await cache.match('data/lieux.json')).json();
-      const photos = [...new Set(data.lieux.map((l) => l.image).filter(Boolean))];
-      await cache.addAll(photos);
-    } catch { /* elles seront mises en cache au premier affichage */ }
+    // Chaque ville : lieux, distances et photos, pour que tout reste disponible hors ligne.
+    const { villes } = await (await cache.match('villes/villes.json')).json();
+    for (const v of villes) {
+      await cache.addAll([`${v.dossier}/lieux.json`, `${v.dossier}/distances.json`]);
+      try {
+        const data = await (await cache.match(`${v.dossier}/lieux.json`)).json();
+        const photos = [...new Set([v.image, ...data.lieux.map((l) => l.image)].filter(Boolean))];
+        await cache.addAll(photos);
+      } catch { /* elles seront mises en cache au premier affichage */ }
+    }
     // Leaflet depuis le CDN (requêtes CORS pour rester compatibles avec l'attribut integrity).
     await Promise.all(CDN.map(async (url) => {
       try {
@@ -49,7 +52,8 @@ self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
     await Promise.all(keys
-      .filter((k) => k.startsWith('metz-shell-') && k !== SHELL_CACHE)
+      // Anciennes versions, y compris celles de l'ex-app « Metz à pied » (caches lux-* : autre app, on n'y touche pas).
+      .filter((k) => (k.startsWith('apied-shell-') && k !== SHELL_CACHE) || k.startsWith('metz-shell-') || k === 'metz-tiles')
       .map((k) => caches.delete(k)));
     await self.clients.claim();
   })());

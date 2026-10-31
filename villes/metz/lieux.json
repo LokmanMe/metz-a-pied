@@ -61,7 +61,7 @@
       "anecdote": "Dans la crypte est suspendu le Graoully, dragon légendaire qui terrorisait la ville avant d'être chassé par saint Clément, premier évêque de Metz.",
       "photo": "Depuis la place d'Armes, accroupissez-vous pour cadrer la façade en contre-plongée. À l'intérieur, le matin pour les vitraux côté est, la fin d'après-midi pour l'ouest.",
       "note": "Entrée libre ; crypte, trésor et tours payants.",
-      "image": "images/cathedrale.jpg",
+      "image": "villes/metz/images/cathedrale.jpg",
       "imageCredit": "Patrick from Compiègne, France · CC BY-SA 2.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_(Moselle)_-_Cath%C3%A9drale_Saint-%C3%89tienne_(32283913217).jpg"
     },
@@ -83,7 +83,7 @@
       "anecdote": "La flèche centrale mesure 77 m : un clin d'œil à 1977, année d'ouverture du Centre Pompidou à Paris. La toiture s'inspire d'un chapeau chinois tressé.",
       "photo": "Placez-vous sous l'auvent pour saisir les motifs hexagonaux de la charpente ; de nuit, la membrane s'illumine.",
       "note": "Tarifs selon les expositions.",
-      "image": "images/pompidou.jpg",
+      "image": "villes/metz/images/pompidou.jpg",
       "imageCredit": "FrDr · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_47.jpg"
     },
@@ -104,7 +104,7 @@
       "aRegarder": "Les mâchicoulis, la galerie couverte sur le pont et les traces des différentes campagnes de construction.",
       "anecdote": "Son nom ne vient pas d'une armée allemande mais des Frères hospitaliers de Notre-Dame-des-Allemands (chevaliers teutoniques) installés tout près au Moyen Âge.",
       "photo": "Descendez sur la promenade au bord de la Seille, côté boulevard, pour avoir les tours et leur reflet.",
-      "image": "images/porte-allemands.jpg",
+      "image": "villes/metz/images/porte-allemands.jpg",
       "imageCredit": "Marc Ryckaert (MJJR) · CC BY 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_Porte_des_Allemands_R04.jpg"
     },
@@ -126,7 +126,7 @@
       "aRegarder": "Le contraste voulu entre ce style rhénan et le classicisme français de la place de la Comédie voisine. Faites le tour de l'île par les berges.",
       "anecdote": "Le bâtiment devait affirmer la présence allemande au cœur de la ville : il a été implanté face à l'Opéra, symbole du Metz français du XVIIIe siècle.",
       "photo": "Depuis le Moyen Pont à l'heure bleue, quand le temple s'illumine et se reflète dans l'eau.",
-      "image": "images/temple-neuf.jpg",
+      "image": "villes/metz/images/temple-neuf.jpg",
       "imageCredit": "Marc Ryckaert (MJJR) · CC BY 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_Temple_Neuf_R02.jpg"
     },
@@ -149,7 +149,7 @@
       "anecdote": "Pendant la Révolution, la place a accueilli une guillotine ; elle s'appelait alors place de l'Égalité.",
       "photo": "Le soir, cadrez la façade éclairée depuis l'angle de la place avec le Temple Neuf en arrière-plan.",
       "note": "Visites de l'intérieur sur réservation, à confirmer.",
-      "image": "images/opera-comedie.jpg",
+      "image": "villes/metz/images/opera-comedie.jpg",
       "imageCredit": "FrDr · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_30.jpg"
     },
@@ -171,7 +171,7 @@
       "aRegarder": "Les arcades basses en pierre de Jaumont, les fenêtres gothiques à remplages et les enseignes anciennes.",
       "anecdote": "Les changeurs installaient leurs tables sous les arcades : c'est l'un des premiers « quartiers d'affaires » de la ville.",
       "photo": "Fin d'après-midi : le soleil rasant fait rougeoyer la pierre jaune. Alignez les arcades en enfilade.",
-      "image": "images/place-saint-louis.jpg",
+      "image": "villes/metz/images/place-saint-louis.jpg",
       "imageCredit": "JuJu939 · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_Saint-Louis_(Vue_d%27ensemble)_-_Metz_57.JPG"
     },
@@ -192,7 +192,7 @@
       "aRegarder": "Le clocher-horloge, les chapiteaux sculptés, puis l'avenue Foch et la Poste centrale en grès rose.",
       "anecdote": "Ses quais et halls ont été dimensionnés pour l'embarquement rapide de troupes : la gare était aussi un outil militaire face à la France.",
       "photo": "Depuis le parvis, en légère diagonale pour inclure toute la longueur de la façade (près de 300 m).",
-      "image": "images/gare-imperial.jpg",
+      "image": "villes/metz/images/gare-imperial.jpg",
       "imageCredit": "Johan Bakker · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:PA00106842-Gare_de_Metz-Ville.jpg"
     },
@@ -212,7 +212,7 @@
       "aRegarder": "Les thermes gallo-romains conservés en sous-sol, le grenier de Chèvremont (1457) et sa charpente, les plafonds peints médiévaux.",
       "anecdote": "Les thermes ont été découverts lors de travaux d'agrandissement du musée dans les années 1930 : le musée a été construit autour.",
       "photo": "La charpente du grenier de Chèvremont, en cadrage symétrique au grand-angle.",
-      "image": "images/cour-dor.jpg",
+      "image": "villes/metz/images/cour-dor.jpg",
       "imageCredit": "GFreihalter · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_Mus%C3%A9e_de_la_Cour_d%27Or_Grange_de_Ch%C3%A8vremont_829.jpg"
     },
@@ -234,7 +234,7 @@
       "anecdote": "Elle a longtemps servi d'entrepôt militaire, ce qui l'a paradoxalement protégée des démolitions.",
       "photo": "Cadrez la façade de biais pour faire ressortir les rangs de briques romaines.",
       "note": "Ouverture saisonnière, à confirmer.",
-      "image": "images/saint-pierre-nonnains.jpg",
+      "image": "villes/metz/images/saint-pierre-nonnains.jpg",
       "imageCredit": "Marc Ryckaert (MJJR) · CC BY 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_Saint_Pierre_R02.jpg"
     },
@@ -256,7 +256,7 @@
       "anecdote": "Elle a échappé à la destruction car elle était enclose dans la citadelle militaire.",
       "photo": "À l'intérieur, plein cadre au grand-angle sur la voûte peinte depuis le centre.",
       "note": "Ouverture saisonnière, à confirmer.",
-      "image": "images/templiers.jpg",
+      "image": "villes/metz/images/templiers.jpg",
       "imageCredit": "Marc Ryckaert (MJJR) · CC BY 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_Chapelle_des_Templiers_R01.jpg"
     },
@@ -278,7 +278,7 @@
       "anecdote": "Il fait partie de la Cité musicale-Metz, avec Les Trinitaires et la BAM.",
       "photo": "L'esplanade devant l'Arsenal avec Saint-Pierre-aux-Nonnains dans le même cadre.",
       "note": "Concerts payants, programme à consulter.",
-      "image": "images/arsenal.jpg",
+      "image": "villes/metz/images/arsenal.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Arsenal_-_Metz_(FR57)_-_2022-02-26_-_3.jpg"
     },
@@ -299,7 +299,7 @@
       "aRegarder": "La statue du maréchal Ney, les parterres fleuris, la vue sur le Mont Saint-Quentin.",
       "anecdote": "L'Esplanade a été aménagée sur l'emplacement de l'ancienne citadelle, ouverte aux promeneurs pour aérer la ville de garnison.",
       "photo": "Coucher de soleil depuis la balustrade, face à l'ouest.",
-      "image": "images/esplanade.jpg",
+      "image": "villes/metz/images/esplanade.jpg",
       "imageCredit": "Fissunix · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Esplanade-metz.jpg"
     },
@@ -321,7 +321,7 @@
       "anecdote": "L'évêque n'a jamais habité son palais : la Révolution a éclaté avant la fin des travaux.",
       "photo": "Les étals colorés en cadrage serré, puis la cathédrale depuis la sortie côté place de Chambre.",
       "note": "Fermé dimanche et lundi (à confirmer).",
-      "image": "images/marche-couvert.jpg",
+      "image": "villes/metz/images/marche-couvert.jpg",
       "imageCredit": "besopha · CC BY-SA 2.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Marche_couvert_(3672190363).jpg"
     },
@@ -341,7 +341,7 @@
       "aRegarder": "Les cygnes, les bateaux de la base nautique et la silhouette de la ville sur la colline.",
       "anecdote": "On y voit souvent des cygnes : Metz en a fait l'un de ses symboles au bord de l'eau.",
       "photo": "Depuis la rive opposée, la ville et la cathédrale en arrière-plan au coucher du soleil.",
-      "image": "images/plan-eau.jpg",
+      "image": "villes/metz/images/plan-eau.jpg",
       "imageCredit": "No machine-readable author provided. FrauAntje82~commonsw… · CC BY-SA 2.5 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Plan_d%27Eau.jpg"
     },
@@ -361,7 +361,7 @@
       "aRegarder": "Les prairies humides, les passerelles sur la Seille et les vues sur la toiture du Pompidou.",
       "anecdote": "Jean-Marie Pelt, né à Rodemack et professeur à Metz, fut l'un des pionniers de l'écologie urbaine en France.",
       "photo": "Le Pompidou en arrière-plan, avec herbes hautes au premier plan.",
-      "image": "images/jardins-pelt.jpg",
+      "image": "villes/metz/images/jardins-pelt.jpg",
       "imageCredit": "JuJu939 · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Parc_de_la_Seille_-_Metz_-_Lagune.JPG"
     },
@@ -381,7 +381,7 @@
       "aRegarder": "Les ponts anciens, les péniches, les reflets de la ville dans l'eau.",
       "anecdote": "Metz s'est développée à la confluence de la Moselle et de la Seille : les îles du Petit- et du Grand-Saulcy en sont les témoins.",
       "photo": "En fin de journée, le Temple Neuf en contre-jour depuis le quai.",
-      "image": "images/quais-moselle.jpg",
+      "image": "villes/metz/images/quais-moselle.jpg",
       "imageCredit": "Florian Pépellin · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Port_du_Quai_des_R%C3%A9gates_de_Metz_au_cr%C3%A9puscule_(juin_2019).JPG"
     },
@@ -401,7 +401,7 @@
       "aRegarder": "L'enfilade du Temple Neuf et de la pointe de l'île.",
       "anecdote": "C'est l'image que l'on retrouve sur la plupart des cartes postales de la ville.",
       "photo": "À l'heure bleue, appuyez le téléphone sur le parapet pour une pose longue nette.",
-      "image": "images/moyen-pont.jpg",
+      "image": "villes/metz/images/moyen-pont.jpg",
       "imageCredit": "Pieter van Everdingen · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_-_View_of_Temple_Neuf,_Moselle_river_and_Cath%C3%A9drale_Saint_Etienne_from_Moyen_Pont_(Q22690).jpg"
     },
@@ -422,7 +422,7 @@
       "anecdote": "Cocteau est mort en 1963 avant la fin du chantier : ses cartons ont été achevés et posés après sa disparition.",
       "photo": "Par temps ensoleillé, cadrez un seul vitrail avec ses taches de couleur projetées sur la pierre.",
       "note": "Horaires d'ouverture restreints, à confirmer.",
-      "image": "images/saint-maximin.jpg",
+      "image": "villes/metz/images/saint-maximin.jpg",
       "imageCredit": "No machine-readable author provided. Zusammen030378~commo… · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Saintmaximin.jpg"
     },
@@ -442,7 +442,7 @@
       "aRegarder": "Les façades néo-classiques et Art nouveau au-dessus des vitrines.",
       "anecdote": "« Serpenoise » vient de Scarpone, l'étape romaine vers laquelle menait la route.",
       "photo": "Levez les yeux : les étages supérieurs valent souvent plus que les vitrines.",
-      "image": "images/rue-serpenoise.jpg",
+      "image": "villes/metz/images/rue-serpenoise.jpg",
       "imageCredit": "Speculos · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Serpenoise_Metz.JPG"
     },
@@ -463,7 +463,7 @@
       "aRegarder": "Les maisons à pans de pierre, les enseignes en fer forgé, les petites cours.",
       "anecdote": "En Fournirue était la rue des « fourniers », les boulangers qui cuisaient le pain pour la ville.",
       "photo": "Une rue étroite en perspective, avec un passant pour donner l'échelle.",
-      "image": "images/rue-taison.jpg",
+      "image": "villes/metz/images/rue-taison.jpg",
       "imageCredit": "M.Strīķis · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Taison,_Metz,_Lorraine,_France_-_panoramio.jpg"
     },
@@ -483,7 +483,7 @@
       "aRegarder": "Les inscriptions commémoratives et l'arche isolée au milieu du boulevard.",
       "anecdote": "Le nom de la porte rappelle, comme la rue, l'antique route de Scarpone.",
       "photo": "Cadrez l'arche en encadrant le Quartier Impérial derrière elle.",
-      "image": "images/porte-serpenoise.jpg",
+      "image": "villes/metz/images/porte-serpenoise.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Porte_Serpenoise_-_Metz_(FR57)_-_2022-02-26_-_5.jpg"
     },
@@ -504,7 +504,7 @@
       "aRegarder": "La colonne de la Vierge au centre et les façades colorées.",
       "anecdote": "Le dessous de la place cache un parking… et, selon les fouilles, des vestiges romains.",
       "photo": "Depuis une terrasse, la colonne en premier plan avec la vie de la place autour.",
-      "image": "images/place-saint-jacques.jpg",
+      "image": "villes/metz/images/place-saint-jacques.jpg",
       "imageCredit": "Alice Volkwardsen · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_Saint_Jacques_Metz.jpg"
     },
@@ -524,7 +524,7 @@
       "aRegarder": "Le contraste entre l'ordre classique de Blondel et le gothique de la cathédrale.",
       "anecdote": "Blondel a dû démolir un cloître pour créer cette place, dans l'esprit des Lumières.",
       "photo": "Grand-angle depuis l'angle de l'Hôtel de Ville pour avoir place et cathédrale.",
-      "image": "images/place-armes.jpg",
+      "image": "villes/metz/images/place-armes.jpg",
       "imageCredit": "Arnaud.scherer · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_d%27armes_%C3%A0_Metz.jpg"
     },
@@ -544,7 +544,7 @@
       "aRegarder": "La tour romane et la nef très large, presque carrée.",
       "anecdote": "Saint Eucaire aurait été l'un des premiers évêques de Metz, au IVe siècle.",
       "photo": "Le clocher en contre-plongée depuis la rue étroite.",
-      "image": "images/saint-eucaire.jpg",
+      "image": "villes/metz/images/saint-eucaire.jpg",
       "imageCredit": "Auteur inconnu · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Sainteucaire.jpg"
     },
@@ -564,7 +564,7 @@
       "aRegarder": "Les meurtrières et la maçonnerie de la muraille.",
       "anecdote": "Selon la tradition, elle porte le nom d'un artilleur réputé qui la défendait.",
       "photo": "Avec les arbres du jardin en premier plan pour adoucir la silhouette militaire.",
-      "image": "images/tour-camoufle.jpg",
+      "image": "villes/metz/images/tour-camoufle.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Tour_Camoufle_-_Metz_(FR57)_-_2022-02-26_-_1.jpg"
     },
@@ -584,7 +584,7 @@
       "aRegarder": "Les pignons, les tourelles et les sculptures de façade (visible de l'extérieur uniquement).",
       "anecdote": "Le bâtiment abrite toujours des services militaires : on l'admire depuis la rue.",
       "photo": "Depuis le trottoir d'en face, téléphone à la verticale pour avoir tout le pignon.",
-      "image": "images/palais-gouverneur.jpg",
+      "image": "villes/metz/images/palais-gouverneur.jpg",
       "imageCredit": "Ga5775 · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Palais_du_Gouverneur_Metz_08.JPG"
     },
@@ -604,7 +604,7 @@
       "aRegarder": "Les murets de pierre, le panorama sur l'Outre-Seille.",
       "anecdote": "Le nom rappelle les tanneurs qui travaillaient près de la Seille, dont ils utilisaient l'eau.",
       "photo": "Panorama des toits depuis la terrasse la plus haute.",
-      "image": "images/jardin-tanneurs.jpg",
+      "image": "villes/metz/images/jardin-tanneurs.jpg",
       "imageCredit": "JuJu939 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Jardin_des_Tanneurs_-_Outre-Seille_-_Metz_57.JPG"
     },
@@ -624,7 +624,7 @@
       "aRegarder": "Le mélange gothique (chœur) et classique (façade) sur un même édifice.",
       "anecdote": "Elle appartenait à une puissante abbaye bénédictine fondée au Xe siècle.",
       "photo": "Depuis le pont voisin, avec la Moselle au premier plan.",
-      "image": "images/saint-vincent.jpg",
+      "image": "villes/metz/images/saint-vincent.jpg",
       "imageCredit": "Graoully · CC BY 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Basilique_Saint-Vincent.JPG"
     },
@@ -644,7 +644,7 @@
       "aRegarder": "Le mur romain intégré, les vitraux du XVe au XIXe siècle.",
       "anecdote": "On peut y toucher littéralement les fondations de la Metz antique.",
       "photo": "Le contraste des pierres romaines et gothiques en lumière rasante.",
-      "image": "images/saint-martin.jpg",
+      "image": "villes/metz/images/saint-martin.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint_Martin_-_Metz_(FR57)_-_2022-02-27_-_7.jpg"
     },
@@ -666,7 +666,7 @@
       "anecdote": "Comme l'Arsenal, il fait partie de la Cité musicale-Metz.",
       "photo": "Le cloître éclairé le soir.",
       "note": "Concerts payants, accès au bar selon programmation.",
-      "image": "images/trinitaires.jpg",
+      "image": "villes/metz/images/trinitaires.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Trinitaires_-_Metz_(FR57)_-_2022-02-27_-_3.jpg"
     },
@@ -687,7 +687,7 @@
       "anecdote": "Le quartier tient son nom de l'amphithéâtre gallo-romain de Divodurum (l'antique Metz), mis au jour au début du XXe siècle lors de la construction de la gare de marchandises.",
       "photo": "Cadrez la toiture du Centre Pompidou depuis le parvis qui relie les deux bâtiments.",
       "note": "Horaires à confirmer.",
-      "image": "images/muse.jpg",
+      "image": "villes/metz/images/muse.jpg",
       "imageCredit": "Alexandre Prevot from Nancy, France · CC BY-SA 2.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:MUSE_(54123884283).jpg"
     },
@@ -707,7 +707,7 @@
       "anecdote": "Pratique les jours de pluie : les rues commerçantes du centre sont toutes à quelques minutes à pied.",
       "photo": "Plutôt la place Saint-Jacques et ses terrasses que la galerie elle-même.",
       "note": "Horaires à confirmer (fermé le dimanche en général).",
-      "image": "images/centre-saint-jacques.jpg",
+      "image": "villes/metz/images/centre-saint-jacques.jpg",
       "imageCredit": "Zéphyrios · CC0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Passage_Saint-Jacques.jpg"
     },
@@ -727,7 +727,7 @@
       "aRegarder": "Levez les yeux au-dessus des vitrines : beaucoup de façades anciennes en pierre de Jaumont.",
       "anecdote": "La pierre de Jaumont, un calcaire couleur miel extrait au nord de Metz, donne à la ville sa teinte dorée, surtout au soleil couchant.",
       "photo": "Les façades dorées en lumière rasante, en fin de journée.",
-      "image": "images/rues-palais-clercs.jpg",
+      "image": "villes/metz/images/rues-palais-clercs.jpg",
       "imageCredit": "Chabe01 · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Clercs_-_Metz_(FR57)_-_2022-02-25_-_1.jpg"
     },
@@ -749,7 +749,7 @@
       "anecdote": "Son nom, « 49 Nord 6 Est », correspond aux coordonnées géographiques de Metz.",
       "photo": "La façade médiévale depuis la rue des Trinitaires, puis un détail d'œuvre dans les salles (si les photos sont autorisées).",
       "note": "Entrée gratuite et horaires à confirmer ; fermé entre deux expositions.",
-      "image": "images/frac-lorraine.jpg",
+      "image": "villes/metz/images/frac-lorraine.jpg",
       "imageCredit": "Jean-Pierre Dalbéra from Paris, France · CC BY 2.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:LH%C3%B4tel_Saint-Livier_de_Metz_(5055895107).jpg"
     },
@@ -774,7 +774,7 @@
       "anecdote": "Une institution messine : comptez un peu d'attente le samedi midi.",
       "photo": "Le comptoir en plein cadre, avec les produits au premier plan.",
       "note": "Fermé dimanche et lundi ; horaires à confirmer.",
-      "image": "images/pause-mauricette.jpg",
+      "image": "villes/metz/images/pause-mauricette.jpg",
       "imageCredit": "besopha · CC BY-SA 2.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Marche_couvert_(3672190363).jpg",
       "imageIllustration": true
@@ -799,7 +799,7 @@
       "anecdote": "Goûtez le pâté lorrain : feuilleté de porc et veau marinés, l'autre fierté régionale après la quiche.",
       "photo": "Votre assiette près de la fenêtre, lumière naturelle.",
       "note": "Adresse indicative : vérifiez qu'il est ouvert et réservez.",
-      "image": "images/pause-pont-saint-marcel.jpg",
+      "image": "villes/metz/images/pause-pont-saint-marcel.jpg",
       "imageCredit": "Arnaud 25 · CC0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A2t%C3%A9_lorrain_03.jpg",
       "imageIllustration": true
@@ -825,7 +825,7 @@
       "anecdote": "La place doit son nom à la « chambre » des chanoines de la cathédrale.",
       "photo": "Depuis la terrasse, la cathédrale en contre-plongée au-dessus des parasols.",
       "note": "Choix sur place ; horaires à confirmer.",
-      "image": "images/pause-place-chambre.jpg",
+      "image": "villes/metz/images/pause-place-chambre.jpg",
       "imageCredit": "JuJu939 · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_de_Chambre_-_Metz_57.JPG",
       "imageIllustration": true
@@ -850,7 +850,7 @@
       "aRegarder": "La vie de la place et les façades colorées.",
       "anecdote": "Les Messins s'y retrouvent dès le premier rayon de soleil, même en hiver.",
       "photo": "Votre tasse en premier plan, la colonne floue derrière.",
-      "image": "images/pause-saint-jacques.jpg",
+      "image": "villes/metz/images/pause-saint-jacques.jpg",
       "imageCredit": "Alice Volkwardsen · CC BY-SA 3.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_Saint_Jacques_Metz.jpg",
       "imageIllustration": true
@@ -875,7 +875,7 @@
       "anecdote": "La mirabelle de Lorraine bénéficie d'une IGP ; la récolte a lieu de mi-août à mi-septembre.",
       "photo": "Une part de tarte à la mirabelle en lumière du jour, vue de dessus.",
       "note": "Adresse indicative : vérifiez les horaires.",
-      "image": "images/pause-bourguignon.jpg",
+      "image": "villes/metz/images/pause-bourguignon.jpg",
       "imageCredit": "Stanislas PERRIN · Public domain · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Koogan_2002-08-14-160359.JPG",
       "imageIllustration": true
@@ -901,7 +901,7 @@
       "anecdote": "Le parvis porte le nom de parvis des Droits-de-l'Homme.",
       "photo": "La toiture vue depuis votre table.",
       "note": "Horaires liés à ceux du musée.",
-      "image": "images/pause-pompidou.jpg",
+      "image": "villes/metz/images/pause-pompidou.jpg",
       "imageCredit": "FrDr · CC BY-SA 4.0 · Wikimedia Commons",
       "imageUrl": "https://commons.wikimedia.org/wiki/File:Metz_47.jpg",
       "imageIllustration": true

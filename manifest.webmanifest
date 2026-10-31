@@ -1,7 +1,7 @@
 {
-  "name": "Metz à pied — parcours personnalisé",
-  "short_name": "Metz à pied",
-  "description": "Parcours personnalisé des lieux à voir à Metz, utilisable hors ligne pendant la visite.",
+  "name": "À pied — parcours personnalisés en ville",
+  "short_name": "À pied",
+  "description": "Parcours personnalisés à pied à Metz, Luxembourg et d'autres villes, utilisables hors ligne pendant la visite.",
   "lang": "fr",
   "id": "./",
   "start_url": "./",

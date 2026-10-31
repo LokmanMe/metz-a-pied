@@ -1,9 +1,9 @@
-/* Metz à pied — génération de parcours et suivi de visite (vanilla JS, sans build) */
+/* À pied — génération de parcours et suivi de visite, une ville au choix (vanilla JS, sans build) */
 'use strict';
 
 // ---------- Constantes ----------
-const STORE = { prefs: 'metz.prefs.v1', route: 'metz.route.v1', visited: 'metz.visited.v1' };
-const METZ_CENTER = { lat: 49.1193, lng: 6.1757 };
+const CITY_KEY = 'apied.ville';
+const LEGACY_PREFIX = { metz: 'metz', luxembourg: 'lux' };   // clés des anciennes apps séparées (même origine)
 const DETOUR = 1.3;                 // facteur de détour piéton vs vol d'oiseau
 const DAY_START_DEFAULT = 9 * 60 + 30;
 
@@ -30,17 +30,20 @@ const CATEGORY_LABELS = {
 const SPARSE_MSG = "Peu de lieux correspondent à vos centres d'intérêt : le parcours est plus court que la durée choisie. Ajoutez-en un pour l'allonger.";
 const DEFAULT_PREFS = {
   interests: ['histoire', 'architecture', 'photo'], duration: 'half', pace: 'normal',
-  transport: 'walk', start: 'gare', parking: 'p-cathedrale', budget: 'paid', pauses: ['cafe'],
+  transport: 'walk', start: 'gare', parking: null, budget: 'paid', pauses: ['cafe'],
   startTime: null,
 };
 
 // ---------- État ----------
-let DATA = null;          // contenu de lieux.json
-let DIST = null;          // distances piétonnes réelles précalculées (data/distances.json)
+let CITIES = [];          // catalogue des villes (villes/villes.json)
+let CITY = null;          // ville choisie
+let STORE = null;         // clés localStorage de cette ville
+let DATA = null;          // contenu de villes/<ville>/lieux.json
+let DIST = null;          // distances piétonnes réelles précalculées (villes/<ville>/distances.json)
 let BY_ID = {};
-let prefs = { ...DEFAULT_PREFS, ...load(STORE.prefs, DEFAULT_PREFS) };
-let route = load(STORE.route, null);
-let visited = new Set(load(STORE.visited, []));
+let prefs = { ...DEFAULT_PREFS };
+let route = null;
+let visited = new Set();
 let map = null, layers = null, meMarker = null, meCircle = null, watchId = null, lastPos = null;
 
 const $ = (sel) => document.querySelector(sel);
@@ -73,7 +76,7 @@ function walkKm(a, b) {
   return haversineKm(a, b) * DETOUR;
 }
 
-/** Trajet entre deux points : marche, ou bus Le Met' si plus rapide et autorisé. */
+/** Trajet entre deux points : marche, ou transports en commun si plus rapide et autorisé. */
 function leg(a, b, p = prefs) {
   const km = walkKm(a, b);
   const walkMin = km / PACE[p.pace].speed * 60;
@@ -455,8 +458,8 @@ async function resolveStart(p) {
     try {
       const pos = await getPosition({ enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 });
       const here = { lat: pos.coords.latitude, lng: pos.coords.longitude, nom: 'Ma position' };
-      if (haversineKm(here, METZ_CENTER) > 15) {
-        toast('Vous semblez loin de Metz : départ fixé à la gare.');
+      if (haversineKm(here, CITY.centre) > 15) {
+        toast(`Vous semblez loin de ${CITY.nom} : départ fixé à la gare.`);
       } else return here;
     } catch (err) {
       toast(geoErrorMessage(err) + ' Départ fixé à la gare.', 5000);
@@ -505,6 +508,7 @@ function onPosition(pos) {
 function showNotice(html) { const n = $('#notice'); n.innerHTML = html; n.hidden = false; }
 
 function showRoute() {
+  $('#screen-cities').hidden = true;
   $('#screen-quiz').hidden = true;
   $('#screen-route').hidden = false;
   $('#btn-edit').hidden = false;
@@ -514,6 +518,7 @@ function showRoute() {
   startWatch();
 }
 function showQuiz() {
+  $('#screen-cities').hidden = true;
   $('#screen-route').hidden = true;
   $('#screen-quiz').hidden = false;
   window.scrollTo(0, 0);
@@ -525,7 +530,7 @@ function initMap() {
     $('#map').innerHTML = '<p class="notice" style="margin:16px">Carte indisponible hors ligne au premier lancement. La liste des étapes reste utilisable.</p>';
     return;
   }
-  map = L.map('map', { zoomControl: false, attributionControl: true }).setView([METZ_CENTER.lat, METZ_CENTER.lng], 15);
+  map = L.map('map', { zoomControl: false, attributionControl: true }).setView([CITY.centre.lat, CITY.centre.lng], 15);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     crossOrigin: true,          // réponses CORS, cachables proprement par le service worker
@@ -566,7 +571,7 @@ function renderRoute(fit = false) {
     if (di === 0 || days > 1) html.push(`<li class="leg">Départ : ${esc(route.start.nom)}</li>`);
     d.rows.forEach((r) => {
       const isDone = visited.has(r.id), isCur = r.index === route.current;
-      html.push(`<li class="leg">${r.leg.bus ? '🚌 bus Le Met\'' : '🚶'} ${r.leg.min} min · ${fmtKm(r.leg.km)}</li>`);
+      html.push(`<li class="leg">${r.leg.bus ? esc(CITY.trajetBus) : '🚶'} ${r.leg.min} min · ${fmtKm(r.leg.km)}</li>`);
       html.push(`<li class="stop${isDone ? ' visited' : ''}${isCur ? ' current' : ''}" data-index="${r.index}">
         <span class="badge${r.pause ? ' pause' : ''}${isDone ? ' done' : ''}">${isDone ? '✓' : r.index + 1}</span>
         <button class="stop-main" data-open="${r.index}">
@@ -586,6 +591,8 @@ function renderRoute(fit = false) {
   fetchStreetPaths(sch);
 }
 
+const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
 function drawMap(sch, fit) {
   if (!map) return;
   layers.clearLayers();
@@ -594,8 +601,8 @@ function drawMap(sch, fit) {
   sch.days.forEach((d, di) => {
     const path = route.paths?.[di];
     const pts = path && path.key === dayKey(d) ? path.latlngs : [[start.lat, start.lng], ...d.rows.map((r) => [r.pl.lat, r.pl.lng])];
-    L.polyline(pts, { color: '#1F4E8C', weight: 5, opacity: 0.85, dashArray: di ? '10 8' : null }).addTo(layers);
-    L.polyline(pts, { color: '#E9C766', weight: 2, opacity: 0.9 }).addTo(layers);
+    L.polyline(pts, { color: cssVar('--route'), weight: 5, opacity: 0.85, dashArray: di ? '10 8' : null }).addTo(layers);
+    L.polyline(pts, { color: cssVar('--route-inner'), weight: 2, opacity: 0.9 }).addTo(layers);
   });
   sch.flat.forEach((r) => {
     const cls = [r.pause ? 'pause' : '', visited.has(r.id) ? 'done' : '', r.index === route.current ? 'current' : ''].join(' ');
@@ -713,7 +720,7 @@ function nextStep() {
   saveVisited();
   if (nextIdx === -1) {
     renderRoute();
-    toast('🎉 Parcours terminé ! Bravo, et bonne fin de séjour à Metz.', 5000);
+    toast(`🎉 Parcours terminé ! Bravo, et bonne fin de séjour à ${CITY.nom}.`, 5000);
     return;
   }
   route.current = nextIdx;
@@ -762,6 +769,13 @@ function openSheet(index) {
 // ---------- Événements ----------
 function bindEvents() {
   $('#btn-edit').addEventListener('click', showQuiz);
+  $('#btn-city').addEventListener('click', showCities);
+  $('#city-list').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-city]');
+    if (!b) return;
+    if (b.dataset.city !== CITY?.id) return chooseCity(b.dataset.city);
+    route ? showRoute() : showQuiz();
+  });
   $('#btn-suggest').addEventListener('click', openSuggestions);
   $('#btn-regen').addEventListener('click', regenerate);
   $('#btn-next').addEventListener('click', nextStep);
@@ -814,29 +828,101 @@ function bindEvents() {
   document.querySelectorAll('dialog').forEach((dlg) => dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); }));
 }
 
+// ---------- Villes ----------
+const storeFor = (id) => ({ prefs: `apied.${id}.prefs.v1`, route: `apied.${id}.route.v1`, visited: `apied.${id}.visited.v1` });
+
+/** Reprend préférences, parcours et lieux visités des anciennes apps « Metz à pied » et « Luxembourg à pied ». */
+function migrateLegacy(id) {
+  const old = LEGACY_PREFIX[id], keys = storeFor(id);
+  if (!old) return;
+  try {
+    for (const k of ['prefs', 'route', 'visited']) {
+      const v = localStorage.getItem(`${old}.${k}.v1`);
+      if (v !== null && localStorage.getItem(keys[k]) === null) localStorage.setItem(keys[k], v);
+    }
+  } catch { /* stockage indisponible */ }
+}
+
+/** Changer de ville recharge l'app : données, préférences et thème sont propres à chaque ville. */
+function chooseCity(id) {
+  save(CITY_KEY, id);
+  location.href = location.pathname;
+}
+
+function showCities() {
+  $('#city-list').innerHTML = CITIES.map((c) => `<li><button type="button" class="city-card" data-city="${esc(c.id)}" aria-current="${c.id === CITY?.id}">
+      <img src="${esc(c.image)}" alt="" loading="lazy" decoding="async">
+      <span class="city-text"><strong>${esc(c.nom)}</strong><small>${esc(c.pays)} · ${esc(c.resume)}</small></span>
+    </button></li>`).join('');
+  $('#screen-quiz').hidden = true;
+  $('#screen-route').hidden = true;
+  $('#screen-cities').hidden = false;
+  $('#btn-edit').hidden = true;
+  window.scrollTo(0, 0);
+}
+
+/** Nom, accroche, couleurs et libellés propres à la ville (ex. « Gastronomie lorraine », « bus Le Met' »). */
+function applyCity() {
+  document.documentElement.dataset.ville = CITY.id;
+  document.title = `${CITY.nom} à pied`;
+  $('#brand-city').textContent = CITY.nom;
+  $('#intro').textContent = CITY.accroche;
+  $('#theme-light').content = CITY.couleur.clair;
+  $('#theme-dark').content = CITY.couleur.sombre;
+  for (const [name, labels] of Object.entries(CITY.libelles || {})) {
+    for (const [value, text] of Object.entries(labels)) {
+      const chip = document.querySelector(`.chips[data-name="${name}"] [data-value="${value}"]`);
+      if (chip) chip.textContent = text;
+    }
+  }
+  $('#btn-city').hidden = CITIES.length < 2;
+}
+
 // ---------- Démarrage ----------
 async function main() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js', { scope: './' }).catch((err) => console.warn('SW non enregistré', err));
   }
+  const fail = () => {
+    $('#screen-quiz').hidden = false;
+    $('#intro').textContent = 'Impossible de charger les lieux. Vérifiez la connexion puis rechargez la page.';
+  };
   try {
-    const res = await fetch('data/lieux.json');
-    DATA = await res.json();
-  } catch {
-    document.querySelector('.intro').textContent = 'Impossible de charger les lieux. Vérifiez la connexion puis rechargez la page.';
+    CITIES = (await (await fetch('villes/villes.json')).json()).villes;
+  } catch { return fail(); }
+  bindEvents();
+
+  // Ville : ?ville=… dans l'adresse (lien partagé), sinon la dernière choisie, sinon on demande.
+  const asked = new URLSearchParams(location.search).get('ville');
+  const id = [asked, load(CITY_KEY, null)].find((x) => CITIES.some((c) => c.id === x));
+  if (!id) {
+    $('.brand em').textContent = 'À pied';
+    showCities();
     return;
   }
-  BY_ID = Object.fromEntries(DATA.lieux.map((pl) => [pl.id, pl]));
+  save(CITY_KEY, id);
+  CITY = CITIES.find((c) => c.id === id);
+  STORE = storeFor(id);
+  migrateLegacy(id);
+  prefs = { ...DEFAULT_PREFS, ...load(STORE.prefs, DEFAULT_PREFS) };
+  route = load(STORE.route, null);
+  visited = new Set(load(STORE.visited, []));
+  applyCity();
+
   try {
-    const dj = await (await fetch('data/distances.json')).json();
+    DATA = await (await fetch(`${CITY.dossier}/lieux.json`)).json();
+  } catch { return fail(); }
+  BY_ID = Object.fromEntries(DATA.lieux.map((pl) => [pl.id, pl]));
+  if (!DATA.departs.parkings.some((pk) => pk.id === prefs.parking)) prefs.parking = DATA.departs.parkings[0]?.id ?? null;
+  try {
+    const dj = await (await fetch(`${CITY.dossier}/distances.json`)).json();
     DIST = { index: Object.fromEntries(dj.ids.map((id, i) => [id, i])), m: dj.m };
   } catch { /* repli : vol d'oiseau × 1,3 */ }
   // Un parcours sauvegardé qui référence un lieu disparu est abandonné.
   if (route && !route.days?.flat().every((it) => BY_ID[it.id])) route = null;
 
   initQuiz();
-  bindEvents();
-  if (route) showRoute();
+  route ? showRoute() : showQuiz();
 }
 
 main();

@@ -1,0 +1,933 @@
+{
+  "version": 1,
+  "verification": "Coordonnées vérifiées via OpenStreetMap/Nominatim le 2026-10-30. Horaires, tarifs et adresses de pauses à confirmer sur place.",
+  "departs": {
+    "gare": {
+      "nom": "Gare de Luxembourg",
+      "lat": 49.59993,
+      "lng": 6.13413,
+      "id": "depart-gare"
+    },
+    "parkings": [
+      {
+        "id": "p-knuedler",
+        "nom": "Parking Knuedler (place Guillaume II)",
+        "lat": 49.61036,
+        "lng": 6.13016
+      },
+      {
+        "id": "p-theatre",
+        "nom": "Parking Théâtre",
+        "lat": 49.61278,
+        "lng": 6.13089
+      },
+      {
+        "id": "p-saint-esprit",
+        "nom": "Parking Saint-Esprit",
+        "lat": 49.60859,
+        "lng": 6.13284
+      },
+      {
+        "id": "p-monterey",
+        "nom": "Parking Monterey",
+        "lat": 49.61,
+        "lng": 6.12235
+      },
+      {
+        "id": "p-glacis",
+        "nom": "Parking Glacis",
+        "lat": 49.61691,
+        "lng": 6.12412
+      }
+    ]
+  },
+  "lieux": [
+    {
+      "id": "casemates-bock",
+      "nom": "Casemates du Bock",
+      "lat": 49.61166,
+      "lng": 6.13668,
+      "categories": [
+        "histoire",
+        "architecture",
+        "photo"
+      ],
+      "duree": 45,
+      "payant": true,
+      "importance": 3,
+      "description": "Galeries creusées dans le rocher du Bock à partir du XVIIe siècle pour abriter soldats, chevaux et canons. C'est sur ce promontoire que le comte Sigefroi fonda son château en 963, acte de naissance de la ville.",
+      "aRegarder": "Les meurtrières ouvertes sur la vallée de l'Alzette, les escaliers taillés dans la roche, la crypte archéologique à l'entrée.",
+      "anecdote": "Pendant les deux guerres mondiales, les casemates ont servi d'abri à des dizaines de milliers d'habitants lors des alertes.",
+      "photo": "Depuis une meurtrière, cadrez le quartier du Grund en contrebas comme dans un cadre de pierre.",
+      "note": "Ouverture saisonnière (généralement fermées en hiver), à confirmer.",
+      "image": "villes/luxembourg/images/casemates-bock.jpg",
+      "imageCredit": "Николай Максимович · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Bock_casemates,_Luxembourg_-_panoramio_(2).jpg"
+    },
+    {
+      "id": "corniche",
+      "nom": "Chemin de la Corniche",
+      "lat": 49.61076,
+      "lng": 6.13473,
+      "categories": [
+        "photo",
+        "nature",
+        "histoire"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 3,
+      "description": "Promenade aménagée sur les anciens remparts, surplombant la vallée de l'Alzette et le quartier du Grund.",
+      "aRegarder": "L'abbaye de Neumünster et l'église Saint-Jean en contrebas, les toits d'ardoise, le plateau du Rham en face.",
+      "anecdote": "On la surnomme « le plus beau balcon d'Europe », une formule attribuée à l'écrivain luxembourgeois Batty Weber.",
+      "photo": "En fin d'après-midi, la lumière rasante éclaire le Grund : appuyez-vous sur le parapet pour une vue plongeante.",
+      "image": "villes/luxembourg/images/corniche.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg-ville_%E2%80%93Corniche.jpg"
+    },
+    {
+      "id": "cathedrale",
+      "nom": "Cathédrale Notre-Dame",
+      "lat": 49.60981,
+      "lng": 6.13155,
+      "categories": [
+        "religieux",
+        "histoire",
+        "architecture"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 3,
+      "description": "Ancienne église des Jésuites construite au début du XVIIe siècle, mêlant gothique tardif et décor Renaissance. Elle est devenue cathédrale en 1870.",
+      "aRegarder": "La statue de la Consolatrice des Affligés, patronne de la ville, le portail Renaissance, la crypte de la famille grand-ducale.",
+      "anecdote": "La crypte abrite le tombeau de Jean l'Aveugle, comte de Luxembourg et roi de Bohême, mort à la bataille de Crécy en 1346.",
+      "photo": "Les trois flèches se cadrent bien depuis la place de la Constitution, avec la vallée au premier plan.",
+      "note": "Entrée libre hors offices.",
+      "image": "villes/luxembourg/images/cathedrale.jpg",
+      "imageCredit": "Michał Jaroszczyk · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_Eurotrip_(133169443).jpeg"
+    },
+    {
+      "id": "palais",
+      "nom": "Palais grand-ducal",
+      "lat": 49.61094,
+      "lng": 6.13286,
+      "categories": [
+        "architecture",
+        "histoire",
+        "photo"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 3,
+      "description": "Ancien hôtel de ville de 1572 devenu résidence officielle du Grand-Duc. Sa façade Renaissance est couverte de motifs d'inspiration hispano-mauresque.",
+      "aRegarder": "La façade ciselée, la sentinelle devant l'entrée et, juste à côté, la Chambre des députés.",
+      "anecdote": "Un drapeau hissé sur le palais signale que le Grand-Duc est présent au Luxembourg.",
+      "photo": "Plan large depuis le trottoir d'en face pour avoir la façade entière ; attendez qu'un garde soit en place.",
+      "note": "Visites intérieures guidées en été uniquement, payantes et sur réservation.",
+      "image": "villes/luxembourg/images/palais.jpg",
+      "imageCredit": "EEJCC · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Gran_Ducal_de_Luxemburgo.jpg"
+    },
+    {
+      "id": "knuedler",
+      "nom": "Place Guillaume II (Knuedler)",
+      "lat": 49.61061,
+      "lng": 6.13088,
+      "categories": [
+        "histoire",
+        "gastronomie",
+        "shopping"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Grande place de la Ville-Haute bordée par l'hôtel de ville, avec la statue équestre du roi-grand-duc Guillaume II. Marché le mercredi et le samedi matin.",
+      "aRegarder": "L'hôtel de ville néoclassique et ses lions, les étals du marché (fromages, Kachkéis, fruits de la Moselle).",
+      "anecdote": "Son surnom « Knuedler » vient du nœud de la cordelière des moines franciscains, dont le couvent occupait les lieux.",
+      "photo": "Les jours de marché, cadrez les étals avec la statue équestre en arrière-plan.",
+      "note": "Jours de marché à confirmer.",
+      "image": "villes/luxembourg/images/knuedler.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_pl_Guillaume_Knuedler_vers_rue_Reine_01.jpg"
+    },
+    {
+      "id": "place-armes",
+      "nom": "Place d'Armes et Cercle Cité",
+      "lat": 49.61124,
+      "lng": 6.12954,
+      "categories": [
+        "architecture",
+        "gastronomie",
+        "nuit"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Le « salon » de la ville : une place ombragée de platanes, avec kiosque à musique et terrasses, dominée par le palais du Cercle Cité.",
+      "aRegarder": "La façade du Cercle Cité et son grand relief, le kiosque où l'on joue des concerts en été.",
+      "anecdote": "Comme son nom l'indique, la place servait à l'origine aux exercices de la garnison de la forteresse.",
+      "photo": "Depuis une terrasse, le kiosque encadré par les platanes.",
+      "image": "villes/luxembourg/images/place-armes.jpg",
+      "imageCredit": "Auteur inconnu · Public domain · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_d%27Armes_Luxembourg.jpg"
+    },
+    {
+      "id": "constitution",
+      "nom": "Place de la Constitution et Gëlle Fra",
+      "lat": 49.60945,
+      "lng": 6.12902,
+      "categories": [
+        "histoire",
+        "photo"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 3,
+      "description": "Belvédère sur l'ancien bastion Beck, face à la vallée de la Pétrusse et au pont Adolphe, avec le Monument du Souvenir.",
+      "aRegarder": "La Gëlle Fra (« dame dorée ») au sommet de l'obélisque, hommage aux Luxembourgeois tombés lors des guerres.",
+      "anecdote": "Abattue par l'occupant en 1940, la statue a été retrouvée en morceaux sous une tribune du stade national, puis réinstallée en 1985.",
+      "photo": "La Gëlle Fra en contre-plongée avec la cathédrale derrière, ou le pont Adolphe au téléobjectif.",
+      "image": "villes/luxembourg/images/constitution.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_fortress_Petrusse_valley_01.jpg"
+    },
+    {
+      "id": "pont-adolphe",
+      "nom": "Pont Adolphe",
+      "lat": 49.60846,
+      "lng": 6.12692,
+      "categories": [
+        "architecture",
+        "photo",
+        "nature"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Pont en pierre de 1903 enjambant la Pétrusse. À sa construction, son arche de plus de 84 m était la plus grande arche en maçonnerie du monde.",
+      "aRegarder": "La passerelle suspendue sous le tablier, réservée aux piétons et cyclistes, avec vue sur la vallée.",
+      "anecdote": "Les Luxembourgeois l'appellent encore « le nouveau pont », alors qu'il a plus d'un siècle.",
+      "photo": "Depuis la vallée de la Pétrusse, l'arche entière avec la verdure en premier plan.",
+      "image": "villes/luxembourg/images/pont-adolphe.jpg",
+      "imageCredit": "Denise Hastert · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Adolphe_Bridge_post_2017_renovation_works_-_7_August_2018.jpg"
+    },
+    {
+      "id": "mnha",
+      "nom": "Musée national d'histoire et d'art (MNHA)",
+      "lat": 49.6117,
+      "lng": 6.1337,
+      "categories": [
+        "art",
+        "histoire"
+      ],
+      "duree": 75,
+      "payant": false,
+      "importance": 2,
+      "description": "Le grand musée du pays, sur le Marché-aux-Poissons, cœur historique de la ville : archéologie gallo-romaine, arts décoratifs, peinture et art moderne.",
+      "aRegarder": "La mosaïque romaine de Vichten, les salles d'archéologie creusées dans le rocher, la collection d'art luxembourgeois.",
+      "anecdote": "Une partie du bâtiment descend dans le rocher : les sous-sols sont plus profonds que la façade ne le laisse croire.",
+      "photo": "Le Marché-aux-Poissons et ses vieilles maisons depuis l'entrée du musée.",
+      "note": "Collections permanentes gratuites, expositions temporaires payantes : à confirmer.",
+      "image": "villes/luxembourg/images/mnha.jpg",
+      "imageCredit": "MNAHA / Tom Lucas · CC0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:MNAHA_-_Mus%C3%A9e_national_d%27arch%C3%A9ologie,_d%27histoire_et_d%27art_(101).jpg"
+    },
+    {
+      "id": "city-museum",
+      "nom": "Lëtzebuerg City Museum",
+      "lat": 49.60993,
+      "lng": 6.1336,
+      "categories": [
+        "histoire",
+        "art"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 2,
+      "description": "Le musée d'histoire de la ville, installé dans quatre maisons anciennes : mille ans d'évolution de la forteresse et de la cité.",
+      "aRegarder": "Les maquettes de la forteresse à différentes époques, l'ascenseur vitré qui traverse les niveaux et le rocher.",
+      "anecdote": "Les maquettes montrent pourquoi on surnommait la ville « la Gibraltar du Nord ».",
+      "photo": "Depuis l'ascenseur vitré, la vue sur la vallée de l'Alzette.",
+      "image": "villes/luxembourg/images/city-museum.jpg",
+      "imageCredit": "Michael Kramer · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Historisches_Museum_der_Stadt_Luxemburg_8325-026.jpg"
+    },
+    {
+      "id": "saint-michel",
+      "nom": "Église Saint-Michel",
+      "lat": 49.61122,
+      "lng": 6.13485,
+      "categories": [
+        "religieux",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Le plus ancien édifice religieux de la ville : ancienne chapelle du château comtal, consacrée en 987, reconstruite plusieurs fois.",
+      "aRegarder": "Le portail baroque et le mélange des styles roman, gothique et baroque à l'intérieur.",
+      "anecdote": "Détruite et reconstruite au fil des sièges, elle a toujours gardé sa place au départ du Bock.",
+      "photo": "Le clocher depuis la rue Sigefroi, en contre-plongée.",
+      "image": "villes/luxembourg/images/saint-michel.jpg",
+      "imageCredit": "Caranorn · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_SaintMichael2.jpg"
+    },
+    {
+      "id": "trois-tours",
+      "nom": "Porte des Trois Tours",
+      "lat": 49.61253,
+      "lng": 6.13328,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Porte médiévale de l'enceinte de la ville, encadrée de tours, au-dessus de la vallée de l'Alzette.",
+      "aRegarder": "Les différentes époques de maçonnerie dans les tours.",
+      "anecdote": "Les portes de la forteresse étaient fermées chaque soir : arriver après l'heure obligeait à dormir dehors.",
+      "photo": "Depuis le bas de la rue, la porte en perspective.",
+      "image": "villes/luxembourg/images/trois-tours.jpg",
+      "imageCredit": "Zinneke · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Dr%C3%A4i_Tierm_Luxembourg_City_2012-04b.JPG"
+    },
+    {
+      "id": "wenzel",
+      "nom": "Mur de Wenceslas (circuit Wenzel)",
+      "lat": 49.61155,
+      "lng": 6.13728,
+      "categories": [
+        "histoire",
+        "nature",
+        "photo"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 2,
+      "description": "Muraille du XIVe siècle qui descend vers l'Alzette. Le circuit Wenzel, balisé, fait parcourir mille ans d'histoire de la forteresse.",
+      "aRegarder": "Les tours de la muraille, les jardins en terrasses, la vue sur le Bock depuis le bas.",
+      "anecdote": "La muraille porte le nom de Wenceslas II, duc de Luxembourg, qui fit agrandir l'enceinte.",
+      "photo": "Le Bock et ses casemates depuis le pont du Stierchen, en bas de la muraille.",
+      "image": "villes/luxembourg/images/wenzel.jpg",
+      "imageCredit": "Kauk0r · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Alzette_Wenzelsmauer.JPG"
+    },
+    {
+      "id": "neumunster",
+      "nom": "Abbaye de Neumünster et Grund",
+      "lat": 49.61034,
+      "lng": 6.13652,
+      "categories": [
+        "histoire",
+        "architecture",
+        "nature",
+        "photo",
+        "nuit"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 3,
+      "description": "Ancienne abbaye bénédictine au bord de l'Alzette, devenue prison puis centre culturel. Avec l'église Saint-Jean voisine, c'est le cœur du quartier du Grund.",
+      "aRegarder": "Le cloître et la cour, les expositions gratuites, la Vierge noire de l'église Saint-Jean.",
+      "anecdote": "L'abbaye a servi de prison jusqu'en 1984, y compris sous l'occupation nazie pour des résistants luxembourgeois.",
+      "photo": "Depuis le pont du Grund, l'abbaye et les remparts au-dessus d'elle, reflétés dans l'Alzette.",
+      "image": "villes/luxembourg/images/neumunster.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Abad%C3%ADa_Neum%C3%BCnster,_ciudad_de_Luxemburgo,_Luxemburgo,_2023-12-16,_DD_66-68_HDR.jpg"
+    },
+    {
+      "id": "ascenseur-grund",
+      "nom": "Ascenseur du Grund (Plateau du Saint-Esprit)",
+      "lat": 49.60789,
+      "lng": 6.13434,
+      "categories": [
+        "photo",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Ascenseur public gratuit creusé dans la roche, qui relie la Ville-Haute au quartier du Grund en quelques secondes.",
+      "aRegarder": "La vue depuis le plateau du Saint-Esprit, ancienne citadelle, sur le Grund et la Pétrusse.",
+      "anecdote": "Pratique pour économiser vos jambes : la Ville-Haute et le Grund ont environ 50 m de dénivelé.",
+      "photo": "Panorama sur les toits du Grund depuis le haut du plateau.",
+      "image": "villes/luxembourg/images/ascenseur-grund.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_-_Grund_from_Corniche.jpg"
+    },
+    {
+      "id": "petrusse",
+      "nom": "Vallée de la Pétrusse",
+      "lat": 49.60562,
+      "lng": 6.13409,
+      "categories": [
+        "nature",
+        "photo"
+      ],
+      "duree": 40,
+      "payant": false,
+      "importance": 2,
+      "description": "Parc au fond de la vallée qui coupe la ville en deux, sous le pont Adolphe et le viaduc de la Passerelle.",
+      "aRegarder": "Les arches des ponts vues d'en bas, les bastions au-dessus, la chapelle Saint-Quirin.",
+      "anecdote": "Le viaduc de la Passerelle (1861) a été construit pour relier la vieille ville à la nouvelle gare.",
+      "photo": "Le pont Adolphe en contre-plongée, plein cadre, depuis le chemin.",
+      "image": "villes/luxembourg/images/petrusse.jpg",
+      "imageCredit": "Martin Röll Martinroell · CC BY-SA 2.0 de · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:050917-luxemburg-petrusse.jpg"
+    },
+    {
+      "id": "saint-quirin",
+      "nom": "Chapelle Saint-Quirin",
+      "lat": 49.60568,
+      "lng": 6.13512,
+      "categories": [
+        "religieux",
+        "histoire",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Petite chapelle du XIVe siècle à moitié creusée dans la falaise de la Pétrusse.",
+      "aRegarder": "La façade gothique collée contre la roche et la source voisine.",
+      "anecdote": "La source près de la chapelle était réputée guérir les maladies des yeux.",
+      "photo": "Plan large pour montrer la chapelle encastrée dans le rocher.",
+      "image": "villes/luxembourg/images/saint-quirin.jpg",
+      "imageCredit": "PlayMistyForMe at Luxembourgish Wikipedia · CC BY-SA 1.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Greinskapell_01.jpg"
+    },
+    {
+      "id": "pfaffenthal-ascenseur",
+      "nom": "Ascenseur panoramique du Pfaffenthal",
+      "lat": 49.61559,
+      "lng": 6.13064,
+      "categories": [
+        "photo",
+        "architecture",
+        "nature"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Ascenseur vitré gratuit de 71 m qui descend de la Ville-Haute au quartier du Pfaffenthal, avec une plateforme au plancher de verre.",
+      "aRegarder": "La vue sur le pont rouge, Kirchberg et le Pfaffenthal pendant la descente.",
+      "anecdote": "Ouvert en 2016, il est vite devenu l'un des points de vue préférés des habitants.",
+      "photo": "Sur la plateforme, le pont Grande-Duchesse-Charlotte dans l'axe.",
+      "image": "villes/luxembourg/images/pfaffenthal-ascenseur.jpg",
+      "imageCredit": "Wolfgang Staudt from Saarbruecken, Germany · CC BY 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Pfaffenthal.jpg"
+    },
+    {
+      "id": "pont-rouge",
+      "nom": "Pont Grande-Duchesse-Charlotte (pont rouge)",
+      "lat": 49.61778,
+      "lng": 6.13175,
+      "categories": [
+        "architecture",
+        "photo"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Pont métallique rouge de 1966 reliant le centre au plateau de Kirchberg, au-dessus du Pfaffenthal.",
+      "aRegarder": "Le contraste entre le rouge vif et la vallée verte en contrebas.",
+      "anecdote": "Le funiculaire et la gare Pfaffenthal-Kirchberg, juste à côté, permettent de remonter vers Kirchberg sans effort.",
+      "photo": "Depuis l'ascenseur panoramique, le pont en diagonale dans le cadre.",
+      "image": "villes/luxembourg/images/pont-rouge.jpg",
+      "imageCredit": "GilPe · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg,_Pont_G-D_Charlotte_(1a).jpg"
+    },
+    {
+      "id": "mudam",
+      "nom": "Mudam (musée d'art moderne)",
+      "lat": 49.61686,
+      "lng": 6.14028,
+      "categories": [
+        "art",
+        "architecture",
+        "photo"
+      ],
+      "duree": 90,
+      "payant": true,
+      "importance": 2,
+      "description": "Musée d'art contemporain dessiné par I. M. Pei, l'architecte de la pyramide du Louvre, ouvert en 2006 sur les fondations du fort Thüngen.",
+      "aRegarder": "Le grand hall vitré, les expositions d'art contemporain et le parc Dräi Eechelen.",
+      "anecdote": "Pei a dessiné le bâtiment pour qu'il suive le tracé des anciennes fortifications de Vauban.",
+      "photo": "Le hall de verre en contre-plongée depuis l'entrée.",
+      "image": "villes/luxembourg/images/mudam.jpg",
+      "imageCredit": "Damacar1 · CC BY-SA 3.0 lu · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Drei_Eicheln_mit_Mudammuseum.jpg"
+    },
+    {
+      "id": "fort-thungen",
+      "nom": "Fort Thüngen (Musée Dräi Eechelen)",
+      "lat": 49.61648,
+      "lng": 6.13942,
+      "categories": [
+        "histoire",
+        "architecture"
+      ],
+      "duree": 45,
+      "payant": true,
+      "importance": 1,
+      "description": "Fort du XVIIIe siècle restauré, qui abrite le musée de la forteresse et de l'identité luxembourgeoise.",
+      "aRegarder": "Les trois tours coiffées de glands en pierre, les galeries souterraines.",
+      "anecdote": "« Dräi Eechelen » signifie « trois glands » en luxembourgeois, d'après les sculptures au sommet des tours.",
+      "photo": "Les trois tours alignées depuis le parc.",
+      "note": "Tarifs à confirmer.",
+      "image": "villes/luxembourg/images/fort-thungen.jpg",
+      "imageCredit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_Th%C3%BCngen,_ciudad_de_Luxemburgo,_Luxemburgo,_2023-12-16,_DD_148.jpg"
+    },
+    {
+      "id": "philharmonie",
+      "nom": "Philharmonie et place de l'Europe",
+      "lat": 49.61842,
+      "lng": 6.14244,
+      "categories": [
+        "architecture",
+        "art",
+        "nuit"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Salle de concert de Christian de Portzamparc (2005), entourée de plus de 800 fines colonnes blanches, au cœur du quartier européen de Kirchberg.",
+      "aRegarder": "La forêt de colonnes, les tours de la Porte de l'Europe tout autour.",
+      "anecdote": "Le quartier de Kirchberg accueille plusieurs institutions européennes, dont la Cour de justice de l'Union européenne.",
+      "photo": "Le soir, les colonnes éclairées en enfilade.",
+      "note": "Concerts payants.",
+      "image": "villes/luxembourg/images/philharmonie.jpg",
+      "imageCredit": "Geugeor · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Philharmonie_Luxembourg_03.jpg"
+    },
+    {
+      "id": "parc-municipal",
+      "nom": "Parc municipal et Villa Vauban",
+      "lat": 49.61312,
+      "lng": 6.12242,
+      "categories": [
+        "nature",
+        "art"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Parc à l'anglaise aménagé à la place des fortifications démantelées, par le paysagiste Édouard André. La Villa Vauban y abrite un musée d'art.",
+      "aRegarder": "Les allées ombragées, les massifs fleuris, la pelouse de la Kinnekswiss.",
+      "anecdote": "Le démantèlement de la forteresse, après le traité de Londres de 1867, a libéré l'espace pour ce parc.",
+      "photo": "Les reflets dans le bassin de la Villa Vauban.",
+      "note": "Musée de la Villa Vauban payant, parc gratuit.",
+      "image": "villes/luxembourg/images/parc-municipal.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Villa_Vauban_Luxembourg_02.jpg"
+    },
+    {
+      "id": "grand-rue",
+      "nom": "Grand-Rue",
+      "lat": 49.61223,
+      "lng": 6.1264,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Principale rue commerçante piétonne de la Ville-Haute, entre boutiques de luxe, enseignes internationales et maisons de pâtisserie.",
+      "aRegarder": "Les rues adjacentes (rue Philippe-II, rue des Capucins) et les façades anciennes au-dessus des vitrines.",
+      "anecdote": "Elle suit le tracé d'une ancienne voie romaine qui traversait le plateau.",
+      "photo": "Levez les yeux : les étages ont gardé leurs façades d'origine.",
+      "image": "villes/luxembourg/images/grand-rue.jpg",
+      "imageCredit": "BiiJii · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Genistre_et_Grand-Rue_%C3%A0_Luxembourg.jpg"
+    },
+    {
+      "id": "clausen",
+      "nom": "Rives de Clausen",
+      "lat": 49.6126,
+      "lng": 6.14242,
+      "categories": [
+        "nuit",
+        "gastronomie",
+        "histoire"
+      ],
+      "duree": 30,
+      "payant": false,
+      "importance": 1,
+      "description": "Ancienne brasserie Mousel au bord de l'Alzette, reconvertie en bars, restaurants et clubs : le quartier de la vie nocturne.",
+      "aRegarder": "Les bâtiments industriels en brique réaménagés, et le Bock éclairé au-dessus.",
+      "anecdote": "Clausen abritait au XVIe siècle le château et les jardins du gouverneur Pierre-Ernest de Mansfeld.",
+      "photo": "Le soir, les terrasses éclairées avec les remparts en arrière-plan.",
+      "image": "villes/luxembourg/images/clausen.jpg",
+      "imageCredit": "Rombou · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rives_de_Clausen_2012.JPG"
+    },
+    {
+      "id": "gare",
+      "nom": "Gare de Luxembourg",
+      "lat": 49.59993,
+      "lng": 6.13413,
+      "categories": [
+        "architecture",
+        "histoire"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 1,
+      "description": "Gare néo-baroque du début du XXe siècle, avec sa tour d'horloge, et sa grande verrière moderne côté parvis.",
+      "aRegarder": "La tour d'horloge et la marquise de verre ajoutée au XXIe siècle.",
+      "anecdote": "Construite quand le réseau luxembourgeois était exploité par les chemins de fer d'Alsace-Lorraine, elle est une cousine de la gare de Metz.",
+      "photo": "La tour d'horloge depuis le parvis, avec le tram en premier plan.",
+      "image": "villes/luxembourg/images/gare.jpg",
+      "imageCredit": "Basile · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:LUXGARE8.jpg"
+    },
+    {
+      "id": "natur-musee",
+      "nom": "Natur Musée (histoire naturelle)",
+      "lat": 49.60967,
+      "lng": 6.13563,
+      "categories": [
+        "art",
+        "nature"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Musée national d'histoire naturelle, dans le Grund : géologie, faune et flore du pays, très apprécié des familles.",
+      "aRegarder": "Les salles sur la faune locale et les fossiles.",
+      "anecdote": "Le musée occupe un ancien hospice au bord de l'Alzette.",
+      "photo": "La façade depuis le pont du Grund.",
+      "note": "Tarifs à confirmer.",
+      "image": "villes/luxembourg/images/natur-musee.jpg",
+      "imageCredit": "PlayMistyForMe · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:MNHNL_01_Luxembourg.jpg"
+    },
+    {
+      "id": "rue-philippe",
+      "nom": "Rue Philippe II",
+      "lat": 49.6108,
+      "lng": 6.12805,
+      "categories": [
+        "shopping"
+      ],
+      "duree": 20,
+      "payant": false,
+      "importance": 1,
+      "description": "Rue piétonne de la Ville-Haute où se concentrent les boutiques de luxe et les grandes maisons de mode.",
+      "aRegarder": "Les vitrines, et la place d'Armes toute proche au bout de la rue.",
+      "anecdote": "Elle porte le nom de Philippe II d'Espagne, souverain du duché de Luxembourg au XVIe siècle, à l'époque des Pays-Bas espagnols.",
+      "photo": "Les façades en enfilade avec les vitrines éclairées, en fin de journée.",
+      "image": "villes/luxembourg/images/rue-philippe.jpg",
+      "imageCredit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Rue_Philippe-II_in_Luxembourg_City.jpg"
+    },
+    {
+      "id": "avenue-gare",
+      "nom": "Avenue de la Gare",
+      "lat": 49.60382,
+      "lng": 6.13322,
+      "categories": [
+        "shopping",
+        "architecture"
+      ],
+      "duree": 25,
+      "payant": false,
+      "importance": 1,
+      "description": "Grande rue commerçante, en partie piétonne, qui mène de la gare vers le pont Passerelle et la Ville-Haute : enseignes, cafés et boutiques.",
+      "aRegarder": "Les immeubles du début du XXe siècle au-dessus des vitrines.",
+      "anecdote": "Le quartier de la Gare s'est construit à partir de 1859, avec l'arrivée du chemin de fer au Luxembourg.",
+      "photo": "En remontant vers la Ville-Haute, la vue sur le pont Passerelle qui enjambe la vallée de la Pétrusse.",
+      "image": "villes/luxembourg/images/avenue-gare.jpg",
+      "imageCredit": "GilPe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Avenue_de_la_Gare_4.JPG"
+    },
+    {
+      "id": "theatre-capucins",
+      "nom": "Théâtre des Capucins",
+      "lat": 49.6126,
+      "lng": 6.13016,
+      "categories": [
+        "art",
+        "nuit",
+        "histoire"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Petit théâtre municipal de la Ville-Haute, sur la place du Théâtre, installé à l'emplacement de l'ancien couvent des Capucins.",
+      "aRegarder": "La façade sur la place du Théâtre et, le soir, l'animation avant les représentations.",
+      "anecdote": "Le théâtre et la rue voisine doivent leur nom aux moines capucins, dont le couvent occupait autrefois ce quartier.",
+      "photo": "La place du Théâtre à l'heure bleue, quand l'entrée s'illumine.",
+      "note": "Spectacles payants, programme à consulter.",
+      "image": "villes/luxembourg/images/theatre-capucins.jpg",
+      "imageCredit": "PlayMistyForMe · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_Th%C3%A9%C3%A2tre_des_capucins_01.jpg"
+    },
+    {
+      "id": "grand-theatre",
+      "nom": "Grand Théâtre",
+      "lat": 49.61779,
+      "lng": 6.1278,
+      "categories": [
+        "art",
+        "nuit",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Principale scène de la ville pour l'opéra, la danse et le théâtre, au rond-point Robert-Schuman, à l'entrée du Limpertsberg. Bâtiment moderniste inauguré en 1964.",
+      "aRegarder": "La longue façade vitrée et le parvis, animés les soirs de spectacle.",
+      "anecdote": "C'est ici, alors appelé Nouveau Théâtre, que s'est tenu le concours Eurovision de la chanson en 1973.",
+      "photo": "La façade éclairée à la tombée de la nuit.",
+      "note": "Spectacles payants, programme à consulter.",
+      "image": "villes/luxembourg/images/grand-theatre.jpg",
+      "imageCredit": "Photo: Andreas Praefcke · CC BY 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxemburg_Grand_Theatre_5.jpg"
+    },
+    {
+      "id": "den-atelier",
+      "nom": "Den Atelier",
+      "lat": 49.59876,
+      "lng": 6.12615,
+      "categories": [
+        "nuit"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Salle de concerts du quartier de Hollerich, près de la gare, étape incontournable des tournées rock, pop et électro.",
+      "aRegarder": "L'affiche des concerts à venir à l'entrée.",
+      "anecdote": "Son nom signifie simplement « l'atelier » en luxembourgeois.",
+      "photo": "L'enseigne et la file d'attente un soir de concert.",
+      "note": "Concerts payants, programme à consulter.",
+      "image": "villes/luxembourg/images/den-atelier.jpg",
+      "imageCredit": "Jwh · CC BY-SA 3.0 lu · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Den_Atelier,_rue_de_Hollerich-101.jpg"
+    },
+    {
+      "id": "casino-luxembourg",
+      "nom": "Casino Luxembourg – Forum d'art contemporain",
+      "lat": 49.60978,
+      "lng": 6.12716,
+      "categories": [
+        "art",
+        "histoire"
+      ],
+      "duree": 40,
+      "payant": true,
+      "importance": 2,
+      "description": "Ancien casino bourgeois du XIXe siècle devenu un centre d'art contemporain, qui présente des expositions temporaires.",
+      "aRegarder": "Le contraste entre le décor du bâtiment ancien et les installations contemporaines.",
+      "anecdote": "Franz Liszt y a donné son dernier concert, en 1886, quelques jours avant sa mort.",
+      "photo": "La façade de la rue Notre-Dame, puis un détail d'œuvre (si les photos sont autorisées).",
+      "note": "Tarifs et horaires à confirmer ; fermé entre deux expositions.",
+      "image": "villes/luxembourg/images/casino-luxembourg.jpg",
+      "imageCredit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Casino_Luxembourg.jpg"
+    },
+    {
+      "id": "synagogue",
+      "nom": "Grande Synagogue",
+      "lat": 49.60966,
+      "lng": 6.12164,
+      "categories": [
+        "religieux",
+        "histoire",
+        "architecture"
+      ],
+      "duree": 10,
+      "payant": false,
+      "importance": 1,
+      "description": "Synagogue de l'avenue Monterey, inaugurée en 1953 pour remplacer l'ancienne synagogue de la ville, détruite pendant l'occupation allemande.",
+      "aRegarder": "La façade et ses décors, depuis l'avenue Monterey.",
+      "anecdote": "L'ancienne synagogue, rue Notre-Dame, a été démolie par l'occupant nazi en 1943 ; la communauté a reconstruit ce lieu après la guerre.",
+      "photo": "La façade dans la lumière de l'après-midi, depuis le trottoir d'en face.",
+      "note": "À voir de l'extérieur ; visite de l'intérieur sur demande uniquement.",
+      "image": "villes/luxembourg/images/synagogue.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_City_Synagogue_01a.jpg"
+    },
+    {
+      "id": "saint-jean-grund",
+      "nom": "Église Saint-Jean du Grund",
+      "lat": 49.61062,
+      "lng": 6.13612,
+      "categories": [
+        "religieux",
+        "histoire",
+        "art"
+      ],
+      "duree": 15,
+      "payant": false,
+      "importance": 2,
+      "description": "Église de l'ancienne abbaye de Neumünster, au bord de l'Alzette, à l'intérieur richement décoré.",
+      "aRegarder": "La Vierge noire, statue vénérée de longue date, et les autels décorés.",
+      "anecdote": "Les Vierges noires doivent leur teinte au bois sombre ou à la patine des siècles ; leur origine exacte reste discutée.",
+      "photo": "Le clocher avec les remparts de la Ville-Haute en arrière-plan, depuis le pont du Grund.",
+      "note": "Ouverture variable, à confirmer.",
+      "image": "villes/luxembourg/images/saint-jean-grund.jpg",
+      "imageCredit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Saint-Jean-du-Grund_church_in_Luxembourg_City.jpg"
+    },
+    {
+      "id": "pause-oberweis",
+      "type": "pause",
+      "nom": "Oberweis (Grand-Rue)",
+      "lat": 49.61207,
+      "lng": 6.13127,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 25,
+      "payant": true,
+      "importance": 1,
+      "description": "Maison de pâtisserie luxembourgeoise réputée, avec salon de thé : entremets, macarons et, en saison, Quetschentaart (tarte aux quetsches).",
+      "aRegarder": "La vitrine des pâtisseries et chocolats.",
+      "anecdote": "La Quetschentaart est la tarte aux prunes de fin d'été, cousine de la tarte à la mirabelle lorraine.",
+      "photo": "Une part de tarte vue de dessus, près de la fenêtre.",
+      "note": "Adresse indicative : vérifiez les horaires.",
+      "image": "villes/luxembourg/images/pause-oberweis.jpg",
+      "imageCredit": "Joel Bez · CC BY 2.5 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Quetschentaart_02.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-chocolate-house",
+      "type": "pause",
+      "nom": "Chocolate House (face au Palais)",
+      "lat": 49.61071,
+      "lng": 6.13249,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "gouter",
+        "cafe"
+      ],
+      "duree": 25,
+      "payant": true,
+      "importance": 1,
+      "description": "Salon de thé célèbre pour ses chocolats chauds : on choisit une cuillère de chocolat à plonger dans le lait chaud.",
+      "aRegarder": "Le mur de cuillères de chocolat aux parfums variés.",
+      "anecdote": "La maison est installée juste en face du Palais grand-ducal : vue imprenable sur la relève de la garde.",
+      "photo": "La cuillère de chocolat qui fond dans la tasse.",
+      "note": "Adresse indicative : vérifiez les horaires.",
+      "image": "villes/luxembourg/images/pause-chocolate-house.jpg",
+      "imageCredit": "Alpha from Melbourne, Australia · CC BY-SA 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Hahndorf_Hot_Chocolate.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-tiirmschen",
+      "type": "pause",
+      "nom": "Am Tiirmschen (rue de l'Eau)",
+      "lat": 49.61114,
+      "lng": 6.13377,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Restaurant de cuisine luxembourgeoise traditionnelle dans une maison ancienne : Judd mat Gaardebounen, Bouneschlupp, Rieslingspaschtéit.",
+      "aRegarder": "Le décor rustique et la carte des spécialités.",
+      "anecdote": "Le Judd mat Gaardebounen (collet de porc fumé aux fèves) est considéré comme le plat national.",
+      "photo": "Votre plat près de la fenêtre, en lumière naturelle.",
+      "note": "Adresse indicative : vérifiez qu'il est ouvert et réservez.",
+      "image": "villes/luxembourg/images/pause-tiirmschen.jpg",
+      "imageCredit": "UnorthodoxY · CC BY-SA 2.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Judd_mat_Gaardebounen.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-guillaume",
+      "type": "pause",
+      "nom": "Brasseries de la place Guillaume II",
+      "lat": 49.61096,
+      "lng": 6.13048,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "dejeuner",
+        "cafe"
+      ],
+      "duree": 60,
+      "payant": true,
+      "importance": 1,
+      "description": "Plusieurs brasseries et terrasses autour du Knuedler, pratiques pour un déjeuner au centre de la Ville-Haute.",
+      "aRegarder": "L'animation de la place, surtout les jours de marché.",
+      "anecdote": "Les jours de marché, cherchez les Gromperekichelcher (galettes de pommes de terre) sur les stands.",
+      "photo": "La statue équestre depuis votre table.",
+      "note": "Choix sur place ; horaires à confirmer.",
+      "image": "villes/luxembourg/images/pause-guillaume.jpg",
+      "imageCredit": "Cayambe · CC BY-SA 3.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Luxembourg_pl_Guillaume_Knuedler_vers_rue_Reine_01.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-place-armes",
+      "type": "pause",
+      "nom": "Terrasses de la place d'Armes",
+      "lat": 49.61115,
+      "lng": 6.12975,
+      "categories": [
+        "gastronomie"
+      ],
+      "pause": [
+        "cafe",
+        "dejeuner"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Cafés et restaurants à l'ombre des platanes, idéals pour une pause au cœur de la ville.",
+      "aRegarder": "Le kiosque et la vie de la place.",
+      "anecdote": "C'est ici que se retrouvent les Luxembourgeois à la sortie du travail, pour l'« after-work ».",
+      "photo": "Votre tasse en premier plan, le kiosque flou derrière.",
+      "image": "villes/luxembourg/images/pause-place-armes.jpg",
+      "imageCredit": "Auteur inconnu · Public domain · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:Place_d%27Armes_Luxembourg.jpg",
+      "imageIllustration": true
+    },
+    {
+      "id": "pause-scotts",
+      "type": "pause",
+      "nom": "Pub au bord de l'Alzette (Grund)",
+      "lat": 49.60863,
+      "lng": 6.1361,
+      "categories": [
+        "gastronomie",
+        "nuit"
+      ],
+      "pause": [
+        "cafe",
+        "gouter"
+      ],
+      "duree": 20,
+      "payant": true,
+      "importance": 1,
+      "description": "Terrasse au bord de l'eau dans le Grund, au pied du pont, pour une pause au calme après la descente.",
+      "aRegarder": "L'Alzette et les remparts au-dessus.",
+      "anecdote": "Goûtez un crémant ou un riesling de la Moselle luxembourgeoise, à 30 km de là.",
+      "photo": "Le pont du Grund depuis la terrasse.",
+      "note": "Adresse indicative (Scott's, Bisserweg) ; horaires à confirmer.",
+      "image": "villes/luxembourg/images/pause-scotts.jpg",
+      "imageCredit": "-wuppertaler · CC BY-SA 4.0 · Wikimedia Commons",
+      "imageUrl": "https://commons.wikimedia.org/wiki/File:LUX_Luxembourg_Grund_002_2016.jpg",
+      "imageIllustration": true
+    }
+  ]
+}

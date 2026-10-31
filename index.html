@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Metz à pied</title>
-  <meta name="description" content="Parcours personnalisé des lieux à voir à Metz, utilisable hors ligne.">
-  <meta name="theme-color" content="#C9A043" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#17130C" media="(prefers-color-scheme: dark)">
+  <title>À pied</title>
+  <meta name="description" content="Parcours personnalisés à pied en ville (Metz, Luxembourg…), utilisables hors ligne.">
+  <meta name="theme-color" id="theme-light" content="#C9A043" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" id="theme-dark" content="#17130C" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -16,16 +16,26 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="vitrail" aria-hidden="true"></div>
+    <div class="band" aria-hidden="true"></div>
     <div class="topbar-row">
-      <h1 class="brand"><span class="brand-mark" aria-hidden="true"></span>Metz <em>à pied</em></h1>
-      <button id="btn-edit" class="icon-btn" hidden aria-label="Modifier mes préférences">⚙︎</button>
+      <h1 class="brand"><span class="brand-mark" aria-hidden="true"></span><span id="brand-city"></span> <em>à pied</em></h1>
+      <div class="topbar-actions">
+        <button id="btn-city" class="icon-btn" hidden aria-label="Changer de ville" title="Changer de ville">📍</button>
+        <button id="btn-edit" class="icon-btn" hidden aria-label="Modifier mes préférences">⚙︎</button>
+      </div>
     </div>
   </header>
 
+  <!-- Écran 0 : choix de la ville -->
+  <main id="screen-cities" class="screen" hidden>
+    <p class="intro">Où voulez-vous marcher ?</p>
+    <ul id="city-list" class="cities"></ul>
+    <p class="fineprint">Toutes les villes restent disponibles hors ligne une fois l'app installée.</p>
+  </main>
+
   <!-- Écran 1 : questionnaire -->
-  <main id="screen-quiz" class="screen">
-    <p class="intro">Quelques questions, et je vous trace un parcours dans la ville de la pierre de Jaumont.</p>
+  <main id="screen-quiz" class="screen" hidden>
+    <p class="intro" id="intro"></p>
     <form id="quiz" novalidate>
       <fieldset class="q">
         <legend><span class="q-num">1</span>Ce qui vous intéresse</legend>
@@ -34,8 +44,8 @@
           <button type="button" class="chip" data-value="architecture">🏛 Architecture</button>
           <button type="button" class="chip" data-value="art">🎨 Art &amp; musées</button>
           <button type="button" class="chip" data-value="religieux">⛪ Églises</button>
-          <button type="button" class="chip" data-value="nature">🌿 Nature &amp; Moselle</button>
-          <button type="button" class="chip" data-value="gastronomie">🥧 Gastronomie lorraine</button>
+          <button type="button" class="chip" data-value="nature">🌿 Nature</button>
+          <button type="button" class="chip" data-value="gastronomie">🥧 Gastronomie</button>
           <button type="button" class="chip" data-value="shopping">🛍 Shopping</button>
           <button type="button" class="chip" data-value="photo">📷 Photo &amp; points de vue</button>
           <button type="button" class="chip" data-value="nuit">🌙 Vie nocturne</button>
@@ -68,7 +78,7 @@
         <legend><span class="q-num">4</span>Déplacement</legend>
         <div class="chips seg" data-name="transport">
           <button type="button" class="chip" data-value="walk">🚶 À pied</button>
-          <button type="button" class="chip" data-value="bus">🚶+🚌 Pied + bus Le Met'</button>
+          <button type="button" class="chip" data-value="bus">🚶+🚌 Pied + transports</button>
         </div>
       </fieldset>
 
@@ -94,8 +104,8 @@
         <legend><span class="q-num">7</span>Pauses à prévoir</legend>
         <div class="chips" data-name="pauses" data-multi>
           <button type="button" class="chip" data-value="cafe">☕ Café</button>
-          <button type="button" class="chip" data-value="dejeuner">🍽 Déjeuner lorrain</button>
-          <button type="button" class="chip" data-value="gouter">🟡 Goûter mirabelle</button>
+          <button type="button" class="chip" data-value="dejeuner">🍽 Déjeuner</button>
+          <button type="button" class="chip" data-value="gouter">🥧 Goûter</button>
         </div>
       </fieldset>
 

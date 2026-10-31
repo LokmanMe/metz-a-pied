@@ -1,6 +1,6 @@
-# Metz à pied
+# À pied
 
-PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir à Metz, installable sur Android et utilisable hors ligne pendant la visite.
+PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz** et **Luxembourg**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
 HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + tuiles OpenStreetMap.
 
@@ -8,17 +8,18 @@ HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + 
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Questionnaire et écran de parcours |
-| `style.css` | Thème pierre de Jaumont et vitraux, mode sombre automatique |
+| `index.html` | Choix de la ville, questionnaire et écran de parcours |
+| `style.css` | Thème commun, couleurs propres à chaque ville (`:root[data-ville="…"]`), mode sombre automatique |
 | `app.js` | Sélection des lieux, ordre de visite par voyageur de commerce (exact jusqu'à 15 étapes), horaires, GPS, suivi de visite |
-| `data/lieux.json` | 34 lieux + 6 adresses de pause (coordonnées vérifiées sur OpenStreetMap) |
-| `data/distances.json` | Distances réelles à pied entre tous les points (OSM) |
+| `villes/villes.json` | Catalogue des villes : nom, centre, accroche, couleurs, libellés locaux |
+| `villes/<ville>/lieux.json` | Lieux et adresses de pause (Metz : 34 + 6 ; Luxembourg : 35 + 6) |
+| `villes/<ville>/distances.json` | Distances réelles à pied entre tous les points (OSM) |
+| `villes/<ville>/images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 | `manifest.webmanifest` | Métadonnées d'installation |
-| `service-worker.js` | Cache de l'app, des données, de Leaflet et des tuiles déjà vues |
+| `service-worker.js` | Cache de l'app, des données de toutes les villes, de Leaflet et des tuiles déjà vues |
 | `icons/` | Icônes 192, 512 et maskable 512 |
-| `images/` | Une photo par lieu (Wikimedia Commons, crédits dans `lieux.json`) |
 
-Les préférences, le parcours en cours et les lieux visités sont stockés dans le `localStorage` du téléphone.
+Au premier lancement, l'app demande la ville ; elle s'en souvient ensuite (bouton 📍 en haut pour changer). Un lien `…/?ville=luxembourg` ouvre directement une ville. Les préférences, le parcours en cours et les lieux visités sont stockés dans le `localStorage` du téléphone, séparément pour chaque ville (les données des anciennes apps « Metz à pied » et « Luxembourg à pied » sont reprises automatiquement).
 
 ## Lancer en local
 
@@ -30,11 +31,11 @@ python -m http.server 8000
 
 Puis ouvrir <http://localhost:8000>. `localhost` compte comme contexte sécurisé : le service worker et la géolocalisation y fonctionnent.
 
-> Ne pas ouvrir `index.html` en double-cliquant (`file://`) : le chargement de `lieux.json` et le service worker ne fonctionnent pas dans ce mode.
+> Ne pas ouvrir `index.html` en double-cliquant (`file://`) : le chargement des données et le service worker ne fonctionnent pas dans ce mode.
 
 ## Déployer sur GitHub Pages
 
-Une PWA doit être servie en HTTPS pour être installable ; GitHub Pages le fait gratuitement. Tous les chemins sont relatifs et le service worker a pour portée `./`, l'app fonctionne donc sous `https://<utilisateur>.github.io/metz-a-pied/`.
+Une PWA doit être servie en HTTPS pour être installable ; GitHub Pages le fait gratuitement. Tous les chemins sont relatifs et le service worker a pour portée `./`, l'app fonctionne donc sous `https://<utilisateur>.github.io/<dépôt>/`, quel que soit le nom du dépôt.
 
 ### Avec GitHub CLI (`gh`)
 
@@ -52,11 +53,11 @@ gh api -X POST repos/{owner}/metz-a-pied/pages -f "source[branch]=main" -f "sour
 
 ### Sans `gh`
 
-1. Créer un dépôt public vide `metz-a-pied` sur <https://github.com/new> (sans README).
+1. Créer un dépôt public vide sur <https://github.com/new> (sans README).
 2. Pousser le code :
 
 ```bash
-git remote add origin https://github.com/<utilisateur>/metz-a-pied.git
+git remote add origin https://github.com/<utilisateur>/<dépôt>.git
 ```
 
 ```bash
@@ -64,11 +65,19 @@ git push -u origin main
 ```
 
 3. Sur GitHub : **Settings → Pages → Build and deployment → Source : Deploy from a branch**, branche `main`, dossier `/ (root)`, **Save**.
-4. Après 1 à 2 minutes, l'app est en ligne sur `https://<utilisateur>.github.io/metz-a-pied/`.
+4. Après 1 à 2 minutes, l'app est en ligne sur `https://<utilisateur>.github.io/<dépôt>/`.
+
+### Renommer le dépôt
+
+**Settings → General → Repository name**. L'adresse du site change avec le nom (l'ancienne adresse GitHub Pages ne redirige pas) : il faudra réinstaller l'app sur les téléphones. Mettre aussi à jour le remote local :
+
+```bash
+git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
+```
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v5`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v6`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 
@@ -78,7 +87,7 @@ Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (
 
 Conseils pour la visite :
 - Avant de partir (au Wi-Fi de l'hôtel par exemple), générez votre parcours et faites défiler/zoomer la carte sur les zones du parcours : les tuiles consultées restent disponibles hors ligne (jusqu'à environ 1 500 tuiles).
-- Autorisez la localisation quand Chrome la demande, pour voir le point bleu. En cas de refus, l'app reste utilisable ; pour réactiver : cadenas à gauche de l'adresse → Autorisations → Position (ou, pour l'app installée, Paramètres Android → Applications → Metz à pied → Autorisations).
+- Autorisez la localisation quand Chrome la demande, pour voir le point bleu. En cas de refus, l'app reste utilisable ; pour réactiver : cadenas à gauche de l'adresse → Autorisations → Position (ou, pour l'app installée, Paramètres Android → Applications → À pied → Autorisations).
 
 ## Installer sur iPhone
 
@@ -97,9 +106,36 @@ Depuis iOS 16.4, l'ajout fonctionne aussi depuis Chrome sur iPhone (même bouton
 
 Pour supprimer la barre d'adresse dans l'APK, publier aussi le fichier `assetlinks.json` fourni par PWABuilder dans `.well-known/` à la racine du domaine (voir la doc PWABuilder ; sur un sous-dossier GitHub Pages, cela nécessite un domaine personnalisé ou un dépôt `<utilisateur>.github.io`).
 
+## Ajouter une ville
+
+1. Créer `villes/<id>/lieux.json` avec la même structure que Metz : `departs` (`gare` et `parkings`, chacun avec `id`, `nom`, `lat`, `lng`) et `lieux` (voir [Données](#données)).
+2. Ajouter les photos dans `villes/<id>/images/` (champ `image` : `villes/<id>/images/<lieu>.jpg`).
+3. Calculer `villes/<id>/distances.json` (voir plus bas).
+4. Déclarer la ville dans `villes/villes.json` :
+
+```json
+{
+  "id": "nancy", "nom": "Nancy", "pays": "France", "dossier": "villes/nancy",
+  "centre": { "lat": 48.6937, "lng": 6.1834 },
+  "image": "villes/nancy/images/place-stanislas.jpg",
+  "resume": "Ce qu'on voit sur la carte de choix de ville",
+  "accroche": "Phrase d'introduction du questionnaire.",
+  "couleur": { "clair": "#C9A043", "sombre": "#17130C" },
+  "libelles": {
+    "interests": { "gastronomie": "🥧 Gastronomie lorraine" },
+    "transport": { "bus": "🚶+🚋 Pied + tram" },
+    "pauses": { "gouter": "🟡 Goûter macarons" }
+  },
+  "trajetBus": "🚋 tram"
+}
+```
+
+5. Facultatif : un thème de couleurs dans `style.css` avec `:root[data-ville="<id>"] { --stone: …; --c-blue: …; --route: …; … }` (sinon la ville prend le thème de Metz).
+6. Incrémenter `VERSION` dans `service-worker.js`. Toutes les villes du catalogue sont précachées à l'installation (environ 3 Mo par ville) ; au-delà d'une dizaine de villes, il vaudrait mieux ne mettre en cache que la ville choisie.
+
 ## Données
 
-Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/2026. **Les horaires, tarifs et adresses de pause sont indicatifs : à confirmer sur place.** Pour ajouter un lieu, compléter `data/lieux.json` avec les champs :
+Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/2026. **Les horaires, tarifs et adresses de pause sont indicatifs : à confirmer sur place.** Champs d'un lieu dans `lieux.json` :
 
 ```json
 {
@@ -113,18 +149,20 @@ Les coordonnées ont été vérifiées sur OpenStreetMap (Nominatim) le 30/10/20
 }
 ```
 
-Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables.
+Pour une adresse de pause, ajouter `"type": "pause"` et `"pause": ["cafe", "dejeuner", "gouter"]` (au moins un). `importance` (1 à 3) favorise les incontournables. Un parcours ne propose que les lieux qui correspondent aux centres d'intérêt choisis ; les adresses de pause en font partie (gastronomie, vie nocturne), avec au plus 30 min sur place.
+
+Transports : à Metz, l'option « Pied + bus » utilise le réseau Le Met'. Au Luxembourg, bus et tram sont gratuits dans tout le pays depuis 2020.
 
 ### Ordre des étapes (voyageur de commerce)
 
-- **Distances réelles à pied** : `data/distances.json` contient la matrice des distances piétonnes entre tous les lieux, la gare et les parkings, calculée sur les rues OpenStreetMap (OSRM, profil piéton). Pour un départ GPS, la première étape utilise le vol d'oiseau × 1,3.
+- **Distances réelles à pied** : `villes/<ville>/distances.json` contient la matrice des distances piétonnes entre tous les lieux, la gare et les parkings, calculée sur les rues OpenStreetMap (OSRM, profil piéton). Pour un départ GPS, la première étape utilise le vol d'oiseau × 1,3.
 - **Ordre optimal** : l'ordre de visite minimise la distance totale à pied, sans retour au point de départ. Jusqu'à 15 étapes par jour, il est exact (programmation dynamique de Held-Karp) ; au-delà, l'app enchaîne plusieurs départs « plus proche voisin » améliorés par 2-opt et Or-opt.
 - **Tracé sur la carte** : en ligne, le parcours suit les rues (service de routage piéton routing.openstreetmap.de, qui reçoit les coordonnées des étapes et du point de départ, y compris la position GPS si vous l'avez choisie) ; hors ligne, il est dessiné en lignes droites.
 
-Pour recalculer la matrice après avoir ajouté un lieu, interroger `https://routing.openstreetmap.de/routed-foot/table/v1/driving/<lng,lat;…>?annotations=distance` avec les points dans l'ordre de `ids` (gare, parkings, puis lieux).
+Pour recalculer une matrice après avoir ajouté un lieu, interroger `https://routing.openstreetmap.de/routed-foot/table/v1/driving/<lng,lat;…>?annotations=distance` avec les points dans l'ordre de `ids` (gare, parkings, puis lieux).
 
 ### Photos
 
-Chaque lieu a une photo libre de droits issue de Wikimedia Commons (dossier `images/`, 800 px max), avec l'auteur et la licence affichés sous la photo dans la fiche (champs `image`, `imageCredit`, `imageUrl` de `lieux.json`). Les photos des pauses sont des illustrations (plat, quartier), pas l'établissement lui-même. Elles sont mises en cache à l'installation pour rester visibles hors ligne.
+Chaque lieu a une photo libre de droits issue de Wikimedia Commons (800 px max), avec l'auteur et la licence affichés sous la photo dans la fiche (champs `image`, `imageCredit`, `imageUrl` de `lieux.json`). Les photos des pauses sont des illustrations (plat, quartier), pas l'établissement lui-même. Elles sont mises en cache à l'installation pour rester visibles hors ligne.
 
 Données cartographiques © contributeurs OpenStreetMap.
