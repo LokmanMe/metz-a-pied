@@ -633,7 +633,9 @@ function renderRoute(fit = false) {
       const isDone = visited.has(r.id), isCur = r.index === route.current;
       html.push(`<li class="leg">${r.leg.bus ? esc(CITY.trajetBus) : '🚶'} ${r.leg.min} min · ${fmtKm(r.leg.km)}</li>`);
       html.push(`<li class="stop${isDone ? ' visited' : ''}${isCur ? ' current' : ''}" data-index="${r.index}">
-        <span class="badge${r.pause ? ' pause' : ''}${isDone ? ' done' : ''}">${isDone ? '✓' : r.index + 1}</span>
+        ${isDone
+          ? `<button type="button" class="badge done" data-unvisit="${esc(r.id)}" aria-label="Marquer « ${esc(r.pl.nom)} » comme non visité">✓</button>`
+          : `<span class="badge${r.pause ? ' pause' : ''}">${r.index + 1}</span>`}
         <button class="stop-main" data-open="${r.index}">
           ${r.pl.image ? `<img class="stop-thumb" src="${esc(r.pl.image)}" alt="" loading="lazy" decoding="async">` : ''}
           <span class="stop-text">
@@ -862,6 +864,13 @@ function bindEvents() {
     const open = e.target.closest('[data-open]'), rm = e.target.closest('[data-remove]');
     if (open) openSheet(Number(open.dataset.open));
     if (rm) removeStop(Number(rm.dataset.remove));
+    const un = e.target.closest('[data-unvisit]');
+    if (un) {
+      visited.delete(un.dataset.unvisit);
+      saveVisited();
+      renderRoute();
+      toast(`« ${BY_ID[un.dataset.unvisit].nom} » n'est plus marqué visité.`);
+    }
   });
   $('#suggest-list').addEventListener('click', (e) => {
     const b = e.target.closest('[data-add]');
@@ -888,8 +897,41 @@ function bindEvents() {
       if (map && r) map.flyTo([r.pl.lat, r.pl.lng], 17);
     }
   });
-  // Fermer les fiches en touchant le fond
-  document.querySelectorAll('dialog').forEach((dlg) => dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); }));
+  // Fermer les fiches en touchant le fond, la poignée, ou en les faisant glisser vers le bas
+  document.querySelectorAll('dialog').forEach((dlg) => {
+    dlg.addEventListener('click', (e) => { if (e.target === dlg || e.target.closest('.sheet-grip')) dlg.close(); });
+    enableSwipeClose(dlg);
+  });
+}
+
+/** Glisser vers le bas ferme la fiche : depuis la poignée, ou depuis n'importe où quand la fiche est remontée en haut. */
+function enableSwipeClose(dlg) {
+  let y0 = null, dy = 0;
+  const reset = () => { dlg.style.transform = ''; dlg.style.transition = ''; };
+  dlg.addEventListener('close', reset);
+  dlg.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1 || (dlg.scrollTop > 0 && !e.target.closest('.sheet-grip'))) return;
+    y0 = e.touches[0].clientY; dy = 0;
+    dlg.style.transition = 'none';
+  }, { passive: true });
+  dlg.addEventListener('touchmove', (e) => {
+    if (y0 === null) return;
+    dy = e.touches[0].clientY - y0;
+    if (dy <= 0) { dlg.style.transform = ''; return; }   // vers le haut : défilement normal du contenu
+    if (e.cancelable) e.preventDefault();
+    dlg.style.transform = `translateY(${dy}px)`;
+  }, { passive: false });
+  const end = () => {
+    if (y0 === null) return;
+    y0 = null;
+    dlg.style.transition = 'transform .2s ease';
+    if (dy > 80) {
+      dlg.style.transform = 'translateY(100%)';
+      setTimeout(() => dlg.close(), 200);
+    } else dlg.style.transform = '';
+  };
+  dlg.addEventListener('touchend', end);
+  dlg.addEventListener('touchcancel', end);
 }
 
 // ---------- Villes ----------

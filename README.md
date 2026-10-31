@@ -77,7 +77,7 @@ git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
 
 ### Mettre à jour l'app
 
-Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v9`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
+Après une modification, incrémenter `VERSION` en haut de `service-worker.js` (actuellement `v10`), puis commit et push. Sur le téléphone, la nouvelle version s'affiche au deuxième lancement (la première ouverture télécharge la mise à jour en arrière-plan).
 
 ## Installer sur Android
 

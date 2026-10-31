@@ -363,6 +363,7 @@ button, input, select { font: inherit; color: inherit; }
 }
 .badge.pause { background: var(--c-amber); color: var(--on-stone); }
 .badge.done { background: var(--ok); }
+button.badge { padding: 0; cursor: pointer; }
 .stop-main {
   min-width: 0; text-align: left; background: none; border: 0; padding: 4px 0; cursor: pointer;
   display: flex; align-items: center; gap: 10px;
@@ -416,9 +417,11 @@ button, input, select { font: inherit; color: inherit; }
   background: var(--surface); color: var(--text);
   box-shadow: 0 -10px 40px rgba(0,0,0,.3);
 }
+.sheet { overscroll-behavior: contain; }
 .sheet::backdrop { background: rgba(20, 15, 5, .5); }
 .sheet-inner { padding: 8px 18px calc(18px + env(safe-area-inset-bottom)); }
-.sheet-grip { width: 48px; height: 5px; border-radius: 9px; background: var(--line); margin: 6px auto 12px; }
+.sheet-grip { position: relative; width: 48px; height: 5px; border-radius: 9px; background: var(--line); margin: 6px auto 12px; cursor: pointer; }
+.sheet-grip::after { content: ""; position: absolute; inset: -16px -80px; }   /* zone tactile plus large que le trait */
 .sheet h2 { font: 600 24px/1.2 var(--font-title); margin: 0 0 6px; }
 .sheet h3 { font: 600 16px var(--font-ui); margin: 16px 0 4px; color: var(--stone-deep); text-transform: uppercase; letter-spacing: .05em; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sheet h3 { color: var(--stone); } }

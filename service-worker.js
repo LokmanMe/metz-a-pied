@@ -2,7 +2,7 @@
  * - app shell + données de toutes les villes : précache, puis « stale-while-revalidate »
  * - tuiles OpenStreetMap : cache d'abord (les zones consultées restent dispo hors ligne)
  */
-const VERSION = 'v9';
+const VERSION = 'v10';
 const SHELL_CACHE = `apied-shell-${VERSION}`;
 const TILE_CACHE = 'apied-tiles';           // non versionné : on garde les tuiles entre mises à jour
 const MAX_TILES = 1500;
