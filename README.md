@@ -2,6 +2,8 @@
 
 PWA (Progressive Web App) qui génère un parcours personnalisé des lieux à voir dans une ville, installable sur Android et iPhone et utilisable hors ligne pendant la visite. Villes disponibles : **Metz**, **Luxembourg**, **Marseille** et **Santa Cruz de Tenerife**. On en ajoute une en déposant un dossier de données (voir [Ajouter une ville](#ajouter-une-ville)).
 
+En ligne : <https://lokmanme.github.io/a-pied/> (dépôt `LokmanMe/a-pied`, anciennement `metz-a-pied`).
+
 HTML/CSS/JavaScript vanilla, sans framework ni étape de build. Carte Leaflet + tuiles OpenStreetMap.
 
 ## Contenu
@@ -44,11 +46,11 @@ gh auth login
 ```
 
 ```bash
-gh repo create metz-a-pied --public --source=. --remote=origin --push
+gh repo create a-pied --public --source=. --remote=origin --push
 ```
 
 ```bash
-gh api -X POST repos/{owner}/metz-a-pied/pages -f "source[branch]=main" -f "source[path]=/"
+gh api -X POST repos/{owner}/a-pied/pages -f "source[branch]=main" -f "source[path]=/"
 ```
 
 ### Sans `gh`
@@ -69,7 +71,7 @@ git push -u origin main
 
 ### Renommer le dépôt
 
-**Settings → General → Repository name**. L'adresse du site change avec le nom (l'ancienne adresse GitHub Pages ne redirige pas) : il faudra réinstaller l'app sur les téléphones. Mettre aussi à jour le remote local :
+**Settings → General → Repository name**. L'adresse du site change avec le nom (l'ancienne adresse GitHub Pages ne redirige pas) : il faudra réinstaller l'app sur les téléphones. Les préférences, parcours et lieux visités sont conservés, car ils sont liés au domaine `<utilisateur>.github.io` et non au nom du dépôt. Mettre aussi à jour le remote local :
 
 ```bash
 git remote set-url origin https://github.com/<utilisateur>/<nouveau-nom>.git
